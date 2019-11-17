@@ -109,6 +109,6 @@ cat_vector = w2v['cat']
 This should resolve a lot of compatibility issues if you choose to leverage faster Magnitude embeddings with an existing Gensim codebase. 
 
 ## Epilogue: why do I think this is cool?
-I ready about word embeddings sometime during my freshman year of university. I’m not really sure where I learned about it, but I found the idea really enchanting.
+I first read about word embeddings sometime during my freshman year of university. I’m not really sure where/how I learned about it, but I found the idea really enchanting and I was hooked every since.
 
 Word embeddings are a good introduction to neural networks as well as computational linguistics, and it’s what eventually put me on a path through machine learning academia - which has made me a better developer and computer scientist. I decided to pay homage by writing this tutorial. I know lots of good resources about word embeddings exist already, but I wanted to help introduce other burgeoning computer scientists to the wonders of NLP!

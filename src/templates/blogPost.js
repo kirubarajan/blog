@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 require(`katex/dist/katex.min.css`)
-require("prismjs/themes/prism-solarizedlight.css")
+require("../styles/prism-base16-ateliersulphurpool.light.css")
 
 const Template = ({data}) => {
   const {markdownRemark} = data;
