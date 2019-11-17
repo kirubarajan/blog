@@ -12,7 +12,7 @@ const Index = () => {
 	          <figure className="image is-128x128">
 	            <img src={"/img/hello.svg"}  />
 	          </figure>
-	          <h1 className="title"> Hello! I'm Arun. 🙌 </h1>
+	          <h1 className="title"> Hi! I'm Arun. 🙌 </h1>
 	          <p>
 	            I'm a Canadian (🇨🇦) undergraduate at the University of Pennsylvania studying computer science. 
               I research machine learning in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://www.cis.upenn.edu/~cis192/arun/">teach</a> one of the computer science courses at Penn.
@@ -20,7 +20,7 @@ const Index = () => {
 
 	            
               <br /> <br />
-              Outside of computer science, I like brewing coffee, skateboarding, and playing Super Smash Brothers.
+              Outside of computer science, I like brewing coffee, skateboarding, and playing Super Smash Brothers!
 	            This website is where I write the things that I am doing or stuff I find interesting.
 	          </p>
 	        </div>
