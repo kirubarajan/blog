@@ -13,7 +13,7 @@ const Blog = ({data}) => {
           <div className="column">  
             <Nav />
             <figure className="image is-128x128">
-              <img src={"img/papers.svg"} />
+              <img src={"/img/papers.svg"} />
             </figure>
             <h1 className="title"> my blog </h1>
             <p>I like writing about food, my work and (sometimes)

@@ -10,7 +10,7 @@ const Research = () => {
           <div className="column">  
           	<Nav />
 	          <figure className="image is-128x128">
-	            <img src="img/thinking.svg" />
+	            <img src={"/img/thinking.svg"}  />
 	          </figure>
 			  <h1 class="title"> my research</h1>
               <p><strong>Papers</strong></p>

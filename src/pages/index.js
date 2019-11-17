@@ -10,7 +10,7 @@ const Index = () => {
           <div className="column">  
           	<Nav />
 	          <figure className="image is-128x128">
-	            <img src="img/hello.svg" />
+	            <img src={"/img/hello.svg"}  />
 	          </figure>
 	          <h1 className="title"> Hello! I'm Arun. 🙌 </h1>
 	          <p>
