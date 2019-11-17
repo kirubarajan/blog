@@ -7,6 +7,8 @@ excerpt: "Learning to Use Django's Account System"
 ---
 
 # Django Accounts
+> Material written for CIS 192: Python Programming at the University of Pennsylvania.
+
 In this lecture, we dive deeper into the functionality of Django by building a simple note-taking application. However, using our knowledge from last week, this shouldn’t be too difficult. What makes this section interesting are two things:
 
 1. Using form data to accept user input
