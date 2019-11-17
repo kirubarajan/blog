@@ -5,8 +5,11 @@ require(`katex/dist/katex.min.css`)
 require("../styles/prism-base16-ateliersulphurpool.light.css")
 
 const Template = ({data}) => {
-  const {markdownRemark} = data;
+  const {markdownRemark} = data
   const html = markdownRemark.html
+  const date = markdownRemark.frontmatter.date
+  const tags = markdownRemark.frontmatter.tags
+  console.log(date)
   
   return (
     <section>
@@ -15,9 +18,16 @@ const Template = ({data}) => {
           <div className="column" />
           <div className="column is-half" style={{padding: "2rem"}}>
             <br />
-            <div className="generated" dangerouslySetInnerHTML={{__html: html}} /> 
+            <div className="generated">
+              <p className="is-size-7" style={{marginBottom: "0.5rem"}}>
+                Tags: {tags.map(tag => <span style={{marginRight: "0.2rem"}} class="tag is-light is-link"> {tag} </span>)} 
+                <a href="/blog"> <span style={{marginRight: "0.2rem"}} class="tag is-light is-link"> all </span> </a>
+              </p>
+              <p className="is-size-7" style={{marginBottom: "0.5rem"}}>Last Edit: {date}</p>
+              <div style={{marginTop: "1rem"}} dangerouslySetInnerHTML={{__html: html}}/>
+            </div>
             <hr />
-            <p>Read more posts <a href="/blog">here</a>.</p>
+            <a href="/blog"><span class="tag is-link is-light is-medium">Random Post</span></a>
           </div>
           <div className="column" />
         </div>
@@ -33,6 +43,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
+        tags
       }
     }
   }

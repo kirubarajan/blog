@@ -7,7 +7,7 @@ excerpt: "An Undergraduate Summer in NLP Research"
 ---
 
 # Learning Machine Learning
-## An Undergraduate Summer in NLP Research
+> An Undergraduate Summer in NLP Research
 
 This summer, I was excited to finally work with the poster child of computer science: machine learning. I was a summer research assistant at the University of Pennsylvania working in the Natural Language Processing (NLP) Group. Namely, I was working on ChatEval: a scientific framework for evaluating dialogue systems (i.e. deep learning models).
 

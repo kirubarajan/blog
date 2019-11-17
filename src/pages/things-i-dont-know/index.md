@@ -7,7 +7,7 @@ excerpt: "My 2019 Learning Goals for Computer Science"
 ---
 
 # Things I Don’t Know
-## My 2019 Learning Goals for Computer Science
+> My 2019 Learning Goals for Computer Science
 
 A lot of times, it can feel like writing a programming blog is an excuse to brag about the obscure computer science knowledge you have. So this entry, motivated by [Dan Abramov’s blog post], is dedicated to highlighting the gaps in my knowledge and forecasting my focus for the year.
 
