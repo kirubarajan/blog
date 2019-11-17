@@ -1,5 +1,5 @@
 ---
-path: "/learning"
+path: "/blog/learning"
 date: "2019-11-16"
 title: "Learning Machine Learning"
 tags: ['machine learning', 'natural language processing']

@@ -16,6 +16,16 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-plugin-page-progress',
+            options: {
+              includePaths: ['/', { regex: '^/blog' }],
+              excludePaths: ['/blog', '/consulting', '/teaching', '/research'],
+              height: 5,
+              prependToBody: false,
+              color: `#8cc3f7`,
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;

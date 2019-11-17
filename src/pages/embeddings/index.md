@@ -1,5 +1,5 @@
 ---
-path: "/embeddings"
+path: "/blog/embeddings"
 date: "2019-11-16"
 title: "A Gentle Introduction to Word Embeddings"
 tags: ['machine learning', 'natural language processing']
@@ -7,7 +7,7 @@ excerpt: "Fun with Natural Language Processing's Secret Sauce"
 ---
 
 # A Gentle Introduction to Word Embeddings
-## Fun with Natural  Language Processing’s “Secret Sauce“
+> Fun with Natural  Language Processing’s “Secret Sauce“
 
 Computers don’t understand the nuances of language. It’s because they only understand numbers and, as you can imagine, it’s impossible for us to enumerate every single nuance in understanding human language (let alone as numbers). But, we’ve seen a lot of progress in recent years of computers understanding language. So how do these work?  More specifically, how are these system representing words as *numbers*? 
 

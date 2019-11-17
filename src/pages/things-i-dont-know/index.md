@@ -1,5 +1,5 @@
 ---
-path: "/things-i-dont-know"
+path: "/blog/things-i-dont-know"
 date: "2019-11-16"
 title: "Things I Don't Know"
 tags: ['dev', 'computer science', 'school']
