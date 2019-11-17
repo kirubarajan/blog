@@ -15,7 +15,7 @@ const Teaching = () => {
 						<h1 class="title"> some teaching </h1>
 	          <p>
 	            I am the instructor for <a href="https://www.cis.upenn.edu/~cis192/">CIS 192</a> at Penn, which is 
-	            a great class about some very interesting topics (in Python). I also like to give technical talks about my work,
+	            a great class about some very interesting topics (in Python). I'm also a TA for <a href="http://computational-linguistics-class.org/">CIS 530</a>, Penn's graduate computational linguistics course. <br /> <br /> I like to give technical talks about my work,
 	            usually on natural language processing and software engineering: <br />
 	          </p>
 	          <br />

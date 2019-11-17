@@ -1,12 +1,13 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "blog",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "my blog",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "deploy": "npm run build && node ./scripts/deploy",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -27,6 +28,7 @@
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "prettier": "^1.19.1"
   },
   "repository": {
