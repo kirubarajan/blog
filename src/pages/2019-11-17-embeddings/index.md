@@ -34,9 +34,11 @@ Imagine we have the string `“cat”`. Let’s say we have a perfect word embed
 ## Word Embeddings
 Why do we want to represent a three-letter word as a vector with potentially a vector of hundreds of values? In short, we want to create the embeddings such that the vectors **capture the meaning of a given word**. This can intuitively be visualized as the vectors for similar words being group together. For example, if the vector for `"cat"` is `[1, 4]`, the vector for `"kitten"` would be something like `[2, 4]` whereas the vector for `"dog"` would be close by, for example `[1, 5]`. 
 
-Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. Calculating the cosine distance (which encodes similarity) between two words is a powerful feature that makes tasks involving natural language a lot easier:
+Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. Calculating the cosine distance (which encodes similarity) between two words is a powerful feature that makes tasks involving natural language a lot easier. For word vectors $A$ and $B$, we can define cosine similarity as:
 
-$$\frac{\sum_{i = 1}^{n} A_i B_i}{\sqrt{\sum_{i = 1}^{n} A^2_i}\sqrt{\sum_{i = 1}^{n} B^2_i}}$$
+$$
+\frac{\sum_{i = 1}^{n} A_i B_i}{\sqrt{\sum_{i = 1}^{n} A^2_i}\sqrt{\sum_{i = 1}^{n} B^2_i}}
+$$
 
 As a result, something interesting we can do is train our word embeddings to create analogies. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like “Bill Gates is to Microsoft as Steve Jobs is to `_______`” by predicting `"Apple"`.
 
