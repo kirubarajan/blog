@@ -24,7 +24,7 @@ For a long time, one of best approaches we could do was representing a word as a
 ### Better Representation
 So what can we do about our representation problem? Surprise, surprise: we can turn to linguistics for the answer. Distributional semantics, in particular, holds the key:
 
-> "You shall know a word by the company it keeps." - Firth, 1957
+> "You shall know a word by the company it keeps." - Firth (1957)
 
 In essence, it makes sense to be defining words in relation to other words. Intuitively, this is easy to see; if I asked you to describe the word “avocado”, you would probably define it in terms of other words like “fruit” and “green” because the meanings of the word are *close*. This idea of word “closeness” gives rise to the notion of placing our words in some kind of space where we can measure their distance.
 
@@ -37,13 +37,13 @@ As such, she gives us the vector `[1, 4]` to represent the word **cat**.
 ## Word Embeddings
 Why do we want to represent a three-letter word as a vector with potentially a vector of hundreds of values? In short, we want to create the embeddings such that the vectors **capture the meaning of a given word**. This can intuitively be visualized as the vectors for similar words being group together. For example, if the vector for `"cat"` is `[1, 4]`, the vector for `"kitten"` would be something like `[2, 4]` whereas the vector for `"dog"` would be close by, for example `[1, 5]`. 
 
-Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks.Calculating the cosine distance (which encodes similarity) between two words is a powerful feature that makes tasks involving natural language a lot easier. For word vectors $u$ and $v$, we can define cosine similarity as:
+Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. For example, the cosine distance (which encodes similarity) between two vectors is a powerful function that is easily applied to tasks involving natural language. For word vectors $u$ and $v$, we can define cosine similarity as:
 
 $$ 
 s(u, v) = \frac{\sum_{i = 1}^{n} u_i v_i}{\sqrt{\sum_{i = 1}^{n} u^2_i}\sqrt{\sum_{i = 1}^{n} v^2_i}} 
 $$
 
-As a result, something interesting we can do is train our word embeddings to create analogies. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like “Bill Gates is to Microsoft as `____` is to Apple” by predicting `"Steve Jobs"`. This prediction is relatively straightforward when you have good embeddings and can be computed as:
+As a result, something interesting we can do is train our word embeddings to create **analogies**. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like “Bill Gates is to Microsoft as `____` is to Apple” by predicting `"Steve Jobs"`. This prediction is relatively straightforward when you have good embeddings and can be computed as:
 
 $$
 d = \operatorname*{arg\, max}_{v \in V} ~ s(v, a - b + c)
@@ -51,7 +51,7 @@ $$
 
 where $s$ is our cosine similarity function from earlier. In the above example, we have that `a = "Bill Gates"`, `b = "Microsoft"`, `c = "Apple"`. Finally, this gives us `d = "Steve Jobs"`. 
 
-While these ad-hoc analyses are interesting to think about, the real use of word embeddings is to provide computers a semantically-aware representation of words. This is done by providing the word embeddings as *features* to a neural network that performs other “downstream“ tasks. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping.
+This was a fun result that was discovered by researchers, but this isn't where the true potential of word emebddings lie. Although these ad-hoc analyses are interesting to think about, the real use of word embeddings is to serve as a semantically-aware representation of words for **other downstream tasks**. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping. It's hard to think of mathematical grounding for this kind of phenomenom, but intuitively it's clear that better representation of language implies neural networks that can better understand and generate language.
 
 ### How Do We Create Word Embeddings?
 It seems like perfect word embeddings are too specific (continuous vector spaces are the BIG kind of infinite) and are therefore good to be exist. However, we can actually create very powerful word embeddings that capture a lot of semantic meaning using neural networks. 
