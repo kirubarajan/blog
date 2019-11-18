@@ -24,9 +24,9 @@ For a long time, one of best approaches we could do was representing a word as a
 ### Better Representation
 So what can we do about our representation problem? Surprise, surprise: we can turn to linguistics for the answer. Distributional semantics, in particular, holds the key:
 
-> You shall know a word by the company it keeps [Firth, J. R. 1957:11](#)
+> "You shall know a word by the company it keeps." - Firth, 1957
 
-In essence, it makes sense to be defining words in relation to other words. Intuitively, is easy to see; if I asked you to describe the word “avocado”, you would probably define it in terms of other words like “fruit” and “green” because the meanings of the word are *close*. This idea of word “closeness” gives rise to the notion of placing our words in some kind of space where we can measure their distance.
+In essence, it makes sense to be defining words in relation to other words. Intuitively, this is easy to see; if I asked you to describe the word “avocado”, you would probably define it in terms of other words like “fruit” and “green” because the meanings of the word are *close*. This idea of word “closeness” gives rise to the notion of placing our words in some kind of space where we can measure their distance.
 
 To be specific, this means these words exist in some *vector spaces* such as $\mathbb{R}^2$. This means every word can be thought as a vector, like with one-hot encoding! This may seem scary, but this is just because we want to mathematically determine the “closeness” between two words. We could define a one dimensional scalar value for each word (e.g. `{"cat": 1}`), but the nuances of language extend far beyond a single dimension. That’s why we place them in higher order dimensions - typically in the tens or hundreds. Our brains can’t really imagine dimensions higher than three, so for the sake of visualization we’ll work in two dimensions for now: the classic $x-y$ plane.
 
