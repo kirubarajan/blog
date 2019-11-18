@@ -74,7 +74,6 @@ If you notice, they are in essence the inverse of the other. This is good for ou
 You might be wondering: how do we get the word vectors from this process? Turns out the task we’re making the neural network do is a *fake task* that we training the network off of - we actually won’t use the model that’s trained. Instead, the goodies are encoded in the parameters of the neural network layers: the weights and biases of each neuron.
 
 ## Implementation
-Training word embeddings with a given dataset is easy using `gensim`, a Python package that abstracts the implementation of the `word2vec` neural network. This is the most commonly used Python package for generating word embeddings. 
 
 ### Pre-Trained Word Embeddings
 Let’s use **pre-trained word embeddings** from Google (trained by reading through Google News). Using trusted pre-trained models will allow us to quickly play with word vectors as well as prototype with deep learning faster since such models already been worked well in practice.
@@ -98,14 +97,22 @@ There's a lot of great documentation for how you can query the vectories and gai
 
 
 ### Training Word Embeddings
+Training word embeddings with a given dataset is easy using `gensim`, a Python package that abstracts the implementation of the `word2vec` neural network. This is one of the most commonly used Python package for generating word embeddings. 
 
-Some example code:
-> todo
+```python
+from gensim.models import Word2Vec
+model = Word2Vec(sentences, min_count=1)
+print(model)
+```
 
 ### Extra: Visualizing Word Embeddings
 It would be cool to visualize the word vectors. Sadly, we humans are mostly incapable of visualizing in the 300th dimension.
 
-Instead, we can use a process called **dimensionality reduction** which will allow us to turn our 300 dimensions into regular 2D vectors (without losing too much information) that we can visualize.
+Instead, we can use a process called **dimensionality reduction** which will allow us to turn our 300 dimensions into regular 2D vectors (without losing too much information) that we can visualize. We will be using an algorithm called t-SNE to perform our dimensionality reduction from 300 dimensions to 2 dimensions:
+
+```python
+# t-SNE code goes here
+```
 
 ### Extra: Gensim Compatibility with Gensim
 A lot of natural language processing might use the `gensim` package, which has a different API as the faster `pymagnitude` package we’ve been using. In order to interface with the `pymagnitude` model, we can write a wrapper class to use the same API as the `gensim` model:

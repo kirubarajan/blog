@@ -9,7 +9,6 @@ const Template = ({data}) => {
   const html = markdownRemark.html
   const date = markdownRemark.frontmatter.date
   const tags = markdownRemark.frontmatter.tags
-  console.log(date)
   
   return (
     <section>
