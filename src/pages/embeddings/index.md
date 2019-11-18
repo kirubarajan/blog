@@ -52,7 +52,7 @@ $$
 where $s$ is our cosine similarity function from earlier. In the above example, we have that `a = "Bill Gates"`, `b = "Microsoft"`, `c = "Apple"`. Finally, this gives us `d = "Steve Jobs"`. 
 
 
-## Why Are Word Embeddings "Secret Sauce"?
+### Why Are Word Embeddings "Secret Sauce"?
 This was a fun result that was discovered by researchers, but this isn't where the true potential of word emebddings lie. Although these ad-hoc analyses are interesting to think about, the real use of word embeddings is to serve as a semantically-aware representation of words for **other downstream tasks**. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping. 
 
 The use of pre-trained word embeddings galvanized progress in natural language processing research since representation is often at the root of most machine learning problems. It's hard to think of mathematical grounding for this kind of phenomenon, but intuitively it's clear that better representation of language implies neural networks can better understand and generate language.
@@ -73,13 +73,10 @@ If you notice, they are in essence the inverse of the other. This is good for ou
 
 You might be wondering: how do we get the word vectors from this process? Turns out the task we’re making the neural network do is a *fake task* that we training the network off of - we actually won’t use the model that’s trained. Instead, the goodies are encoded in the parameters of the neural network layers: the weights and biases of each neuron.
 
-### Implementation
+## Implementation
 Training word embeddings with a given dataset is easy using `gensim`, a Python package that abstracts the implementation of the `word2vec` neural network. This is the most commonly used Python package for generating word embeddings. 
 
-Some example code:
-> todo
-
-## Using Word Embeddings
+### Pre-Trained Word Embeddings
 Let’s use **pre-trained word embeddings** from Google (trained by reading through Google News). Using trusted pre-trained models will allow us to quickly play with word vectors as well as prototype with deep learning faster since such models already been worked well in practice.
 
 We first want to run `pip install pymagnitude` to install the embedding format. Then we can download the pre-trained word2vec embeddings using some `wget` magic:
@@ -98,6 +95,12 @@ print(vectors.distance("cat", "dog"))
 ```
 
 There's a lot of great documentation for how you can query the vectories and gain interesting insights available at the GitHub repository for Magnitude [here](https://github.com/plasticityai/magnitude).
+
+
+### Training Word Embeddings
+
+Some example code:
+> todo
 
 ### Extra: Visualizing Word Embeddings
 It would be cool to visualize the word vectors. Sadly, we humans are mostly incapable of visualizing in the 300th dimension.
