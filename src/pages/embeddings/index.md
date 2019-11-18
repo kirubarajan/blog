@@ -11,36 +11,35 @@ excerpt: "Fun with Natural Language Processing's Secret Sauce"
 
 Computers don’t understand the nuances of language. It’s because they only understand numbers and, as you can imagine, it’s impossible for us to enumerate every single nuance in understanding human language (let alone as numbers). But, we’ve seen a lot of progress in recent years of computers understanding language. So how do these work?  More specifically, how are these system representing words as *numbers*? 
 
-In this post, we’re going to talk about one of the biggest advances in natural language processing: *word embeddings*.
+In this post, we’re going to talk about one of the most interesting advances in machine learning and natural language processing: *word embeddings*.
 
 ## Representation
 So how do we represent one of the most basic units of natural language, **words**? If this is the first time you’ve thought about this, you might be tempted to say the appropriate data structure is obviously a string! However, this comes with some design considerations:
 
-1. Your compiler doesn’t understand the contents of the string - it just recognizes the ASCII values that correspond to each letter. This representation is as useful to us as recognizing the word `cat` as being `[3, 1, 20]` - not very useful.
-2. Strings can have a variable length. If we wanted to give a machine learning model a string, it might truncate the ending values for consistency’s sake and we would lose important information.
+1. Your compiler doesn’t understand the contents of strings - it just recognizes the ASCII values that correspond to each symbol. This representation has room for improvement. Recognizing the word `cat` as being `[3, 1, 20]` is not very useful for capturing the *meaning of words*.
+2. Strings can have a variable length. If we wanted to give a machine learning model a string, it might truncate (or artificially elongate) values for consistency’s sake and we would lose (or create useless) information.
 
-For a long time, one of best approaches we could do was representing a word as an array with all 0s that had 1 in the index corresponding to a specific word. For example, in the vocabulary `{"I", "am", "a", "cat"}`, the word `"I"` would correspond to `[1, 0, 0, 0]`, the word `"am"` as `[0, 1, 0, 0]`, and so forth. 
+For a long time, one of best approaches we could do was representing a word as an vector (or array) with all 0s that had 1 in the index corresponding to a specific word. This is called **one-hot encoding**. For example, in the vocabulary `{"I", "am", "a", "cat"}`, the word `I` would correspond to `[1, 0, 0, 0]`, the word `am` as `[0, 1, 0, 0]`, and so forth. We’ll see that word representation has shifted recent from one-hot encoding to something *better*.
 
 ### Better Representation
-So what can we do? Turns out, distributional semantics holds the key:
-> You shall know a word by the company it keeps [[Firth, J. R. 1957:11](#)]
+So what can we do about our representation problem? Surprise, surprise: we can turn to linguistics for the answer. Distributional semantics, in particular, holds the key:
 
-In essence, we should be defining words in relation to other words. Intuitively, this makes sense. If I asked you to describe the word “avocado”, you would probably define it in terms of other words like “fruit” and “green”. 
+> You shall know a word by the company it keeps [Firth, J. R. 1957:11](#)
 
-This idea of word similarity gives rise to the notion of placing our words in *vector spaces*. This may seem scary, but in essence want to mathematically determine the “closeness” between two words. We could define a one dimensional scalar value named `distance` that tracks this, but the nuances of language extend far beyond a single dimension. That’s why we place them in higher order dimensions - typically in the tens or hundreds. Our brains can’t really imagine dimensions higher than three, so for the sake of visualization we’ll work in two dimensions for now: the classic x-y plane.
+In essence, it makes sense to be defining words in relation to other words. Intuitively, is easy to see; if I asked you to describe the word “avocado”, you would probably define it in terms of other words like “fruit” and “green” because the meanings of the word are *close*. This idea of word “closeness” gives rise to the notion of placing our words in some kind of space where we can measure their distance.
 
-Imagine we have the string `“cat”`. Let’s say we have a perfect word embedding fairy that gives us the vector `[1, 4]` to represent the word **cat**.
+To be specific, this means these words exist in some *vector spaces* such as $\mathbb{R}^2$. This means every word can be thought as a vector, like with one-hot encoding! This may seem scary, but this is just because we want to mathematically determine the “closeness” between two words. We could define a one dimensional scalar value for each word (e.g. `{"cat": 1}`), but the nuances of language extend far beyond a single dimension. That’s why we place them in higher order dimensions - typically in the tens or hundreds. Our brains can’t really imagine dimensions higher than three, so for the sake of visualization we’ll work in two dimensions for now: the classic $x-y$ plane.
+
+We’ll discuss how to obtain word vectors (hereby referred to as **word embeddings**) in just a little bit. For now, let’s imagine that in our vocabulary, we have the word `“cat”`. Furthermore, let’s imagine that we also have access to a word embedding fairy that gives us the *perfect* vector for each word. 
+
+As such, she gives us the vector `[1, 4]` to represent the word **cat**.
 
 ## Word Embeddings
 Why do we want to represent a three-letter word as a vector with potentially a vector of hundreds of values? In short, we want to create the embeddings such that the vectors **capture the meaning of a given word**. This can intuitively be visualized as the vectors for similar words being group together. For example, if the vector for `"cat"` is `[1, 4]`, the vector for `"kitten"` would be something like `[2, 4]` whereas the vector for `"dog"` would be close by, for example `[1, 5]`. 
 
-Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. Calculating the cosine distance (which encodes similarity) between two words is a powerful feature that makes tasks involving natural language a lot easier. For word vectors $A$ and $B$, we can define cosine similarity as:
+Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. Calculating the cosine distance (which encodes similarity) between two words is a powerful feature that makes tasks involving natural language a lot easier.
 
-$$
-\frac{\sum_{i = 1}^{n} A_i B_i}{\sqrt{\sum_{i = 1}^{n} A^2_i}\sqrt{\sum_{i = 1}^{n} B^2_i}}
-$$
-
-As a result, something interesting we can do is train our word embeddings to create analogies. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like “Bill Gates is to Microsoft as Steve Jobs is to `_______`” by predicting `"Apple"`.
+As a result, something interesting we can do is train our word embeddings to create analogies. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like `“Bill Gates is to Microsoft as Steve Jobs is to _____”` by predicting `Apple`.
 
 While these ad-hoc analyses are interesting to think about, the real use of word embeddings is to provide computers a semantically-aware representation of words. This is done by providing the word embeddings as *features* to a neural network that performs other “downstream“ tasks. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping.
 
@@ -109,6 +108,6 @@ cat_vector = w2v['cat']
 This should resolve a lot of compatibility issues if you choose to leverage faster Magnitude embeddings with an existing Gensim codebase. 
 
 ## Epilogue: why do I think this is cool?
-I first read about word embeddings sometime during my freshman year of university. I’m not really sure where/how I learned about it, but I found the idea really enchanting and I was hooked every since.
+I ready about word embeddings sometime during my freshman year of university. I’m not really sure where I learned about it, but I found the idea really enchanting.
 
 Word embeddings are a good introduction to neural networks as well as computational linguistics, and it’s what eventually put me on a path through machine learning academia - which has made me a better developer and computer scientist. I decided to pay homage by writing this tutorial. I know lots of good resources about word embeddings exist already, but I wanted to help introduce other burgeoning computer scientists to the wonders of NLP!
