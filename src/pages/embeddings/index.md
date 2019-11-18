@@ -37,18 +37,30 @@ As such, she gives us the vector `[1, 4]` to represent the word **cat**.
 ## Word Embeddings
 Why do we want to represent a three-letter word as a vector with potentially a vector of hundreds of values? In short, we want to create the embeddings such that the vectors **capture the meaning of a given word**. This can intuitively be visualized as the vectors for similar words being group together. For example, if the vector for `"cat"` is `[1, 4]`, the vector for `"kitten"` would be something like `[2, 4]` whereas the vector for `"dog"` would be close by, for example `[1, 5]`. 
 
-Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. Calculating the cosine distance (which encodes similarity) between two words is a powerful feature that makes tasks involving natural language a lot easier.
+Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks.Calculating the cosine distance (which encodes similarity) between two words is a powerful feature that makes tasks involving natural language a lot easier. For word vectors $u$ and $v$, we can define cosine similarity as:
 
-As a result, something interesting we can do is train our word embeddings to create analogies. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like `“Bill Gates is to Microsoft as Steve Jobs is to _____”` by predicting `Apple`.
+$$ 
+s(u, v) = \frac{\sum_{i = 1}^{n} u_i v_i}{\sqrt{\sum_{i = 1}^{n} u^2_i}\sqrt{\sum_{i = 1}^{n} v^2_i}} 
+$$
+
+As a result, something interesting we can do is train our word embeddings to create analogies. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like “Bill Gates is to Microsoft as `____` is to Apple” by predicting `"Steve Jobs"`. This prediction is relatively straightforward when you have good embeddings and can be computed as:
+
+$$
+d = \operatorname*{arg\, max}_{v \in V} ~ s(v, a - b + c)
+$$
+
+where $s$ is our cosine similarity function from earlier. In the above example, we have that `a = "Bill Gates"`, `b = "Microsoft"`, `c = "Apple"`. Finally, this gives us `d = "Steve Jobs"`. 
 
 While these ad-hoc analyses are interesting to think about, the real use of word embeddings is to provide computers a semantically-aware representation of words. This is done by providing the word embeddings as *features* to a neural network that performs other “downstream“ tasks. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping.
 
 ### How Do We Create Word Embeddings?
-It seems like perfect word embeddings are too specific and are therefore good to be true. However, we can actually create very powerful word embeddings that capture a lot of semantic meaning using neural networks. Why neural networks? As we’ll see, one previous method of word embedding generation was to perform dimensionality reduction on word co-occurrence matrices (which doesn’t involve deep learning). This procedure captures the intuition behind distributional semantics, but doesn’t have the powerful non-linearity capabilities of neural networks. However, it’s still useful to think about since certain methods of generation word embeddings draw upon this as reference.
+It seems like perfect word embeddings are too specific (continuous vector spaces are the BIG kind of infinite) and are therefore good to be exist. However, we can actually create very powerful word embeddings that capture a lot of semantic meaning using neural networks. 
 
-However, I would actually like you to forget about pre-neural network methods, for now. It turns out that NLP can be implemented “from scratch“, i.e. purely through statistical and neural means.
+So, why neural networks? One previous method of word embedding generation was to perform dimensionality reduction on word co-occurrence matrices (which doesn’t involve deep learning). This procedure captures the intuition behind distributional semantics, but doesn’t have the powerful non-linearity capabilities of neural networks. However, it’s still useful to think about since certain methods of generation word embeddings draw upon this as reference.
 
-A commonly used implementation to generate word embeddings is `word2vec`, which is what we will use as reference in this guide.`word2vec` generates word embeddings through one of two related models. Both models are be trained using different objectives and as such, we can build two simple neural networks that performs the following tasks:
+But to be clear, I would actually like you to forget about pre-neural network methods, for now. It turns out that NLP can be implemented “from scratch“, i.e. purely through statistical and neural means. (You can read more about this from [Collobert et al.](https://arxiv.org/pdf/1103.0398v1.pdf)).
+
+A commonly used implementation to generate word embeddings is `word2vec`, which is what we will use as reference in this guide. The `word2vec` model generates word embeddings through one of two related models. Both models are be trained using different objectives and as such, we can build two simple neural networks that performs the following tasks:
 
 1. **Continuous Bag Of Word**: predicts a given missing word in a sentence/phrase based on context (faster but less specific)
 2. **Skip Gram**: given a word, predicts the words that will co-appear near it (slower but works better for infrequent words)
@@ -66,7 +78,22 @@ Some example code:
 ## Using Word Embeddings
 Let’s use **pre-trained word embeddings** from Google (trained by reading through Google News). Using trusted pre-trained models will allow us to quickly play with word vectors as well as prototype with deep learning faster since such models already been worked well in practice.
 
-> todo 
+We first want to run `pip install pymagnitude` to install the embedding format. Then we can download the pre-trained word2vec embeddings using some `wget` magic:
+
+```bash
+wget http://magnitude.plasticity.ai/word2vec/light/GoogleNews-vectors-negative300.magnitude
+``` 
+
+Finally, we can import the package and start writing queries:
+
+```python
+from pymagnitude import Magnitude
+vectors = Magnitude("GoogleNews-vectors-negative300.magnitude")
+
+print(vectors.distance("cat", "dog"))
+```
+
+There's a lot of great documentation for how you can query the vectories and gain interesting insights available at the GitHub repository for Magnitude [here](https://github.com/plasticityai/magnitude).
 
 ### Extra: Visualizing Word Embeddings
 It would be cool to visualize the word vectors. Sadly, we humans are mostly incapable of visualizing in the 300th dimension.

@@ -26,8 +26,11 @@ const Template = ({data}) => {
               <p className="is-size-7" style={{marginBottom: "0.5rem"}}>Last Edit: {date}</p>
               <div style={{marginTop: "1rem"}} dangerouslySetInnerHTML={{__html: html}}/>
             </div>
-            <hr />
-            <a href="/blog"><span class="tag is-link is-light is-medium">Random Post</span></a>
+            <hr style={{marginTop: "2.5rem"}}/>
+            <div className="level">
+              <p className="is-size-7" style={{marginBottom: "0.5rem"}}>Thanks for reading!</p>
+              <a href="/blog"><span class="tag is-link is-light is-medium">More Posts</span></a>
+            </div>
           </div>
           <div className="column" />
         </div>
