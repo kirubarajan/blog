@@ -51,7 +51,11 @@ $$
 
 where $s$ is our cosine similarity function from earlier. In the above example, we have that `a = "Bill Gates"`, `b = "Microsoft"`, `c = "Apple"`. Finally, this gives us `d = "Steve Jobs"`. 
 
-This was a fun result that was discovered by researchers, but this isn't where the true potential of word emebddings lie. Although these ad-hoc analyses are interesting to think about, the real use of word embeddings is to serve as a semantically-aware representation of words for **other downstream tasks**. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping. It's hard to think of mathematical grounding for this kind of phenomenom, but intuitively it's clear that better representation of language implies neural networks that can better understand and generate language.
+
+## Why Are Word Embeddings "Secret Sauce"?
+This was a fun result that was discovered by researchers, but this isn't where the true potential of word emebddings lie. Although these ad-hoc analyses are interesting to think about, the real use of word embeddings is to serve as a semantically-aware representation of words for **other downstream tasks**. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping. 
+
+The use of pre-trained word embeddings galvanized progress in natural language processing research since representation is often at the root of most machine learning problems. It's hard to think of mathematical grounding for this kind of phenomenon, but intuitively it's clear that better representation of language implies neural networks can better understand and generate language.
 
 ### How Do We Create Word Embeddings?
 It seems like perfect word embeddings are too specific (continuous vector spaces are the BIG kind of infinite) and are therefore good to be exist. However, we can actually create very powerful word embeddings that capture a lot of semantic meaning using neural networks. 
