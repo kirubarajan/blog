@@ -9,9 +9,9 @@ excerpt: "Fun with Natural Language Processing's Secret Sauce"
 # A Gentle Introduction to Word Embeddings
 > Fun with Natural  Language Processing’s “Secret Sauce“
 
-Computers don’t understand the nuances of language. It’s because they only understand numbers and, as you can imagine, it’s impossible for us to enumerate every single nuance in understanding human language (let alone as numbers). But, we’ve seen a lot of progress in recent years of computers understanding language. So how do these work?  More specifically, how are these system representing words as *numbers*? 
+Computers don’t understand the nuances of language. It's because they only understand numbers and, as you can imagine, it’s impossible for us to enumerate every single nuance in understanding human language (let alone as numbers). But, we’ve seen a lot of progress in recent years of computers understanding language. So how do these work?  More specifically, how are these system representing words as *numbers*? 
 
-In this post, we’re going to talk about one of the most interesting advances in machine learning and natural language processing: *word embeddings*.
+In this post, we’re going to talk about one of the coolest advances in machine learning and natural language processing: *word embeddings*.
 
 ## Representation
 So how do we represent one of the most basic units of natural language, **words**? If this is the first time you’ve thought about this, you might be tempted to say the appropriate data structure is obviously a string! However, this comes with some design considerations:
@@ -105,7 +105,7 @@ Training word embeddings with a given dataset is easy using `gensim`, a Python p
 
 ```python
 from gensim.models import Word2Vec
-model = Word2Vec(sentences, min_count=1)
+model = Word2Vec(sentences)
 print(model)
 ```
 
@@ -114,8 +114,21 @@ It would be cool to visualize the word vectors. Sadly, we humans are mostly inca
 
 Instead, we can use a process called **dimensionality reduction** which will allow us to turn our 300 dimensions into regular 2D vectors (without losing too much information) that we can visualize. We will be using an algorithm called t-SNE to perform our dimensionality reduction from 300 dimensions to 2 dimensions:
 
+This is a multi-core implementation of t-SNE available [here](https://github.com/DmitryUlyanov/Multicore-TSNE). In my usage, Sci-Kit Learn's implementation of the algorithm is slower, especially when running on more powerful machines (e.g. Google Colab).
+
 ```python
-# t-SNE code goes here
+from MulticoreTSNE import MulticoreTSNE as TSNE
+from matplotlib import pyplot as plt
+
+embeddings = TSNE(n_jobs=4).fit_transform(vectors)
+
+vis_x = embeddings[:, 0]
+vis_y = embeddings[:, 1]
+
+plt.scatter(vis_x, vis_y, c=digits.target, cmap=plt.cm.get_cmap("jet", 10), marker='.')
+plt.clim(-0.5, 9.5)
+
+plt.show()
 ```
 
 ### Extra: Gensim Compatibility with Gensim
@@ -152,7 +165,7 @@ cat_vector = w2v['cat']
 
 This should resolve a lot of compatibility issues if you choose to leverage faster Magnitude embeddings with an existing Gensim codebase. 
 
-## Epilogue: why do I think this is cool?
-I ready about word embeddings sometime during my freshman year of university. I’m not really sure where I learned about it, but I found the idea really enchanting.
+## Epilogue: why am I writing about this?
+I read about word embeddings sometime during my freshman year of university. I’m not really sure where I learned about it, but I found the idea really enchanting.
 
-Word embeddings are a good introduction to neural networks as well as computational linguistics, and it’s what eventually put me on a path through machine learning academia - which has made me a better developer and computer scientist. I decided to pay homage by writing this tutorial. I know lots of good resources about word embeddings exist already, but I wanted to help introduce other burgeoning computer scientists to the wonders of NLP!
+Word embeddings are a good introduction to neural networks as well as computational linguistics, and it’s what eventually introduced me to academia - which has made me a better developer and computer scientist. I decided to pay homage by writing this tutorial. I know lots of good resources about word embeddings exist already, but I wanted to help excite others to the wonders of NLP!
