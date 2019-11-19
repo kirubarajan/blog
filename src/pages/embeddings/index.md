@@ -53,25 +53,29 @@ where $s$ is our cosine similarity function from earlier. In the above example, 
 
 
 ### Why Are Word Embeddings "Secret Sauce"?
-This was a fun result that was discovered by researchers, but this isn't where the true potential of word emebddings lie. Although these ad-hoc analyses are interesting to think about, the real use of word embeddings is to serve as a semantically-aware representation of words for **other downstream tasks**. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping. 
+Analogy generation was a fun result that was discovered by researchers, but this isn't where the true potential of word emebddings lie. Although these ad-hoc analyses are interesting to think about, the real use of word embeddings is to serve as a semantically-aware representation of words for **other downstream tasks**. For example, providing word embeddings to a neural network that powers a chatbot will let it generate sentences that make more sense than if we represented words using a string-to-index mapping. 
 
-The use of pre-trained word embeddings galvanized progress in natural language processing research since representation is often at the root of most machine learning problems. It's hard to think of mathematical grounding for this kind of phenomenon, but intuitively it's clear that better representation of language implies neural networks can better understand and generate language.
+The use of pre-trained word embeddings galvanized progress in natural language processing research since representation is often at the root of most machine learning problems. It's hard to think of mathematical grounding for this kind of phenomenon, but intuitively it's clear that better representation of language means that our neural networks can better understand semantics and therefore model language.
 
-### How Do We Create Word Embeddings?
-It seems like perfect word embeddings are too specific (continuous vector spaces are the BIG kind of infinite) and are therefore good to be exist. However, we can actually create very powerful word embeddings that capture a lot of semantic meaning using neural networks. 
+It seems like perfect word embeddings will end up being too specific  and are therefore good to be exist. These concerns are true thanks to the curse of dimensionality, but we can actually still approximate very powerful word embeddings that capture semantic meaning by training neural networks using stochastic gradient descent.
 
-So, why neural networks? One previous method of word embedding generation was to perform dimensionality reduction on word co-occurrence matrices (which doesn’t involve deep learning). This procedure captures the intuition behind distributional semantics, but doesn’t have the powerful non-linearity capabilities of neural networks. However, it’s still useful to think about since certain methods of generation word embeddings draw upon this as reference.
+But, why neural networks? One previous method of word embedding generation was to perform dimensionality reduction on word co-occurrence matrices (which doesn’t involve deep learning). This procedure captures the intuition behind distributional semantics, but doesn’t have the powerful non-linearity capabilities of neural networks. However, it’s still useful to think about since certain methods of generation word embeddings draw upon this as reference.
 
 But to be clear, I would actually like you to forget about pre-neural network methods, for now. It turns out that NLP can be implemented “from scratch“, i.e. purely through statistical and neural means. (You can read more about this from [Collobert et al.](https://arxiv.org/pdf/1103.0398v1.pdf)).
 
-A commonly used implementation to generate word embeddings is `word2vec`, which is what we will use as reference in this guide. The `word2vec` model generates word embeddings through one of two related models. Both models are be trained using different objectives and as such, we can build two simple neural networks that performs the following tasks:
+### How Do We Create Word Embeddings?
+
+So you now know we can generate word embeddings using a neural network. But exactly **how** do we do that? A commonly used implementation to generate word embeddings is called `word2vec`, which is what we will use as reference in this guide. This model was conceptualized at Google around 5 years ago and has gone on to push the state of the art in natural language processing.
+
+The `word2vec` model generates word embeddings through one of two related models. Both models are be trained using different objectives and as such, we can build two simple neural networks that performs the following tasks:
 
 1. **Continuous Bag Of Word**: predicts a given missing word in a sentence/phrase based on context (faster but less specific)
 2. **Skip Gram**: given a word, predicts the words that will co-appear near it (slower but works better for infrequent words)
 
+
 If you notice, they are in essence the inverse of the other. This is good for our intuition of how `word2vec` works to generate word embeddings as both are really good examples of the *distributional hypothesis* from earlier!
 
-You might be wondering: how do we get the word vectors from this process? Turns out the task we’re making the neural network do is a *fake task* that we training the network off of - we actually won’t use the model that’s trained. Instead, the goodies are encoded in the parameters of the neural network layers: the weights and biases of each neuron.
+A simple implementation of the above objectives would be logistic regression, which is nothing more than a fancy perceptron. You might be wondering: how do we get the word vectors from this process? Turns out what we're actually doing is making the network perform a **fake** that we training the network off of - we actually won’t use the model that’s trained. Instead, the goodies are encoded in the parameters of the neural network layers: the weights and biases of each neuron. The network’s internal representation of different words encodes the embeddings that we are looking for.
 
 ## Implementation
 
