@@ -77,7 +77,16 @@ If you notice, they are in essence the inverse of the other. This is good for ou
 
 A simple implementation of the above objectives would be logistic regression, which is nothing more than a fancy perceptron. You might be wondering: how do we get the word vectors from this process? Turns out what we're actually doing is making the network perform a **fake** that we training the network off of - we actually won’t use the model that’s trained. Instead, the goodies are encoded in the parameters of the neural network layers: the weights and biases of each neuron. The network’s internal representation of different words encodes the embeddings that we are looking for.
 
-## Implementation
+## More Applications
+> TODO: finish this!
+
+### Reccomendation
+Spotify, Airbnb, etc.
+
+### Contextualization
+BERT, etc.
+
+## Code
 
 ### Pre-Trained Word Embeddings
 Let’s use **pre-trained word embeddings** from Google (trained by reading through Google News). Using trusted pre-trained models will allow us to quickly play with word vectors as well as prototype with deep learning faster since such models already been worked well in practice.
