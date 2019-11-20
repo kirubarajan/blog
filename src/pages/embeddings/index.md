@@ -40,7 +40,7 @@ Why do we want to represent a three-letter word as a vector with potentially a v
 Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. For example, the cosine distance (which encodes similarity) between two vectors is a powerful function that is easily applied to tasks involving natural language. For word vectors $u$ and $v$, we can define cosine similarity as:
 
 $$ 
-\operatorname{cos}(u, v) = \frac{u \cdot v}{|u| \cdot |v|} = \frac{\sum_{i = 1}^{n} u_i v_i}{\sqrt{\sum_{i = 1}^{n} u^2_i}\sqrt{\sum_{i = 1}^{n} v^2_i}} 
+\operatorname{cos}(u, v) = \frac{u \cdot v}{|u| \cdot |v|} = \frac{\sum_{i = 1}^{n} u_i v_i}{\sqrt{\sum_{i = 1}^{n} u^2_i} \cdot \sqrt{\sum_{i = 1}^{n} v^2_i}} 
 $$
 
 As a result, something interesting we can do is train our word embeddings to create **analogies**. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like “Bill Gates is to Microsoft as `____` is to Apple” by predicting `"Steve Jobs"`. This prediction is relatively straightforward when you have good embeddings and can be computed as:
