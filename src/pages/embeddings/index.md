@@ -77,8 +77,10 @@ If you notice, they are in essence the inverse of the other. This is good for ou
 
 A simple implementation of the above objectives would be logistic regression, which is nothing more than a fancy perceptron. You might be wondering: how do we get the word vectors from this process? Turns out what we're actually doing is making the network perform a **fake** that we training the network off of - we actually won’t use the model that’s trained. Instead, the goodies are encoded in the parameters of the neural network layers: the weights and biases of each neuron. The network’s internal representation of different words encodes the embeddings that we are looking for.
 
-## More Applications
+## Recent Applications
 > TODO: finish this!
+
+Word embeddings are an idea from as early as 2003. In the nearly two decades of this idea existing, there have a been a huge surge in its use. From powering virtually every NLP system at Google to inspiring a slew of new models, here are some recent use applications the ideas behind word embeddings:
 
 ### Reccomendation
 Spotify, Airbnb, etc.
