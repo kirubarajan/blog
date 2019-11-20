@@ -40,13 +40,13 @@ Why do we want to represent a three-letter word as a vector with potentially a v
 Since words are now vectors, we are also able to perform linear algebra operations on the given language. Although it may feel weird to subtract `dog` from `cat`, it turns out performing such operations tends to be useful for a variety of tasks. For example, the cosine distance (which encodes similarity) between two vectors is a powerful function that is easily applied to tasks involving natural language. For word vectors $u$ and $v$, we can define cosine similarity as:
 
 $$ 
-s(u, v) = \frac{\sum_{i = 1}^{n} u_i v_i}{\sqrt{\sum_{i = 1}^{n} u^2_i}\sqrt{\sum_{i = 1}^{n} v^2_i}} 
+\operatorname{cos}(u, v) = \frac{u \cdot v}{|u| \cdot |v|} = \frac{\sum_{i = 1}^{n} u_i v_i}{\sqrt{\sum_{i = 1}^{n} u^2_i}\sqrt{\sum_{i = 1}^{n} v^2_i}} 
 $$
 
 As a result, something interesting we can do is train our word embeddings to create **analogies**. For example, a classic example in the field is using word embeddings to see that  `"king" - "man" = "queen" - "woman"`.  We can even generalize this to fill-in-the-blanks for sentences like “Bill Gates is to Microsoft as `____` is to Apple” by predicting `"Steve Jobs"`. This prediction is relatively straightforward when you have good embeddings and can be computed as:
 
 $$
-d = \operatorname*{arg\, max}_{v \in V} ~ s(v, a - b + c)
+d = \operatorname*{arg\, max}_{v \in V} ~ \operatorname{cos} (v, ~ a - b + c)
 $$
 
 where $s$ is our cosine similarity function from earlier. In the above example, we have that `a = "Bill Gates"`, `b = "Microsoft"`, `c = "Apple"`. Finally, this gives us `d = "Steve Jobs"`. 
@@ -115,15 +115,24 @@ Training word embeddings with a given dataset is easy using `gensim`, a Python p
 ```python
 from gensim.models import Word2Vec
 model = Word2Vec(sentences)
+
 print(model)
 ```
 
-### Extra: Visualizing Word Embeddings
+### Extra: Visualizing Word Embeddings with t-SNE
 It would be cool to visualize the word vectors. Sadly, we humans are mostly incapable of visualizing in the 300th dimension.
 
-Instead, we can use a process called **dimensionality reduction** which will allow us to turn our 300 dimensions into regular 2D vectors (without losing too much information) that we can visualize. We will be using an algorithm called t-SNE to perform our dimensionality reduction from 300 dimensions to 2 dimensions:
+Instead, we can use a process called **dimensionality reduction** which will allow us to turn our 300 dimensions into regular 2D vectors that we can visualize. We will be using an algorithm called t-SNE (t-Distributed Stochastic Neighbouring Entities) to perform our dimensionality reduction from 300 dimensions to 2 dimensions.
 
-This is a multi-core implementation of t-SNE available [here](https://github.com/DmitryUlyanov/Multicore-TSNE). In my usage, Sci-Kit Learn's implementation of the algorithm is slower, especially when running on more powerful machines (e.g. Google Colab).
+You might be wondering how we can find a correspondance of vectors in $\mathbb{R}^{300}$ to vectors in $\mathbb{R}^2$. Why don't we just work with these 2D vectors in the first place? The truth is, these new embeddings (in 2D) actually do lose information. This seems obvious since we are going from a high dimensional space to a lower dimensional space. But more concretely, if we imagine an embedding space as being a distribution of points, we can measure the Kullback-Leiber Divergence of the original vectors and the transformed vectors:
+
+$$
+KL(p || q) = \sum_x {~ p(x) \cdot \operatorname{log} ~ \frac{p(x)}{q(x)}}
+$$
+
+This is a measure of how "different" two probability distributions are. As a result, minimizing the KL Divergence between the two distributions using gradient descent "learns" us new a representation of the original embeddings such that they preserve information. This is a very powerful result! It helps us build intuition on high-dimensional embeddings for otherwise blackbox systems.
+
+This is a multi-core implementation of t-SNE available [here](https://github.com/DmitryUlyanov/Multicore-TSNE). In my usage, Sci-Kit Learn's implementation of the algorithm is much slower, especially when running on more powerful machines (e.g. Google Colab).
 
 ```python
 from MulticoreTSNE import MulticoreTSNE as TSNE
