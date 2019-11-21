@@ -29,7 +29,11 @@ ZSH_THEME="agnoster"
 ```
 4. Install [this font](https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf). 
 5. Open iTerm (your icons will look funky) and *cmd-i* to open your Preferences. Under Text select your font to be *Meslo LG M Reguar for Powerline*.
-6. Clone [this repo](https://github.com/mbadolato/iTerm2-Color-Schemes) using `git clone https://github.com/mbadolato/iTerm2-Color-Schemes` to save all the schemas somewhere. 
+6. Clone [this repo](https://github.com/mbadolato/iTerm2-Color-Schemes) using 
+```
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes
+``` 
+to save all the schemas somewhere. 
 7. Pick your favourite theme from the repo and *cmd-i* to open Preferences and under *Colors* click *Color Presets* import the scheme you like from `iTerm2-Color-Schemes/schemes` (you can also tweak the colors at this tab).
 8. Save your present under *General*.
 
