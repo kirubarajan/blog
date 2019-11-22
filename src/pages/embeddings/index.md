@@ -11,7 +11,8 @@ excerpt: "Fun with Natural Language Processing's Secret Sauce"
 
 Computers don’t understand the nuances of language. It's because they only understand numbers and, as you can imagine, it’s impossible for us to enumerate every single nuance in understanding human language (let alone as numbers). But, we’ve seen a lot of progress in recent years of computers understanding language. So how do these work?  More specifically, how are these system representing words as *numbers*? 
 
-In this post, we’re going to talk about one of the coolest advances in machine learning and natural language processing: *word embeddings*.
+In this post, we’re going to talk about one of the coolest advances in machine learning and natural language processing: *word embeddings*. I hope that 
+this post serves as a launch pad to get started with embeddings, including code from how the models are trained to using pre-trained embeddings. In addition, we'll be looking at interesting use cases of word embeddings and recent research in the area of representation.
 
 ## Representation
 So how do we represent one of the most basic units of natural language, **words**? If this is the first time you’ve thought about this, you might be tempted to say the appropriate data structure is obviously a string! However, this comes with some design considerations:
