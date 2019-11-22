@@ -81,13 +81,13 @@ A simple implementation of the above objectives would be logistic regression, wh
 
 Word embeddings are an idea from as early as 2003. In the nearly two decades, there has been a huge surge in its use across the machine learning landscape. From powering virtually every NLP system at Google to inspiring a slew of new models, here are some recent developments regarding word embeddings:
 
-### Reccomendation
+### Recommendation 
 Spotify, Airbnb, etc.
 
 ### Contextualization
 BERT, etc.
 
-## Code
+## Implementation in Python
 
 ### Pre-Trained Word Embeddings
 Let’s use **pre-trained word embeddings** from Google (trained by reading through Google News). Using trusted pre-trained models will allow us to quickly play with word vectors as well as prototype with deep learning faster since such models already been worked well in practice.
