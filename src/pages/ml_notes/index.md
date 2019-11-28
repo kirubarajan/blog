@@ -48,13 +48,11 @@ $$
 We define the L.H.S to be **ELBO**: evidence lower bound. This is equivalent to the negative KL-Divergence plus $\operatorname{log} p(x)$. The nice thing about this is that $\operatorname{log} p(x)$ is a constant with respect to distribution $q$, so we can **minimize the KL-Divergence by maximizing ELBO**, without calculating $p(x)$.
 
 ### Variational Autoencoder
-Autoencoders are models that consist of an encoder-model architecture where the encoder takes data and encodes it into a latent representation and the decoder takes a latent representation and re-generates the .
-
-The goal is to learn latent representations (posterior inference over $z$), as well as learning  generation from latent spaces (marginal inference over $x$).
+Autoencoders are models that consist of an encoder-model architecture where the encoder takes data and encodes it into a latent representation and the decoder takes a latent representation and approximates/re-generates the original data. The goal is to learn latent representations (posterior inference over $z$), as well as learn generation from latent spaces (marginal inference over $x$).
 
 Autoencoders can be modelled using neural networks for both the encoder and decoder mechanisms. However, this can give us a lack of regularity in the latent space (i.e. non-continuous latent space) that makes generation hard for the decoder.
 
-We solve this using a **variational autoencoder**, which is an autoencoder that we *regularize* training for, not only so that we don't overfit but mainly such that the latent space is suitable for generation. We do this by encoding the autoencoder's input as a probability distribution.
+We solve this using a **variational autoencoder**, which is an autoencoder that we *regularize* training for, not only so that we don't overfit but mainly so that the latent space is suitable for generation. We do this by encoding the autoencoder's input as a probability distribution.
 
 In order to train our VAE, we must use backpropogation to compute the gradient of ELBO. However, since the network's nodes represent a stochastic process, we instead model stochastic neurons as having parameters $\sigma$ and $\mu$ that allows us propogate errors meaningfully throughout the network. This is know as the **re-parameterization** trick. 
 
@@ -72,6 +70,36 @@ $$
 
 Where the range is $[0, 1]$ and we can define distance as the complement $1 - \operatorname{cos}(u, v)$.
 
+## Deep Learning
+### Recurrent Neural Networks
+Recurrent Neural Networks are like vanilla feed-forward networks, except they contain *cycles*, which allow the network to process sequential data. RNNs do this by mantaining a hidden state $h \in \mathbb{R}^{d}$ that is updated at time-step $t$, and is later fed back into the network along with the network's previous output at time-step $t + 1$. The hidden state $h$ lets the network maintain context while processing the sequence. 
+
+Sometimes too much context can be a burden for the network, and results in the **vanishing gradient** problem where errors are propogated too far and tend to zero. This problem is resolved with models that manage context better, namely selectively remembering and forgetting parts of the context. Examples of these models are LSTMs (Long Short Term Memory) and GRUs (Gated Recurrent Units).
+
+### Attention
+Given some peice of text, certain words are more important than others and we want our neural network to understand their relative importances accordingly.
+
+## Markov Processes
+Markov Processes are systems that are rooted in the **Markov Assumption** which states that given sequential events $X_{n - 1}$, $X_{n - 2}$, ... $X_0$, we have that:
+
+$$
+P(X_n | X_{n - 1}, X_{n  - 2} ... X_0) = P(X_n | X_{n - 1})
+$$
+
+In other words, our process only depends on the previous state and is **memory-less**.
+
+### Markov Matrices
+A Markov Matrix $A$ is a stochastic matrix, which means that the columns of $A$ are probability vectors that model some distribution. In other words, the columns of $A$ sum to 1 and obey the axiom of probability that each entry is non-negative. The reason that these stochastic matrices are called Markov Matrices is because $A$ doesn't change with respect to time. In other words, we have that at time $t$, the probability distribution (across the states represented by the vector) is $A^tu_0$ where $u_0$ is the distribution at time $0$. This is nice because we can easily compute the exponentiation of matrices using diagonalization. 
+
+The steady state distribution $u_\infty$ of $A$ is the distribution of $A^tu_0$ as $t$ tends to $\infty$. This means that $Au_\infty = u_\infty$, which implies that $u_\infty$ is an eigenvector of $A$ that corresponds to an eigenvalue of 1. In fact, the largest eigenvalue $\lambda$ that $A$ can have is 1.
+
+### Perron-Frobenius Theorem
+Let $A$ be a square matrix with all non-negative values, with an eigenvalue $\lambda$ such that $|\lambda|$ is maximized. Then, 1) we have that $|\lambda|$ is an eigenvalue of $A$ with a positive eigenvector and 2) the algebric and geometric multiplicity of $|\lambda|$ is 1.
+
+-----
+
 ## References
 ### Variational Inference
 - https://arxiv.org/pdf/1601.00670.pdf
+- https://web.stanford.edu/~jurafsky/slp3/
+- https://people.scs.carleton.ca/~maheshwa/courses/3801/Projects17/PF-thm-report.pdf
