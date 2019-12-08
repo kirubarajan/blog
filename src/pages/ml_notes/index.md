@@ -1,15 +1,15 @@
 ---
 path: "/blog/ml_notes"
 date: "2019-11-21"
-title: "Machine Learning Concept Glossary"
+title: "Machine Learning Concepts"
 tags: ['machine learning', 'natural language processing', 'notes']
 excerpt: "Notes on Various Topics"
 ---
 
-# Machine Learning Concept Glossary
-> Notes on Various Machine Learning Topics
+# Machine Learning Concepts
+> My Notes on Various Machine Learning Topics
 
-Getting started in machine learning sometimes feels like drinking water from a firehose (pardon my cliché). The topic has so many academic roots in a lot of different disciplines (bayesian statistics, optimization, and information theory - oh my!) so I decided to keep a personal footnote of various machine learning concepts (namely relating to neural networks and natural language processing) for my own benefit. These notes might not be complete or accurate - if you would like to see an idea to be written about here feel free to shoot me an email!
+Getting started in machine learning sometimes feels like drinking water from a firehose (pardon my cliché). The topic has so many academic roots in a lot of different disciplines (bayesian statistics, optimization, and information theory - oh my!) so I decided to keep a personal glossary of various machine learning concepts (namely relating to neural networks and natural language processing) for my own benefit. These notes might not be complete or accurate - if you would like to see an idea to be written about here feel free to shoot me an email!
 
 ## Variational Inference
 Variational Inference consists of framing inference as an optimization process. For example when we are working with an intractable probability distribution $p$, variational inference has significant gains over Markov-Chain Monte-Carlo estimation. 
@@ -18,7 +18,6 @@ For data $x$ and latent variable $z$, we have:
 1. Prior: $p(z)$
 2. Likelihood: $p(x | z)$
 3. Posterior: $p(z | x)$
-
 
 As a result, we approximate the conditional density of latent variables given observed variables by using optimization methods. For a distribution $p$, we can approximate it with our own distribution $q$ such that we minimize the KL-Divergence between the two distributions:
 
@@ -50,9 +49,7 @@ We define the L.H.S to be **ELBO**: evidence lower bound. This is equivalent to 
 ### Variational Autoencoder
 Autoencoders are models that consist of an encoder-model architecture where the encoder takes data and encodes it into a latent representation and the decoder takes a latent representation and approximates/re-generates the original data. The goal is to learn latent representations (posterior inference over $z$), as well as learn generation from latent spaces (marginal inference over $x$).
 
-Autoencoders can be modelled using neural networks for both the encoder and decoder mechanisms. However, this can give us a lack of regularity in the latent space (i.e. non-continuous latent space) that makes generation hard for the decoder.
-
-We solve this using a **variational autoencoder**, which is an autoencoder that we *regularize* training for, not only so that we don't overfit but mainly so that the latent space is suitable for generation. We do this by encoding the autoencoder's input as a probability distribution.
+Autoencoders can be modelled using neural networks for both the encoder and decoder mechanisms. However, this can give us a lack of regularity in the latent space (i.e. non-continuous latent space) that makes generation hard for the decoder. We solve this using a **variational autoencoder**, which is an autoencoder that we *regularize* training for, not only so that we don't overfit but mainly so that the latent space is suitable for generation. We do this by encoding the autoencoder's input as a probability distribution.
 
 In order to train our VAE, we must use backpropogation to compute the gradient of ELBO. However, since the network's nodes represent a stochastic process, we instead model stochastic neurons as having parameters $\sigma$ and $\mu$ that allows us propogate errors meaningfully throughout the network. This is know as the **re-parameterization** trick. 
 
@@ -126,6 +123,6 @@ Let $A$ be a real, symmetric matrix such that $A^T = A$. Then, we have that 1) a
 
 ## References
 ### Variational Inference
-- https://arxiv.org/pdf/1601.00670.pdf
-- https://web.stanford.edu/~jurafsky/slp3/
-- https://people.scs.carleton.ca/~maheshwa/courses/3801/Projects17/PF-thm-report.pdf
+1. https://arxiv.org/pdf/1601.00670.pdf
+2. https://web.stanford.edu/~jurafsky/slp3/
+3. https://people.scs.carleton.ca/~maheshwa/courses/3801/Projects17/PF-thm-report.pdf

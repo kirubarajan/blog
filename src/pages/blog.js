@@ -21,13 +21,14 @@ const Blog = ({data}) => {
             <p>
               <hr />
               <p style={{marginBottom: "0.5rem"}}><strong>Posts</strong></p>
-              <ul style={{listStyleType: "circle"}}>
+              <ul style={{listStyleType: "none"}}>
                 {edges.map(edge => {
                   const {frontmatter} = edge.node;
                   return (
-                    <li key={frontmatter.path}>
+                    <li key={frontmatter.path} style={{color: "grey", marginTop: "0.25rem"}}>
+                      <span style={{fontSize: "0.75rem"}}>{frontmatter.date}: </span>
                       <Link to={frontmatter.path}>
-                        {frontmatter.title}
+                      {frontmatter.title}
                       </Link>
                     </li>
                   )
@@ -51,6 +52,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            excerpt
             path
             date
           }
