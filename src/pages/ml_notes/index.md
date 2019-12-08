@@ -58,6 +58,29 @@ In order to train our VAE, we must use backpropogation to compute the gradient o
 
 ## Natural Language Processing
 
+### N-Gram Language Models
+The **Maximum Likelihood Estimation** for an n-gram can be given by the formula:
+
+$$
+P(w_t | w_{t - 1}) = \frac{c(w_{t - 1}, w_t)}{c(w_{t - 1})}
+$$ 
+
+where $c(w)$ is the frequency of $w$ in the corpus. Sequence generation can be performed by sampling from this distribution.
+
+**Perplexity** is an intrinsic evaluation method for language models that captures information about the entropy within the test set. Perplexity for a given test can can be computed as:
+
+$$
+PP(W) = P(w_1, w_2, ... w_n)^{-\frac{1}{n}} = \sqrt[n]{\frac{1}{\Pi_{i = 1}^n P(w_i|w_1, w_2 ... w_{i - 1})}}
+$$
+
+This estimate can be approximated using the *Markov Assumption* (for a bi-gram model):
+
+$$
+PP(W) = \sqrt[n]{\frac{1}{\Pi_{i = 1}^n P(w_i|w_{i - 1})}}
+$$
+
+Perplexity can be thought of as the weighted average branching factor of a language, and generally lower perplexity is better. 
+
 ### Word Embeddings
 Word Embeddings are vectors in some space $\mathbb{R}^{d}$ such that they encode lexical semantics. For example, the vectors of `cat` and `kitten` will have a small vector distance whereas the vectors of `cat` and `chair` will be far apart.
 
@@ -95,6 +118,9 @@ The steady state distribution $u_\infty$ of $A$ is the distribution of $A^tu_0$ 
 
 ### Perron-Frobenius Theorem
 Let $A$ be a square matrix with all non-negative values, with an eigenvalue $\lambda$ such that $|\lambda|$ is maximized. Then, 1) we have that $|\lambda|$ is an eigenvalue of $A$ with a positive eigenvector and 2) the algebric and geometric multiplicity of $|\lambda|$ is 1.
+
+### Spectral Theorem
+Let $A$ be a real, symmetric matrix such that $A^T = A$. Then, we have that 1) all the eigenvalues of $A$ are real and 2) there exists an orthonormal basis of eigenvectors for $A$.
 
 -----
 
