@@ -41,6 +41,18 @@ The scaling factor $\alpha$ is used to facilitate the degree of exploration earl
 
 ### Natural Language Target Spaces
 
+For an action space $A$, and state space $S$, vanilla Q-learning recursion requires maintaining a table of size $|A| \cdot |S|$, which can be intractable for large action/state spaces. In addition, depending on the type of text-game, the possible action set $A_t$ for time $t$ can be unknown, so it's unrealistic to design an architecture around the cardinality of the action space.
+
+> From the paper: "it is not practical to have a DQN architecture of a size that is explicitly dependent on the large number of natural language options"
+
+To mitigate this problem, the DRNN is used to compute Q-values with a single forward pass for each state/action pair. Then, softmax selection can be applied with the exploration/exploitation factor $\alpha$.
+
+### Experimental Setup 
+
+The authors manually anotate endings for two different text games, with the reward being proportional to the sentiment of the output. Small negative rewards are given for each non-ending state, to promote the agent to finish the game as quickly as possible.
+
+A Max-Action DQN and a Per-Action DQN are used as baselines to test against. The DRNNs used have 1 or 2 hidden layers with a dimensionality of 20, 50 or 100.
+
 ## Unsupervised Learning of Narrative Event Chains
 *Nathanael Chambers and Dan Jurafsky (2008)*
 
