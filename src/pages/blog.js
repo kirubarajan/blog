@@ -25,8 +25,8 @@ const Blog = ({data}) => {
                 {edges.map(edge => {
                   const {frontmatter} = edge.node;
                   return (
-                    <li key={frontmatter.path} style={{color: "grey", marginTop: "0.25rem"}}>
-                      <span style={{fontSize: "0.75rem"}}>{frontmatter.date}: </span>
+                    <li key={frontmatter.path} style={{color: "grey", marginTop: "1rem"}}>
+                      <span style={{fontSize: "0.75rem"}}>{frontmatter.date} </span> <br />
                       <Link to={frontmatter.path}>
                       {frontmatter.title}
                       </Link>
