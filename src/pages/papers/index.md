@@ -7,7 +7,7 @@ excerpt: "My Notes on Recent Papers in Machine Learning and NLP"
 ---
 
 # Interesting Papers
-> My Notes on Recent Papers in Machine Learning and NLP
+> My Notes on Research Papers in Machine Learning
 
 This page is for short outlines of papers I find interesting. These notes may vary in techincal detail as well as in core concepts - feel free to reach out to me with errata or questions.
 
