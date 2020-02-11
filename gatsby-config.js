@@ -10,6 +10,23 @@ module.exports = {
     description: 'This is the blog of Arun'
   },
   plugins: [
+    {
+      resolve: `gatsby-transformer-sharp`
+    },
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-transformer-remark`,
