@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from 'gatsby';
 import Nav from '../components/Nav';
+import Tag from '../components/Tag';
 
 const Blog = ({data}) => {
   const { edges } = data.allMarkdownRemark;
@@ -30,7 +31,7 @@ const Blog = ({data}) => {
                     {frontmatter.title}
                     </Link>
                     <br style={{marginBottom: "0.5rem"}} />
-                    {frontmatter.tags.map(tag => <a href="/blog"> <span style={{marginRight: "0.2rem"}} class="tag is-light is-link"> {tag} </span> </a>)} 
+                    {frontmatter.tags.map(tag => <Tag name={tag} />)} 
                   </div>
                 )
               })}

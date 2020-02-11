@@ -2,7 +2,7 @@
 path: "/blog/zsh"
 date: "2018-08-15"
 title: "Customizing Your Shell (Tutorial)"
-tags: ['dev', 'programming']
+tags: ['programming']
 excerpt: "How to make your zsh config look pretty!"
 ---
 

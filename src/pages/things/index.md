@@ -28,3 +28,5 @@ I'm a sucker for anything designed by Rayne (based out of Vancouver, Canada). He
 
 Original Skateboards might not be the most consistent (or cost effective), but they make some damn beautiful designs. I used to ride this board ~6 years ago:
 ![something](https://cdn.shopify.com/s/files/1/0067/7694/6741/products/Apex-34-Double-Concave-deck_ba3bfc0a-c9f5-490f-bdf4-72f51c4ffdae_900x.jpg?v=1567640278)
+
+*and that's all!*
