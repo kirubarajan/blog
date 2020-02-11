@@ -1,7 +1,7 @@
 ---
 path: "/blog/narrative"
 date: "2020-01-05"
-title: "My Independent Study on Narrative Event Chains"
+title: "Independent Study on Narrative Event Chains"
 tags: ['machine learning', 'natural language processing', 'notes']
 excerpt: "My Notes on Recent Papers in Machine Learning and NLP"
 ---
