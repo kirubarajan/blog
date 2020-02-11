@@ -1,7 +1,7 @@
 ---
 path: "/blog/study"
 date: "2020-02-10"
-title: "Independent Study"
+title: "My Current Independent Study"
 tags: ['machine learning', 'research', 'notes']
 excerpt: "My Spring 2020 Independent Study in Machine Learning"
 ---
