@@ -19,21 +19,21 @@ const Blog = ({data}) => {
             <p>I like writing about food, my work and (sometimes)
               my personal life. My views are entirely my own.</p>
             <p>
-              <hr />
-              <p style={{marginBottom: "0.5rem"}}><strong>Posts</strong></p>
-              <ul style={{listStyleType: "none"}}>
-                {edges.map(edge => {
-                  const {frontmatter} = edge.node;
-                  return (
-                    <li key={frontmatter.path} style={{color: "grey", marginTop: "1rem"}}>
-                      <span style={{fontSize: "0.75rem"}}>{frontmatter.date} </span> <br />
-                      <Link to={frontmatter.path}>
-                      {frontmatter.title}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
+              <br />
+              <p style={{marginBottom: "0.5rem"}}><strong className="has-text-grey">All Posts</strong></p>
+              {edges.map(edge => {
+                const {frontmatter} = edge.node;
+                return (
+                  <div className="box" key={frontmatter.path} style={{color: "grey", marginBottom: "1rem"}}>
+                    <span style={{fontSize: "0.75rem"}}>{frontmatter.date} </span> <br />
+                    <Link to={frontmatter.path}>
+                    {frontmatter.title}
+                    </Link>
+                    <br style={{marginBottom: "0.5rem"}} />
+                    {frontmatter.tags.map(tag => <a href="/blog"> <span style={{marginRight: "0.2rem"}} class="tag is-light is-link"> {tag} </span> </a>)} 
+                  </div>
+                )
+              })}
             </p>
           </div>
           <div className="column"></div>
@@ -55,6 +55,7 @@ export const query = graphql`
             excerpt
             path
             date
+            tags
           }
         }
       }
