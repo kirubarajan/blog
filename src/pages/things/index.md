@@ -16,8 +16,8 @@ Use this page to decide whether or not you like my style. The orderings don't pa
 2. [8701 by JID and 6LACK](https://open.spotify.com/track/0gmYtRyuvRKpd6cCApSDTh?si=FrK_gR4RR6WyYcmBoo7CEQ)
 
 ## Software 👨🏾‍💻
-1. The beautifully designed open source calculator app [Numi](https://numi.app/).
-2. Modern PostgreSQL client that doesn't make you wanna cry [Postico](https://eggerapps.at/postico/).
+1. The beautifully designed open source calculator app named [Numi](https://numi.app/).
+2. Modern PostgreSQL client that doesn't make you wanna cry named [Postico](https://eggerapps.at/postico/).
 
 ## Places 🏔
 1. Mississauga, Ontario 🇨🇦
