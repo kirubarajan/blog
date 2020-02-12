@@ -14,8 +14,11 @@ const Consulting = () => {
 	          </figure>
 	          <h1 class="title"> some consulting </h1>
 	          <p>           
-	            In 2016, I founded a startup at MIT named <a href="https://eloreprojects.com">elore</a> that used NLP to match software engineering applicants to technical companies. We were able
-	            to grow to 30 teams using our product and were named Most Progressive Startup of our batch. Previously, I was also named one of Wharton's Experts in Residence, helping incubated startups mature and scale. 
+	            In 2014, I started an education startup named Notebulb with my friends in high school (it didn't work out). Then, in 2016, I founded a startup named <a href="https://eloreprojects.com">elore</a> that used NLP to match software engineering applicants to technical companies. We were able
+	            to grow to 30 teams using our product and were named Most Progressive Startup of our batch at an MIT residential incubator. 
+				
+				<br /> <br />
+				Previously, I was also named one of Wharton's Experts in Residence, helping incubated startups mature and scale. 
                 Now, I consult with a variety of cloud companies for deep learning infrastructure solutions. 
                 Some of my clients include <a href="https://digitalocean.com">Digital Ocean</a>, <a href="https://www.alibabacloud.com">Alibaba Cloud</a> and
                 <a href="https://www.trackgen.com"> TrackGen</a>. <br /> <br />
