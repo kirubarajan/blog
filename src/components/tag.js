@@ -13,7 +13,7 @@ function getColour(name) {
 
 const Tag = (props) => {
   return (
-    <a href={"/" + props.name}> <span style={{marginRight: "0.2rem"}} class={"tag " + getColour(props.name)}> {props.name} </span> </a>
+    <a href={"/tags/" + props.name}> <span style={{marginRight: "0.2rem"}} class={"tag " + getColour(props.name)}> {props.name} </span> </a>
   )
 }
 

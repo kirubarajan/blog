@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Tag from '../components/Tag';
 
 require(`katex/dist/katex.min.css`)
 require("../styles/prism-base16-ateliersulphurpool.light.css")
@@ -19,7 +20,7 @@ const Template = ({data}) => {
             <br />
             <div className="generated">
               <p className="is-size-7" style={{marginBottom: "0.5rem"}}>
-                Tags: {tags.map(tag => <span style={{marginRight: "0.2rem"}} class="tag is-light is-link"> {tag} </span>)} 
+                Tags: {tags.map(tag => <Tag name={tag} />)} 
                 <a href="/blog"> <span style={{marginRight: "0.2rem"}} class="tag is-light is-link"> all </span> </a>
               </p>
               <p className="is-size-7" style={{marginBottom: "0.5rem"}}>Last Edit: {date}</p>
