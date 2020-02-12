@@ -5,9 +5,10 @@ const SingleTagTemplate = ({data, pageContext}) => {
   const { posts, tagName } = pageContext;
 
   return (
-    <div>
-      <div>
-        Posts about {`${tagName}`}
+    <div className="container">
+      <br />
+      <div style={{marginBottom: "0.5rem"}}>
+        All posts about <strong className="has-text-grey">{`${tagName}`}</strong>:
       </div>
       <div>
         <ul>
