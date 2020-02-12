@@ -71,8 +71,19 @@ gpt2.finetune(sess, file_name, model_name=model_name, steps=1000)
 gpt2.generate(sess)
 ```
 
-Very nice and simple!
+I trained a fine-tuned GPT-2 model on a [corpus of Barack Obama tweets I put together](https://raw.githubusercontent.com/kirubarajan/phraseviz/master/corpus.txt).
 
+```
+We have a clear goal: Ending the use of force in Afghanistan as quickly 
+as possible. That means giving Congress more time to figure out how to 
+make that happen. And doing so is the single most effective way forward.
+
+The Afghan people deserve better. They and I are foot soldiers for them. 
+We're going to use all our might to get that goal accomplished. 
+But America is not going to give ourselves up for expedience's sake.
+```
+
+Wow! Thanks, Obama for the big policy change!
 
 ## Multitask Learning
 
