@@ -1,6 +1,6 @@
 ---
 path: "/blog/papers"
-date: "2019-12-22"
+date: "2020-2-05"
 title: "Interesting Papers"
 tags: ['machine learning', 'natural language processing', 'notes']
 excerpt: "My Notes on Recent Papers in Machine Learning and NLP"
