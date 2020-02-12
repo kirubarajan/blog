@@ -15,7 +15,7 @@ const Index = () => {
 	          <h1 className="title"> Hi! I'm Arun. 🙌 </h1>
 	          <p>
 	            I'm a Canadian (🇨🇦) undergraduate at the University of Pennsylvania studying computer science. 
-              I research machine learning in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://www.cis.upenn.edu/~cis192/arun/">teach</a> one of the computer science courses at Penn.
+              I research machine learning in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://cis192.github.io/">teach</a> one of the computer science courses at Penn.
               I'm currently a partner at <a href="https://dormroomfund.com">Dorm Room Fund</a> and an incoming intern at <a href="https://bridgewater.com"> Bridgewater Associates</a>.
 
 	            
