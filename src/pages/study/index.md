@@ -49,7 +49,7 @@ The authors note that every random generator yields decent accuracy. Furthermore
 ## Compositional Attention Networks for Machine Reasoning
 [Hudson et. al, 2018](https://arxiv.org/abs/1803.03067)
 
-The authors design a novel fully differentiable neural network architecture that is capable of explicit and expressive reasoning. One primary goal of the paper is interpretibility, without sacrificing the predictive performance of black box methods. Problems are decomposed into attention-based steps, and are solved using Memory, Attention, and Composition (MAC) sub-units. On the CLEVR dataset for visual reasoning, the model accomplishes a state-of-the-art 98.9% accuracy, using less data than competing models.
+The authors design a novel fully differentiable neural network architecture that is capable of explicit and expressive reasoning. One primary goal of the paper is interpretability, without sacrificing the predictive performance of black box methods. Problems are decomposed into attention-based steps, and are solved using Memory, Attention, and Composition (MAC) sub-units. On the CLEVR dataset for visual reasoning, the model accomplishes a state-of-the-art 98.9% accuracy, using less data than competing models.
 
 ## Fine-tuning Transformer Models
 Easy usage can be done through the GPT-2 Simple package by Max Woolf (https://github.com/minimaxir/gpt-2-simple).

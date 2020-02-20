@@ -7,12 +7,17 @@ excerpt: "My Notes on Recent Papers in Machine Learning and NLP"
 ---
 
 # Interesting Papers
-> My Notes on Research Papers in Machine Learning
+> My Notes on Research Papers in Artificial Intelligence
 
 This page is for short outlines of papers I find interesting. These notes may vary in techincal detail as well as in core concepts - feel free to reach out to me with errata or questions.
 
+## Intelligence Without Representation
+[Brooks (1987)](https://people.csail.mit.edu/brooks/papers/representation.pdf)
+
+In this paper, roboticist Rodney Brooks advocates for a research direction of artificial intelligence that is orthogonal to the traditional paradigms of the 1980s (and before). In particular, he argues against centralized representation for AI systems, and instead offers that for a given *Creature*, the environment itself should act as a representation of the world through its feedback. This is an extension of the greater debate against Symbolic AI, and Brooks introduces the **Subsumption Architecture**. A variety of robots were developed and deployed at MIT, that leveraged the *actionist approach* to AI system design.
+
 ## Deep Reinforcement Learning with a Natural Language Action Space
-*Ji He et al. (2016)*
+[Ji He et al. (2016)](https://arxiv.org/abs/1511.04636)
 
 This paper introduces a new deep reinforcement architecture for handling natural language spaces: the Deep Reinforcement Relevance Network (DRRN). The DRRN is shown to perform well in text-based game settings, with superior performance over standard Q-Learning architectures. 
 
