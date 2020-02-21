@@ -1,12 +1,12 @@
 ---
 path: "/blog/papers"
-date: "2020-2-05"
-title: "Interesting Papers"
+date: "2020-02-05"
+title: "Interesting Research Papers"
 tags: ['machine learning', 'natural language processing', 'notes']
 excerpt: "My Notes on Recent Papers in Machine Learning and NLP"
 ---
 
-# Interesting Papers
+# Interesting Research Papers
 > My Notes on Research Papers in Artificial Intelligence
 
 This page is for short outlines of papers I find interesting. These notes may vary in techincal detail as well as in core concepts - feel free to reach out to me with errata or questions.

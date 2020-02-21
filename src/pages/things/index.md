@@ -1,6 +1,6 @@
 ---
 path: "/blog/things"
-date: "2020-2-11"
+date: "2020-02-11"
 title: "Things I Really Like"
 tags: ['personal', 'notes']
 excerpt: "A Variety of Things I Particularly Enjoy The Existence Of"
