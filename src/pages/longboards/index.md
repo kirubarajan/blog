@@ -1,27 +1,32 @@
 ---
 path: "/blog/longboards"
 date: "2020-02-22"
-title: "Longboards and Me"
+title: "On Longboards"
 tags: ['personal']
 ---
 
-# Longboards and Me
-Skateboarding has always been a big part of my life. Since I was 9 years old, I've always had a board by my side (even if I still can't tre-flip). It's great exercise, a fun hobby to meet people, and a good metaphor for living life. My favourite memories from the past decade has come from longboarding with my friends, and exploring the nature around us:
+# On Longboards
+Skateboarding has always been a big part of my life. Since I was 9 years old, I've always had a board by my side (even if I still can't tre-flip). It's great exercise, a fun hobby to meet people, and a good metaphor for living life. My best memories from the past decade has come from longboarding with my friends, and exploring the nature around us:
 
 ![barbertown](https://i.imgur.com/TXeDhT4.jpg)
+<small>(a view of my special longboarding spot in Mississauga, Ontario)</small>
 
 One of my favourite things about longboarding is the technical depth that comes with your setup. In a lot of ways that are similar to computer science and programming, your individual skateboard configuration says a lot about you. From the art design of the board to the ride science while racing down a hill, your board is always an extension of your personality.
 
 In this post, I would love to pay homage to the sport and share some of my favourite longboarding decks, trucks, and equipment that have helped carry me through the years.
 
 ## Design Moodboard
-I'm a sucker for anything designed by Rayne (based out of Vancouver, Canada). Here's the **Rayne Darkside** (V2):
+Longboards have a lot of range in design, and I've spent many years admiring all the interesting shapes and graphics. Here are some of my particular favourite companies and longboard designs:
+
+I'm a sucker for anything designed by Rayne (based out of Vancouver, Canada). Here's the **Rayne Darkside** (V2) made out of bamboo sandwiched between fiber-glass:
 
 ![something](https://d3ol6qpodzlgj8.cloudfront.net/cdn/farfuture/urIXGF75Zuz732FXMZHsZVZD3Iqn5fhQO7GAReYntjc/mtime:1497632620/sites/default/files/styles/preview_jpg/public/product-images/Darkside%20V2_0.jpg?itok=TRO1YcIM)
 
 Original Skateboards might not be the most consistent (or cost effective), but they make some damn beautiful designs. I used to ride a 34-inch version of this board ~6 years ago:
 
 ![something](https://www.pioneersboardshop.com/wp-content/uploads/Screen-shot-2012-06-25-at-4.46.29-PM.png)
+
+The real *kicker* were the nose/tail guards that made the entire board look very steampunk.
 
 ## Current Setup
 My current daily board that I use at school (riding to class, groceries, cruising etc.) is the **Landyachtz Dinghy Emboss**:
