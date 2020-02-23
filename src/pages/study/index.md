@@ -93,11 +93,11 @@ Wow! Thanks, Obama for the big policy change!
 ## Generative Adversarial Networks
 
 Lately, I've also been playing with Style Transfer GANs by exploring abstract artwork from contemporary artists:
-
-![image](https://i.imgur.com/gFAOIRM.png)
+ 
+![image](https://i.imgur.com/gFAOIRM.png) 
 <small> (this is based off of pieces from Marc Chagall) </small>
 
-![image](https://i.imgur.com/Rv7KRFC.png)
+![image](https://i.imgur.com/Rv7KRFC.png) <br />
 <small> (this is based off pieces from Jerret Lee) </small>
 
 ## Multitask Learning
