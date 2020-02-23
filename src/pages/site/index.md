@@ -18,9 +18,15 @@ My personal website has tracked my own progress in software development.
 
 My first attempt at a website was using a professional Bootstrap template and static hosting. I liked it, but I was a useless high school student, so I thought the professional get-up was overkill. The second iteration of my site in high school was written in Express and Angular (back when it was cool) since I thought of them synonymously with *web development*. I wish I had screenshots but this was before I learned how to use Git. This didn't work out due to technical debt (and I didn't know how to deploy things). 
 
-In the following year, I got pretty into [Meteor](https://www.meteor.com/) for web development due its easy full-stack functionality and I re-wrote my website to use it on the back-end. The MongoDB database ended up storing blog posts as raw HTML and that hurt my brain to think about, so this didn't last.
+In the following year, I got pretty into [Meteor](https://www.meteor.com/) for web development due its easy full-stack functionality and I re-wrote my website to use it on the back-end. The MongoDB database ended up storing blog posts as raw HTML and that hurt my brain to think about, so this didn't last. The personal website began becoming useful since switching to a Jekyll website. 
 
-The personal website began becoming useful since switching to a Jekyll website. This was mainly because of **dedicated Markdown files** for content management, which I enjoyed the flexibility and structure of. Ultimately, I got rid of this because I wanted to implement my own styling and functionality.
+This was mainly because of **dedicated Markdown files** for content management, which I enjoyed the flexibility and structure of.
+
+![screenshot](https://i.imgur.com/RnldAK2.png)
+
+Ultimately, I got rid of this because I wanted to implement my own styling and functionality.
+
+![screenshot](https://i.imgur.com/1vQeBlF.png)
 
 My site began to stabilize my freshman year of university when I re-wrote it in Python. I built a simple website layout in [Bulma](https://bulma.io/) and I wrote a simple file-system parser to read a `/posts` folder of Markdown and render them. This was kind of my attempt of implementing Jekyll in Python. As you can imagine, this didn't work out too well. My second to last implementation was in [Django](https://www.djangoproject.com/) due to its really nice ORM for SQL. Again, this was a little over-kill for a personal website and blog and there was a lot of machinery involved with tweaking UI things. In particular, I couldn't for the life of me get LaTeX rendering to work. 
 
