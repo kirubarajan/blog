@@ -90,10 +90,6 @@ But America is not going to give ourselves up for expedience's sake.
 
 Wow! Thanks, Obama for the big policy change!
 
-## Multitask Learning
-
-General background information will go here!
-
 ## Generative Adversarial Networks
 
 Lately, I've also been playing with Style Transfer GANs by exploring abstract artwork from contemporary artists:
@@ -101,3 +97,11 @@ Lately, I've also been playing with Style Transfer GANs by exploring abstract ar
 ![image](https://i.imgur.com/gFAOIRM.png)
 
 <small> (this is based off of pieces from Marc Chagall) </small>
+
+![image](https://i.imgur.com/Rv7KRFC.png)
+
+<small> (this is based off pieces from Jerret Lee) </small>
+
+## Multitask Learning
+
+General background information will go here!
