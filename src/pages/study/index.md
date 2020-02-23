@@ -1,6 +1,6 @@
 ---
 path: "/blog/study"
-date: "2020-02-10"
+date: "2020-02-22"
 title: "Independent Study on *Modern* Deep Learning"
 tags: ['machine learning', 'research']
 excerpt: "My Spring 2020 Independent Study in Machine Learning"
@@ -95,11 +95,9 @@ Wow! Thanks, Obama for the big policy change!
 Lately, I've also been playing with Style Transfer GANs by exploring abstract artwork from contemporary artists:
 
 ![image](https://i.imgur.com/gFAOIRM.png)
-
 <small> (this is based off of pieces from Marc Chagall) </small>
 
 ![image](https://i.imgur.com/Rv7KRFC.png)
-
 <small> (this is based off pieces from Jerret Lee) </small>
 
 ## Multitask Learning
