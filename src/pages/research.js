@@ -15,14 +15,13 @@ const Research = () => {
 			  <h1 class="title"> my research</h1>
               <p><strong>Papers</strong></p>
               <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-                <a class="panel-block list-group-item is-primary">ChatEval: A Tool for Chatbot Evaluation [NAACL 2019]</a>
-                <a class="panel-block list-group-item is-primary">Cloud4ISR: Large-scale intelligence, surveillance, and reconnaissance [SPIE 2016]</a>
+                <a class="panel-block list-group-item is-primary" href="https://www.aclweb.org/anthology/N19-4011/">ChatEval: A Tool for Chatbot Evaluation [NAACL 2019]</a>
+                <a class="panel-block list-group-item is-primary" href="https://spie.org/conferences-and-exhibitions/past-conferences-and-exhibitions/defense--commercial-sensing-2016">Cloud4ISR: Large-scale intelligence, surveillance, and reconnaissance [SPIE 2016]</a>
               </div>
-              <p><strong>Projects</strong></p>
+              <p><strong>Course Projects</strong></p>
               <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
                 <a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/530_Final_Project_1_.pdf">GROVER: Generating Rap by Observing Verses</a>
-				<a class="panel-block list-group-item is-primary" herf="https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life(1).pdf">DNA Lineage Tree Rreconstruction (CRISPR)</a>
-				<a class="panel-block list-group-item is-primary">Sentiment Tracking on Social Networks</a>
+				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf">Deep DNA (CRISPR) Lineage Tree Rreconstruction</a>
               </div>
 	            <p style={{marginBottom: "0.5rem"}}> <strong>Natural Language Processing</strong> </p>
 	            I am an undergraduate researcher working in Professor <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch's</a> lab. My research interests
