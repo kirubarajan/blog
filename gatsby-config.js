@@ -11,6 +11,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-104989157-2",
+      },
+    },
+    {
       resolve: `gatsby-transformer-sharp`
     },
     `gatsby-plugin-sharp`,
