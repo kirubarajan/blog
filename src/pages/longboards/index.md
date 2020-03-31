@@ -6,17 +6,17 @@ tags: ['personal']
 ---
 
 # On Longboards
-Skateboarding has always been a big part of my life. Since I was 9 years old, I've always had a board by my side (even if I still can't tre-flip). It's great exercise, a fun hobby to meet people, and a good metaphor for living life. My best memories from the past decade has come from longboarding with my friends, and exploring the nature around us:
+Skateboarding has always been a big part of my life. Since I was 9 years old, I've always had a board by my side (even if I still can't tre-flip). It's great exercise, a fun hobby to meet people, and a good metaphor for living life. My best memories from the past decade has come from longboarding with my friends (as well as random skaters we managed to subsume into our group), and exploring the nature around us in Southern Ontario.
 
 ![barbertown](https://i.imgur.com/TXeDhT4.jpg)
 <small>(a view of my special longboarding spot in Mississauga, Ontario)</small>
 
-One of my favourite things about longboarding is the technical depth that comes with your setup. In a lot of ways that are similar to computer science and programming, your individual skateboard configuration says a lot about you. From the art design of the board to the ride science while racing down a hill, your board is always an extension of your personality.
-
-In this post, I would love to pay homage to the sport and share some of my favourite longboarding decks, trucks, and equipment that have helped carry me through the years.
+Your individual skateboard setup says a lot about you. From the art design of the board to the ride science while racing down a hill, your board is always an extension of your personality. You can tell a lot about somebody by looking at the build and condition of their board. In this post, I would love to pay homage to the sport and share some of my favourite longboarding decks, trucks, and equipment that have helped carry me through the years.
 
 ## Design Moodboard
 Longboards have a lot of range in design, and I've spent many years admiring all the interesting shapes and graphics. Here are some of my particular favourite companies and longboard designs:
+
+### Favourites
 
 I'm a sucker for anything designed by Rayne (based out of Vancouver, Canada). Here's the **Rayne Darkside** (V2) made out of bamboo sandwiched between fiber-glass:
 
@@ -28,7 +28,7 @@ Original Skateboards might not be the most consistent (or cost effective), but t
 
 The real *kicker* were the nose/tail guards that made the entire board look very steampunk.
 
-## Current Setup
+### Current Setup
 My current daily board that I use at school (riding to class, groceries, cruising etc.) is the **Landyachtz Dinghy Emboss**:
 
 ![dinghy](https://i5.walmartimages.com/asr/14ce04ee-0756-4002-bace-e3dd58eb9e47_1.07d76af3480f7ce64be1de20cd4ad7ea.jpeg)
@@ -51,4 +51,10 @@ It's no secret that I love short wheelbases, and the [original Tesseract](https:
 I've ridden this board going downhill at speeds of 50+ km/h, and have effortlessly carried it around the coffee shop - it can do it all.
 
 ## Moving Forward
-I feel like I'm past my peak longboarding capabilities, but I'm trying hard to get my mojo back. On campus, I always find reasons to bust out the Dinghy and feel the wind in my hair. My goal for the summer is to discover all the cool hills and side-roads to longboarding down, documenting it all the way through (and finally making that edit I've always thought about). 
+I feel like I'm past my peak longboarding capabilities, but I'm trying hard to get my mojo back. Skateboarding is meant to be intuitive - my thoughts behind it are the same from a nine years of age to twenty. There's nothing you can be taught, but there's a lot to learn.
+
+On campus, I'm always trying to find reasons to bust out the Dinghy and feel the wind in my hair. My goal for the summer is to discover all the cool hills and side-roads to longboard down, documenting it all the way through (and finally making that edit I've always thought about). Hopefully, I fall a lot.
+
+**March Update**
+
+I'm working on my tre-flip - will keep the blog posted soon!

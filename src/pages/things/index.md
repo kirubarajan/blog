@@ -16,19 +16,21 @@ Use this page to decide whether or not you like my style. The orderings don't pa
 2. [*Blue Rondo à la Turk* by The David Brubeck Quartet](https://open.spotify.com/track/36MLLjFug6TJYNODUVR7av?si=IsbtjePhSjqXH8CUHE_BGA)
 3. [*8701* by JID and 6LACK](https://open.spotify.com/track/0gmYtRyuvRKpd6cCApSDTh?si=FrK_gR4RR6WyYcmBoo7CEQ)
 
-## Software 👨🏾‍💻
-1. The beautifully designed open source calculator app, named [Numi](https://numi.app/).
-2. Modern PostgreSQL client that doesn't make you wanna cry, named [Postico](https://eggerapps.at/postico/).
-3. My favourite app for serious writing, named [Ulysses](https://ulysses.app/).
-
 ## Places 🏔
 1. Mississauga, Ontario 🇨🇦
 2. Vancouver, British Columbia 🇨🇦
 3. Osaka, Kansai 🇯🇵
 
+## Software 👨🏾‍💻
+1. The beautifully designed open source calculator app, named [Numi](https://numi.app/).
+2. Modern PostgreSQL client that doesn't make you wanna cry, named [Postico](https://eggerapps.at/postico/).
+3. My favourite app for serious writing, named [Ulysses](https://ulysses.app/).
+
 ## Video Games
 1. *INSIDE* (Playdead Studios)
 2. *Super Smash Brothers Ultimate* (Nintendo)
+3. *Paper Mario: The Thousand Year Door* (Intelligent Systems)
+4. *The Last of Us* (Naughty Dog)
 
 ## Books
 1. The Language of Food (Dan Jurafsky)
