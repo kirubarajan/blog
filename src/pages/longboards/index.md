@@ -44,9 +44,10 @@ However, my main setup back in Canada is the **Loaded Truncated Tesseract**:
 
 ![tesseract](https://www.muirskate.com/photos/products/8444/hd_product_Loaded-Truncated-2019--Lognboard-%28Set-HD%29.png)
 
-It's no secret that I love short wheelbases, and the [original Tesseract](https://www.youtube.com/watch?v=ZI6lcXKVT3U) was a thing of beauty. This board is made of bamboo and fiberglass, and overall is a love-letter to anybody who's even remotely into skateboarding. I ride it with Cast Ronins and Cloudride wheels:
+It's no secret that I love short wheelbases, and the [original Tesseract](https://www.youtube.com/watch?v=ZI6lcXKVT3U) was a thing of beauty. This board is made of bamboo and fiberglass, and overall is a love-letter to anybody who's even remotely into skateboarding. I ride it with Cast Ronins and Cloudride wheels.
 
 ![my setup](https://i.imgur.com/Ui7BKqp.jpg)
+<small>(excuse the coning on the wheels)</small>
 
 I've ridden this board going downhill at speeds of 50+ km/h, and have effortlessly carried it around the coffee shop - it can do it all.
 
