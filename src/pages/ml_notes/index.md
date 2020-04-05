@@ -2,7 +2,7 @@
 path: "/blog/ml_notes"
 date: "2019-11-21"
 title: "Machine Learning Concepts"
-tags: ['machine learning', 'natural language processing', 'notes']
+tags: ['machine learning', 'notes']
 excerpt: "Notes on Various Topics"
 ---
 

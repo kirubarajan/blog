@@ -2,7 +2,7 @@
 path: "/blog/learning"
 date: "2018-09-09"
 title: "Learning Machine Learning"
-tags: ['machine learning', 'natural language processing']
+tags: ['machine learning', 'research']
 excerpt: "An Undergraduate Summer in NLP Research"
 ---
 
