@@ -2,12 +2,12 @@
 path: "/blog/site"
 date: "2020-02-21"
 title: "About This Website"
-tags: ['programming', 'research']
-excerpt: "How I Build/Use This Site"
+tags: ['programming']
+excerpt: "How I Build and Use This Site"
 ---
 
 # About This Website
-> How I Build/Use This Site
+> How I Build and Use This Site
 
 It's pretty commonplace for computer scientists (and people working in tech) to maintain a website displaying a portfolio and a blog conveying technical thoughts. As you can see, I am no different. In fact, I actually purchased the domain name https://kirubarajan.com back in early high school when we had a teacher strike and I needed something to do.
 
