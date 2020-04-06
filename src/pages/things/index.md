@@ -31,6 +31,7 @@ Use this page to decide whether or not you like my style. The orderings don't pa
 2. *Super Smash Brothers Ultimate* (Nintendo)
 3. *Paper Mario: The Thousand Year Door* (Intelligent Systems)
 4. *The Last of Us* (Naughty Dog)
+5. *The Legend of Zelda: Breath of the Wild (Nintendo)*
 
 ## Books
 1. The Language of Food (Dan Jurafsky)
