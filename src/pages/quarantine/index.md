@@ -15,12 +15,12 @@ But on the other hand, I think expecting too much out of yourself during such tr
 
 My themes for the next few weeks are **comfort** and **exploration**.
 
-Comfort is purely about indulgence. Video games, sweets, caffeine, more video games, TV shows, long Zoom calls with friends - you name it.
+Comfort is purely about indulgence. Sleeping in, candy, caffeinated beverages, TV shows, long Zoom calls with friends - you name it. In particular, I've devoted a lot of time to playing fun video games that I always wanted to play. [I've also decided to make my bucket list public!](/games). It's nice to have a little vacation at home while the rest of the world is on fire.
 
 ![lakeshore](https://i.imgur.com/D8JM1Wv.jpg)
 <small> long walks along lakeshore on the rocks </small>
 
-Exploration is about doing things I otherwise wouldn't be able to do during my "normal life". Cooking new recipies with my mom, learning guitar, reading old Tamil poetry - if it's something I couldn't do without having a large amount of time stuck at home, it contributes to the theme.
+Exploration is about doing things I otherwise wouldn't be able to do during my "normal life". Cooking new recipies with my mom, learning guitar, reading old Tamil poetry - if it's something I couldn't do without having a large amount of time stuck at home, it contributes to the theme. I've also been using this time to go on long walks every day (still maintaining my 2 meters of distance), and I've found it to be very therapeutic. Without headphones in, just admiring the everyday sounds of a quiet evening neighbourhood. Spending time outside (again, far away from other people) has kept me sane, especially with all the nice weather.
 
 ![cooking](https://i.imgur.com/zcgGNR8.jpg)
 <small> prepping ingredients for a vegetarian stir-fry </small>
