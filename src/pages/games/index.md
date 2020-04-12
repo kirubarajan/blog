@@ -24,5 +24,8 @@ Here are the games I've finished (or played a substantial amount of) since retur
 3. *Wolfenstein: The New Order*
 4. *Titanfall 2*
 5. *Animal Crossing: New Horizons*
+6. *Legend of Zelda: Breath of the Wild* (re-play)
 6. *Shadow of the Colossus*
-7. *Wolfenstein II: The New Colossus* (in progress)
+7. *Halo Reach*
+8. *Legend of Zelda: Wind Waker*
+9. *Wolfenstein II: The New Colossus*
