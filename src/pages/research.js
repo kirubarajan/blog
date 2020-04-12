@@ -21,7 +21,7 @@ const Research = () => {
               <p><strong>Course Projects</strong></p>
               <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
                 <a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/530_Final_Project_1_.pdf">GROVER: Generating Rap by Observing Verses</a>
-				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf">Deep DNA (CRISPR) Lineage Tree Rreconstruction</a>
+				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf">Deep DNA (CRISPR) Lineage Tree Reconstruction</a>
               </div>
 	            <p style={{marginBottom: "0.5rem"}}> <strong>Natural Language Processing</strong> </p>
 	            I am an undergraduate researcher working in Professor <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch's</a> lab. My research interests
