@@ -11,11 +11,11 @@ tags: ['personal']
 
 It's no secret that COVID-19 has put the world in flux. Jobs are lost, routines are ruined, and lifestyles have been overturned. To look on the bright side of things, lots of folks are setting "challenges" and other audacious goals for themselves so that they emerge from quarantine better and more complete people. 
 
-But on the other hand, I think expecting too much out of yourself during such troubling times is also unhealthy. There's no need to pile on unnecessary stress during a global pandemic. Generally, I think goals themselves can  be a way to set yourself up to fail and never look back so instead I like to set myself **themes**. Individual acts, no matter how small, contribute to my theme (whether it be for the New Year or time in quarantime), and it's more rewarding to look back on a series of successes rather than the missing gaps in my "goals".
+But on the other hand, I think expecting too much out of yourself during such troubling times is also unhealthy. There's no need to pile on unnecessary stress during a global pandemic. Generally, I think goals themselves can  be a way to set yourself up to fail and never look back so instead I like to set myself **themes**. Individual acts, no matter how small, contribute to my theme (whether it be for the New Year or time in quarantine), and it's more rewarding to look back on a series of successes rather than the missing gaps in my "goals".
 
 My themes for the next few weeks are **comfort** and **exploration**.
 
-Comfort is purely about indulgence. Sleeping in, candy, caffeinated beverages, TV shows, long Zoom calls with friends - you name it. In particular, I've devoted a lot of time to playing fun video games that I always wanted to play. [I've also decided to make my bucket list public!](/blog/games). It's nice to have a little vacation at home while the rest of the world is on fire.
+Comfort is purely about indulgence. Sleeping in, candy, caffeinated beverages, TV shows, long Zoom calls with friends - you name it. In particular, I've devoted a lot of time to playing fun video games that I always wanted to play. [I've also decided to make my bucket list public!](/blog/games) It's nice to have a little vacation at home while the rest of the world is on fire.
 
 ![lakeshore](https://i.imgur.com/D8JM1Wv.jpg)
 <small> long walks along lakeshore on the rocks </small>

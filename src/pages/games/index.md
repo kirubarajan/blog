@@ -28,4 +28,5 @@ Here are the games I've finished (or played a substantial amount of) since retur
 6. *Shadow of the Colossus*
 7. *Halo Reach*
 8. *Legend of Zelda: Wind Waker*
-9. *Wolfenstein II: The New Colossus*
+9. *The Stanley Parable*
+10. *Wolfenstein II: The New Colossus*
