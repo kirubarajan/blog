@@ -34,7 +34,8 @@
     "node-sass": "^4.13.0",
     "prismjs": "^1.17.1",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-helmet": "^6.0.0"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",

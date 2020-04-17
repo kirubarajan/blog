@@ -1,9 +1,15 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 import Nav from '../components/Nav'
 
 const Index = () => {
   return (
 	  <section className="section" style={{"paddingTop": "1rem"}}>
+		    <Helmet>
+          <meta charSet="utf-8" />
+          <title>Arun Kirubarajan</title>
+        </Helmet>
+
 	    <div className="container">
         <div className="columns">
           <div className="column is-one-fourth"> </div>

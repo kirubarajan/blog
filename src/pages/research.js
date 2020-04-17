@@ -1,9 +1,15 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 import Nav from '../components/Nav'
 
 const Research = () => {
   return (
 	  <section className="section" style={{"paddingTop": "1rem"}}>
+		  	<Helmet>
+          <meta charSet="utf-8" />
+          <title>Research</title>
+        </Helmet>
+
 	    <div className="container">
         <div className="columns">
           <div className="column is-one-fourth"> </div>
@@ -21,6 +27,7 @@ const Research = () => {
               <p><strong>Projects</strong></p>
               <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
 				<a class="panel-block list-group-item is-primary" href="https://github.com/kirubarajan/trick">Learning to Trick Humans: Evaluation Criteria for Human and Computer Written Text</a>
+				<a class="panel-block list-group-item is-primary" href="https://github.com/kirubarajan/trick">Learning Temporal Event Reasoning Using Wiki-How</a>
 				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf">Deep DNA (CRISPR) Lineage Tree Reconstruction</a>
 				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/530_Final_Project_1_.pdf">GROVER: Generating Rap by Observing Verses</a>
               </div>

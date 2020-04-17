@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from "react-helmet"
 import Tag from '../components/Tag';
 
 require(`katex/dist/katex.min.css`)
@@ -10,9 +11,15 @@ const Template = ({data}) => {
   const html = markdownRemark.html
   const date = markdownRemark.frontmatter.date
   const tags = markdownRemark.frontmatter.tags
+  const title = markdownRemark.frontmatter.title
   
   return (
     <section>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{title}</title>
+      </Helmet>
+
       <div className="container">
         <div className="columns">
           <div className="column" />

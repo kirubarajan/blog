@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from 'gatsby';
+import { Helmet } from "react-helmet"
 import Nav from '../components/Nav';
 import Tag from '../components/Tag';
 
@@ -8,6 +9,11 @@ const Blog = ({data}) => {
 
   return (
     <section className="section" style={{"paddingTop": "1rem"}}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blog</title>
+      </Helmet>
+      
       <div className="container">
         <div className="columns">
           <div className="column is-one-fourth"> </div>
