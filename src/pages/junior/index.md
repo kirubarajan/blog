@@ -3,11 +3,11 @@ path: "/blog/junior"
 date: "2020-04-16"
 title: "Junior Year in Photos"
 tags: ['personal']
-excerpt: "How I Build and Use This Site"
+excerpt: "Human Subjects Sold Seperately"
 ---
 
 # Junior Year in Photos
-> Humans Sold Seperately
+> Human Subjects Sold Seperately
 
 ![](https://i.imgur.com/1309Uf7.jpg)
 

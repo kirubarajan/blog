@@ -3,7 +3,7 @@ path: "/blog/narrative"
 date: "2020-01-10"
 title: "Independent Study on Narrative Event Chains"
 tags: ['machine learning', 'research']
-excerpt: "My Notes on Recent Papers in Machine Learning and NLP"
+excerpt: "Unsupervised Learning of Narrative Knowledge"
 ---
 
 # Unsupervised Learning of Narrative Event Chains

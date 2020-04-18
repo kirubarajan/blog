@@ -3,9 +3,12 @@ path: "/blog/longboards"
 date: "2020-02-22"
 title: "On Longboards"
 tags: ['personal']
+excerpt: "Reflecting on My Favourite Hobby"
 ---
 
 # On Longboards
+> Reflecting on My Favourite Hobby
+
 Skateboarding has always been a big part of my life. Since I was 9 years old, I've always had a board by my side (even if I still can't tre-flip). It's great exercise, a fun hobby to meet people, and a good metaphor for living life. My best memories from the past decade has come from longboarding with my friends (as well as random skaters we managed to subsume into our group), and exploring the nature around us in Southern Ontario.
 
 ![barbertown](https://i.imgur.com/TXeDhT4.jpg)

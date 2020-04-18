@@ -3,7 +3,7 @@ path: "/blog/ml_notes"
 date: "2019-11-21"
 title: "Machine Learning Concepts"
 tags: ['machine learning', 'notes']
-excerpt: "Notes on Various Topics"
+excerpt: "My Notes on Various Topics"
 ---
 
 # Machine Learning Concepts

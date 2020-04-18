@@ -1,9 +1,9 @@
 ---
 path: "/blog/zsh"
 date: "2018-08-15"
-title: "Customizing Your Shell (Tutorial)"
+title: "Customizing Your Zsh Shell (Tutorial)"
 tags: ['programming']
-excerpt: "How to make your zsh config look pretty!"
+excerpt: "Making Your Terminal Look Pretty!"
 ---
 
 # Your Terminal and You

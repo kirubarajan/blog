@@ -34,9 +34,9 @@ const Blog = ({data}) => {
                   <div className="box" key={frontmatter.path} style={{color: "grey", marginBottom: "1rem"}}>
                     <span style={{fontSize: "0.75rem"}}>{frontmatter.date} </span> <br />
                     <Link to={frontmatter.path}>
-                    {frontmatter.title}
+                    <p>{frontmatter.title}</p>
                     </Link>
-                    <br style={{marginBottom: "0.5rem"}} />
+                    <p style={{fontSize: "0.85rem", marginBottom: "0.5rem", marginTop: "0.1rem"}}>{frontmatter.excerpt}</p>
                     {frontmatter.tags.map(tag => <Tag name={tag} />)} 
                   </div>
                 )

@@ -1,13 +1,13 @@
 ---
 path: "/blog/things"
 date: "2020-02-11"
-title: "Things I Really Like"
+title: "My Favourite Things"
 tags: ['personal', 'notes']
-excerpt: "A Variety of Things I Particularly Enjoy The Existence Of"
+excerpt: "Lists of Things That I Like"
 ---
 
-# Things I Really Like
-> a variety of things that I particularly enjoy the existence of
+# My Favourite Things
+> Lists of Things That I Like
 
 Use this page to decide whether or not you like my style. The orderings don't particularly matter much, and I might remove things as my interests change!
 

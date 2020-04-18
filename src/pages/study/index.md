@@ -3,7 +3,7 @@ path: "/blog/study"
 date: "2020-03-06"
 title: "Independent Study on *Modern* Deep Learning"
 tags: ['machine learning', 'research']
-excerpt: "My Spring 2020 Independent Study in Machine Learning"
+excerpt: "Misc. Machine Learning Methodologies"
 ---
 
 # Independent Study on *Modern* Deep Learning
