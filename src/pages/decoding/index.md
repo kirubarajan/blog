@@ -58,6 +58,13 @@ $$
 for an entire sequence is thereby also **NP-Hard** since they are equivalent problems. As a result, solving our little text decoding problem in polynomial time could net you [one million dollars](https://en.wikipedia.org/wiki/Millennium_Prize_Problemshttps://en.wikipedia.org/wiki/Millennium_Prize_Problems)! People have tried to do this for a long time with little luck, so let's look into **approximating** this problem instead.
  
 ## Greedy Decoding
+Our first and most intuitive approximation is known as **Greedy Decoding**, where we take the **most probable word** over a vocabulary $V$ for a context $c$ as the next word.
+
+$$
+w_i = \operatorname*{arg\, max}_{w \in V} ~ P(w | c)
+$$
+
+Repeatedly taking the most performing this operation will allow us to create a sentence, one word at a time.
 
 ## Beam Search
 
