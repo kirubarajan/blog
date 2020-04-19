@@ -27,13 +27,12 @@ const Teaching = () => {
 	          <br />
 	          <p><strong>Machine Learning</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-	            <a class="panel-block list-group-item is-primary">P-Classic 2019 - NLP Survey Lecture </a>
-	            <a class="panel-block list-group-item is-primary">WOCHAT 2019 - Neural Text Generation </a>
-	            <a class="panel-block list-group-item is-primary">PennApps 2019 - ML and NLP Quickstart (Python)</a>
+	            <a class="panel-block list-group-item is-primary">P-Classic 2019 - Natural Language Processing (Python) </a>
+	            <a class="panel-block list-group-item is-primary">PennApps 2019 - Machine Learning (Python) </a>
 	          </div>
 	          <p><strong>Web Development</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-	            <a class="panel-block list-group-item is-primary">PennApps 2018 - Django Framework (Python)</a>
+	            <a class="panel-block list-group-item is-primary">PennApps 2018 - Django Rest Framework (Python)</a>
 	            <a class="panel-block list-group-item is-primary">PennApps 2018 - Express REST APIs (Node.js)</a>
 	          </div>
 	        </div>
