@@ -28,7 +28,7 @@ const Index = () => {
 
               <br /> <br />
               I like brewing coffee, skateboarding, and playing video games!
-              This website is where I write the things that I am doing or stuff I find interesting.
+              This website is where I write about the things that I am doing or stuff I find interesting.
 	          </p>
 	        </div>
 	        <div className="column"></div>
