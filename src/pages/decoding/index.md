@@ -67,8 +67,12 @@ $$
 Repeatedly taking the most performing this operation will allow us to create a sentence, one word at a time.
 
 ## Beam Search
+As with most naive approaches, Greedy Decoding doesn't always produce the best outcomes. This is especially true in certain domains such as translating between different languages, where tokens at the beginning of the sentence may dramatically alter the likehood of its following tokens. This creates the problem of a high-probability token "hiding behind" a low-probability token that preceeds it in the order of the sentence. As a result, Greedy Decoding will forgo the low-probabilty token in favour of another one, regardless of that token's subsequently generated tokens.
+
+One approach that mitigates this problem is **Beam Search**, which is another *greedy* algorithm that approximates the search process by maintaining multiple possible candidates for a path (i.e. the sentence).
 
 ## Random Sampling
+The last way that we can generate text is to let uncertainy do it's thing and **randomly sample** from the distribution of $P(w | c)$. In expectation, this should mean that we produce likely sequences, and that we should have some trials that produce a very high-probability sequence. For machine learning in general, relying on expectation tends to do us well!
 
 ## Distribution Changes
 
