@@ -20,20 +20,34 @@ So how do we make computers sound human? In particular, let’s look at the diff
 
 ### Our Objective
 
-We can use the chain rule in probability to break down a sequence (or sentence) of words into step-by-step calculations:
+We can use the chain rule in probability to break down a sequence (or sentence) of words into step-by-step calculations. Let's say we are looking for the probability of the phrase "cat in the hat":
 
 $$
-P(\text{cat in the hat}) = P(\text{hat} | \text{the}) \cdot P(\text{the} | \text{in}) \cdot P(\text{in} | \text{cat}) \cdot P(\text{cat} | \text{<s>})
+P(\text{cat in the hat})
 $$
 
-How do we get these probabilities? That's what the **language model** is for. In essence, a language model’s purpose is to give us $P(w|c)$, where $w$ is a particular target word (i.e. the next word) and $c$ is the context that precedes the target word. Using a trained model, we can use $P(w|c)$ to create a distribution of the liklihood for the next word.
+We can break this value down into the product of the following terms (where $\text{<s>}$ denotes the starting token):
+
+$$
+P(\text{<s>})
+\newline
+P(\text{cat} ~|~ \text{<s>})
+\newline 
+P(\text{in} ~|~ \text{<s> cat}) 
+\newline 
+P(\text{the} ~|~ \text{<s> cat in}) 
+\newline 
+P(\text{hat} ~|~ \text{<s> cat in the}) 
+$$
+
+But how do we get these probabilities to start? That's what the **language model** is for. In essence, a language model’s purpose is to give us $P(w|c)$, where $w$ is a particular target word (i.e. the next word) and $c$ is the context that precedes the target word. Using a trained model, we can use $P(w|c)$ to create a distribution of the likelihood for the next word.
 
 Now, we turn our focus to using these probabilities to **create** text. Let's determine what the first word of our generation would be. Similar to the previous example, where we have a $\text{<s>}$ token to signify the beginning of a sequence, we can ask the model what the value of $P(w | \text{<s>})$ for a variety of different values of $w$. But how do we select what $w$ should be when we're given the probabilities for every possible word? Is it simply the highest value?
 
 More broadly, our goal is to select the words that maximize:
 
 $$
-\prod _{i = 0} ^{n} P(w_i | c_i)
+\prod _{i = 0} ^{n} P(w_i ~ | ~ c_0 ~ ... ~ c_{i - 1})
 $$
 
 But how do we do this using the model's outputted probabilities? As we will see, this is the million dollar question - literally. 
@@ -52,7 +66,7 @@ The easiest reduction to see is if we construct a directed graph, starting with 
 As we know, the longest path problem is famously NP-Hard, which means that trying to maximize
 
 $$
-\prod _{i = 0} ^{n} P(w_i | c_i)
+\prod _{i = 0} ^{n} P(w_i ~ | ~ c_0 ~ ... ~ c_{i - 1})
 $$
 
 for an entire sequence is thereby also **NP-Hard** since they are equivalent problems. As a result, solving our little text decoding problem in polynomial time could net you [one million dollars](https://en.wikipedia.org/wiki/Millennium_Prize_Problemshttps://en.wikipedia.org/wiki/Millennium_Prize_Problems)! People have tried to do this for a long time with little luck, so let's look into **approximating** this problem instead.
@@ -61,7 +75,7 @@ for an entire sequence is thereby also **NP-Hard** since they are equivalent pro
 Our first and most intuitive approximation is known as **Greedy Decoding**, where we take the **most probable word** over a vocabulary $V$ for a context $c$ as the next word.
 
 $$
-w_i = \operatorname*{arg\, max}_{w \in V} ~ P(w | c)
+w_i = \operatorname*{arg\, max}_{w \in V} ~ P(w_i ~ | ~ c_0 ~ ... ~ c_{i - 1})
 $$
 
 Repeatedly taking the most performing this operation will allow us to create a sentence, one word at a time.
@@ -86,4 +100,4 @@ The last way that we can generate text is to let uncertainy do it's thing and **
 
 So it seems like there are a lot of decoding strategies for generating text. For deciding which to use, I like to think about what aspect of human language you are trying to capture. If it's the sense-maximizing translation task, then Beam Search is the way to go (determinism can be helpful). If you want the expressiveness and character of a chatbot, then random sampling with a distributional change is the current best.
 
-Trying to use statical and mathematical tools to decipher what it means to be human is an interesting avenue of research and lately I've been exploring it in earnest. Check out this project [here](github.com/kirubarajan/trick) to see our latest efforts!
+Trying to use statical and mathematical tools to decipher what makes text sound human is an interesting avenue of research and lately I've been exploring it in earnest. Check out this project [here](github.com/kirubarajan/trick) to see our latest efforts!
