@@ -17,7 +17,7 @@ But in the time of a tumultuous real world, the appeals of virtual ones couldn't
 
 ## My Progress
 
-Here are the games I've finished (or played a substantial amount of) since returning back to Canada for social distancing. If you couldn't tell, I have a preference for well-crafted, single player experiences. Working through this backlog of games is ultimately what keeps me looking forward to each day - I try to finish around a video game a week (regardless of its length).
+Here are the games I've finished (or played a substantial amount of) since returning back to Canada for social distancing. If you couldn't tell, I have a preference for well-crafted, single player experiences. Working through this backlog of games is what keeps me looking forward to each day - I try to finish around a video game a week (regardless of its length).
 
 1. *God of War*
 2. *DOOM Eternal*
@@ -30,3 +30,5 @@ Here are the games I've finished (or played a substantial amount of) since retur
 8. *Legend of Zelda: Wind Waker*
 9. *The Stanley Parable*
 10. *Wolfenstein II: The New Colossus*
+11. *Uncharted 3: Drake's Deception (re-play)*
+12. *Celeste*
