@@ -40,9 +40,9 @@ P(\text{the} ~|~ \text{<s> cat in})
 P(\text{hat} ~|~ \text{<s> cat in the}) 
 $$
 
-But how do we get these probabilities to start? That's what the **language model** is for. In essence, a language model’s purpose is to give us $P(w|c)$, where $w$ is a particular target word (i.e. the next word) and $c$ is the context that precedes the target word. Using a trained model, we can use $P(w|c)$ to create a distribution of the likelihood for the next word.
+But how do we get these probabilities to start? That's what the **language model** is for. In essence, a language model’s purpose is to give us $P(w ~|~ c)$, where $w$ is a particular target word (i.e. the next word) and $c$ is the context that precedes the target word. Using a trained model, we can use $P(w ~|~ c)$ to create a distribution of the likelihood for the next word.
 
-Now, we turn our focus to using these probabilities to **create** text. Let's determine what the first word of our generation would be. Similar to the previous example, where we have a $\text{<s>}$ token to signify the beginning of a sequence, we can ask the model what the value of $P(w | \text{<s>})$ for a variety of different values of $w$. But how do we select what $w$ should be when we're given the probabilities for every possible word? Is it simply the highest value?
+Now, we turn our focus to using these probabilities to **create** text. Let's determine what the first word of our generation would be. Similar to the previous example, where we have a $\text{<s>}$ token to signify the beginning of a sequence, we can ask the model what the value of $P(w ~|~ \text{<s>})$ for a variety of different values of $w$. But how do we select what $w$ should be when we're given the probabilities for every possible word? Is it simply the highest value?
 
 More broadly, our goal is to select the words that maximize:
 
@@ -53,12 +53,12 @@ $$
 But how do we do this using the model's outputted probabilities? As we will see, this is the million dollar question - literally. 
 
 ## Showing NP-Hardness
-Before moving on to approaching a solution, it’s worth gaining a little appreciation for how **difficult** this problem truly is. To solve it in its entirety, you would make a million dollars! Literally! The challenges we have with using our machine model to generate text is yet another manifestation of the NP-Complete class of problems (in it’s decision form). If you are unfamiliar, these problems are known to be the toughest problems in computer science. What’s more interesting, is that problems existing in this class can all be **reduced** to one another, implying that they are in essence the same problem.
+Before moving on to approaching a solution, it’s worth gaining a little appreciation for how **difficult** this problem truly is. To solve it in its entirety, you would make a million dollars! Literally! The challenges we have with using our machine model to generate text is yet another manifestation of the NP-Complete class of problems (in it’s decision form). If you are unfamiliar, these problems are known to be the toughest problems in computer science. What’s more interesting, is that problems existing in this class can all be **reduced** to one another, implying that they are all in essence the same problem.
 
-Let’s show that our issue of text generation is *just as hard* as the other famous NP-hard problems, like the Traveling Salesman Problem and Knapsack Problem. 
+Let’s show that our issue of finding the most likely sequence is *just as hard* as the other famous NP-hard problems, like the Traveling Salesman Problem and Knapsack Problem. 
 
 Generating text is akin to the problem of finding the **highest probability sequence** that starts with $\text{<s>}$.
-The easiest reduction to see is if we construct a directed graph, starting with $\text{<s>}$, and layers consisting of each word in our vocabulary. Each edge $(u, v)$ will be equal to $P(v | u)$ where $u$ and $v$ are words. Note that this graph goes on forever, and that we have a $\text{</s>}$ token for ending a sequence. Thus, finding out the most likely sequence of words is equivalent to finding **the longest path** in this graph. 
+The easiest reduction to see is if we construct a directed graph, starting with $\text{<s>}$, and layers consisting of each word in our vocabulary. Each edge $(u, v)$ will be equal to $P(v ~|~ u)$ where $u$ and $v$ are words. Note that this graph goes on forever, and that we have a $\text{</s>}$ token for ending a sequence. Thus, finding out the most likely sequence of words is equivalent to finding **the longest path** in this graph. 
 
 ![](https://i.imgur.com/46XrpAS.jpg)
 <small> An illustration of how we "search" for the most probable sequence. </small>
@@ -83,10 +83,10 @@ Repeatedly taking the most performing this operation will allow us to create a s
 ## Beam Search
 As with most naive approaches, Greedy Decoding doesn't always produce the best outcomes. This is especially true in certain domains such as translating between different languages, where tokens at the beginning of the sentence may dramatically alter the likehood of its following tokens. This creates the problem of a high-probability token "hiding behind" a low-probability token that preceeds it in the order of the sentence. As a result, Greedy Decoding will forgo the low-probabilty token in favour of another one, regardless of that token's subsequently generated tokens.
 
-One approach that mitigates this problem is **Beam Search**, which is another *greedy* algorithm that approximates the search process by maintaining multiple possible candidates for a path (i.e. the sentence).
+One approach that mitigates this problem is **Beam Search**, which is another *greedy* algorithm that approximates the search process by maintaining multiple possible candidates for a path (which each represent a sentence).
 
 ## Random Sampling
-The last way that we can generate text is to let uncertainy do it's thing and **randomly sample** from the distribution of $P(w | c)$. In expectation, this should mean that we produce likely sequences, and that we should have some trials that produce a very high-probability sequence. For machine learning in general, relying on expectation tends to do us well!
+The last way that we can generate text is to let uncertainy do it's thing and **randomly sample** directly from the distribution of $P(w ~|~ c)$. In expectation, this should mean that we produce likely sequences, and that we should have some trials that produce a very high-probability sequence. For machine learning in general, relying on expectation tends to do us well!
 
 ## Distribution Changes
 
