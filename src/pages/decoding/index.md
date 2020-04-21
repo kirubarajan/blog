@@ -86,9 +86,10 @@ As with most naive approaches, Greedy Decoding doesn't always produce the best o
 One approach that mitigates this problem is **Beam Search**, which is another *greedy* algorithm that approximates the search process by maintaining multiple possible candidates for a path (which each represent a sentence).
 
 ## Random Sampling
-The last way that we can generate text is to let uncertainy do it's thing and **randomly sample** directly from the distribution of $P(w ~|~ c)$. In expectation, this should mean that we produce likely sequences, and that we should have some trials that produce a very high-probability sequence. For machine learning in general, relying on expectation tends to do us well!
+The last way that we can generate text is to let uncertainy do it's thing and **randomly sample** directly from the distribution of $P(w ~|~ c)$. This might also feels like a naive way to do text generation, but in reality this allows for a good middle-ground between creativity and greediness. In expectation, the strategy tends to produce statistically likely sequences. For machine learning in general, relying on expectation tends to do well for us!
 
-## Distribution Changes
+## Distributional Changes
+One issue with Random Sampling (and decoding strategies in general) is the lack of control we have over how the signal is used to select candidate words. Fear not, because we have ways of fine-tuning the way our model uses the token probabilities to generate text. One main way is to impose additional behaviour on decoding strategies by **altering the output distribution** of $P(w ~|~ c)$.
 
 ### Temperature
 
@@ -101,3 +102,12 @@ The last way that we can generate text is to let uncertainy do it's thing and **
 So it seems like there are a lot of decoding strategies for generating text. For deciding which to use, I like to think about what aspect of human language you are trying to capture. If it's the sense-maximizing translation task, then Beam Search is the way to go (determinism can be helpful). If you want the expressiveness and character of a chatbot, then random sampling with a distributional change is the current best.
 
 Trying to use statical and mathematical tools to decipher what makes text sound human is an interesting avenue of research and lately I've been exploring it in earnest. Check out this project [here](https://github.com/kirubarajan/trick) to see our latest efforts!
+
+<br />
+
+---
+
+<br />
+
+## References
+1. [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751)
