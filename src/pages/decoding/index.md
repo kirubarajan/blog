@@ -6,8 +6,11 @@ tags: ['machine learning']
 excerpt: "An Overview of How To *Use* A Trained Language-Model"
 ---
 
-<div class="notification  is-light">
+<div class="notification  is-danger">
 Disclaimer: this post is still being written - check back soon for updates!
+</div>
+<div class="notification is-link">
+  There is accompanying code for this blog post, if you would like to re-create the results - check out the <a href="https://github.com/kirubarajan/language_modelling">repository here</a>!
 </div>
 
 # Decoding Strategies for Text Generation
