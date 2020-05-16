@@ -1,6 +1,6 @@
 ---
 path: "/blog/study"
-date: "2020-03-06"
+date: "2020-05-16"
 title: "Independent Study on *Modern* Deep Learning"
 tags: ['machine learning', 'research']
 excerpt: "Misc. Machine Learning Methodologies"
@@ -9,34 +9,36 @@ excerpt: "Misc. Machine Learning Methodologies"
 # Independent Study on *Modern* Deep Learning
 > Misc. Machine Learning Methodologies
 
-This page serves as both research notes and a workspace for my independent study on Multitask Learning and other (meta) machine learning methodologies, advised by Pratik Chaudhari at the University of Pennsylvania. I'll be adding interesting code snippets/results here as well as a brief literature review of various research papers. 
+This page serves as both research notes and a workspace for my independent study at the University of Pennsylvania, advised by [Pratik Chaudhari](https://pratikac.github.io/). This independent study is 
+meant to serve as an extension to the course [ESE 546: Principles of Deep Learning](https://pratikac.github.io/pub/19_ese546.pdf). The goal of the study is to learn more advanced paradigms of training deep learning models, as well as inference using them. This work was split into two sections: 1) a literature review of papers on various topics and 2) experiments with different types of models and algorithms, implemented in Python. Although the COVID-19 pandemic limited certain topics I would have like to explore (namely reinforcement learning), I was able to learn many new concepts and promising research avenues.
 
-Disclaimer: the "Modern Deep Learning* name is meant to be a joke, since the focus on this independent study is on cool/interesting trends in deep learning research.
+Disclaimer: the "Modern Deep Learning* name is meant to be a joke, since the focus on this independent study is on cool/interesting trends in deep learning, which is already a trendy area of research.
 
---- 
-### Literature Review
-Below are my notes on some recent interesting papers that have expanded my views on standard machine learning paradigms.
+## Literature Review
+Below are my notes on some recent interesting papers that have expanded my views on standard machine learning paradigms. 
 
-## ZeRO: Memory Optimization Towards Training A Trillion Parameter Models
+### ZeRO: Memory Optimization Towards Training A Trillion Parameter Models
 [*Rajbhandari et al. 2020*](https://arxiv.org/pdf/1910.02054.pdf)
 
 This paper introduces a novel optimizer named the Zero Redundency Optimizer (ZeRO), which aims to make it feasible and efficient to train previously impossible to train model architectures whose training exhibits memory limitations. This is done by partitioning model states as opposed to standard model state replication across clusters. Memory analysis shows that the optimizer can train a **one trillion** parameter model on 1024 GPUs with data parallelism degree $N_d = 1024$.
 
 Thanks, Microsoft!
 
-## Exploring Randomly Wired Neural Networks for Image Recognition
+### Exploring Randomly Wired Neural Networks for Image Recognition
 *Xie et al. (2019)*
 
 This paper explores different neural network architectures by generating random neural network wirings. This is done by defining a stochastic network generator to encapsulate Neural Architecture Search, and later using classical random graph algorithms for wiring the networks. The authors show that the generated networks have competitve performance on the ImageNet task.
 
-### Network Generator
+**Network Generator**
+
 Network Generators define a family of possible wiring patterns. Network architectures can thereby be sampled according to a probability distribution, which is differentiably learnable.
 
 Formally, the generator is a mapping $g: \Theta \rightarrow N$ where $\Theta$ is the parameter space and $N$ is the space of neural network architectures. As such, $g$ determines how the computational graph representing the neural network is wired. The given parameters $\theta \in \Theta$ specifies meta-information about the network such as the number of layers, activation types, etc. The output of $g$ is symbolic, so it doesn't return the weights of the networks (which can be learned from standard differentiable training processes) but instead a representation of the network (e.g. flow of data and types of operations).
 
 The network generator $g$ can be extended to include an additional argument $s$, which acts as a stochastic seed. Then, the generator $g(s, \theta)$ can be repeatedly called to generate a pseudo-random family of architectures.
 
-### Graphs to Neural Networks
+**Graphs to Neural Networks**
+
 The neural network generator generates a *general graph*, which is a set of nodes followed by a set of edges that connect the nodes. This general representation does not specify how the graph corresponds to a neural network, which is a later post-processing step. The non-restrictivness of the general graph allows the use of classical graph generation techniques from graph theory. In particular, the authors experiment with Erdos-Renyi (ER), Barabasi-Albert (BA), and Watts-Strogatz (WS) models of graph generation.
 
 The generated edges are defined to be data flow (i.e. sending a tensor of data from one node to another) and that nodes define operations of either:
@@ -44,26 +46,26 @@ The generated edges are defined to be data flow (i.e. sending a tensor of data f
 2. **Transformation** (e.g. non-linearity)
 3. **Distribution** (e.g. copying data)
 
-### Experiments
+**Experiments**
+
 For each generator, the authors sample 5 instances (generated by 5 random seeds), and train them from scratch. Networks are trained for roughly 100 epochs, using a half-period-cosine learning rate decay from an initial learning rate of 0.1 with a momentum of 0.9.
 
 The authors note that every random generator yields decent accuracy. Furthermore, the variation among the random network instances is rather low with a standard deviation in the range of 0.2% to 0.4%.
 
 
-## Multitask Learning
-
-General background information will go here!
-
-## Compositional Attention Networks for Machine Reasoning
+### Compositional Attention Networks for Machine Reasoning
 [Hudson et. al, 2018](https://arxiv.org/abs/1803.03067)
 
 The authors design a novel fully differentiable neural network architecture that is capable of explicit and expressive reasoning. One primary goal of the paper is interpretability, without sacrificing the predictive performance of black box methods. Problems are decomposed into attention-based steps, and are solved using Memory, Attention, and Composition (MAC) sub-units. On the CLEVR dataset for visual reasoning, the model accomplishes a state-of-the-art 98.9% accuracy, using less data than competing models.
-
---- 
-### Experiments
+ 
+## Experiments
 Below are some experiments I've run for playing around with state-of-the-art models. Code will be available on GitHub, after the end of my independent study.
 
-## Fine-tuning Transformer Models
+A topic that originally prompted me to begin this independent study is Multitask Learning due to the similarities with how humans acquire knowledge in the real world. One example of this is Open AI's 
+[GPT-2 model](https://openai.com/blog/better-language-models/), whose paper was named [Language Models are Unsupervised Multitask Learners](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf). As part of this study, I have implemented numerous experiments ranging from using libraries to fine-tune large pre-trained language models, to implementing various sampling algorithms for natural
+language generation in PyTorch.
+
+### Fine-Tuning Transformer Models (GPT-2)
 Easy usage can be done through the GPT-2 Simple package by Max Woolf (https://github.com/minimaxir/gpt-2-simple).
 
 Install using `pip3 install gpt-2-simple` and provide text for fine-tuning:
@@ -102,7 +104,7 @@ But America is not going to give ourselves up for expedience's sake.
 
 Wow! Thanks, Obama for the big policy change!
 
-### Control Sequences
+### Transfer Learning via Control Sequences
 As per the CTRL language model paper by [Keskar et al.](https://arxiv.org/pdf/1909.05858.pdf), I also experimented with prepending a "control sequence" $c$ that would allow the fine-tuning process to control downstream generation. In particular, I used the Hugging Face Transformers library to fine-tune the pre-trained 355M GPT-2 with Venture Captial tweets (in typical fashion). As a control sequence, I set $c$ to be the user name of generation (e.g. `@paulg`) and was able to reduce perplexity by over 20%. This creates an implicit Transfer Learning effect within the fine-tuning process.
 
 Some example generations turned out being very promising:
@@ -117,12 +119,60 @@ Some example generations turned out being very promising:
 
 My favourite is `\paulg- It takes a village to raise an army.`.
 
-## Generative Adversarial Networks
+### Generative Adversarial Networks
 
-Lately, I've also been playing with Style Transfer GANs by exploring abstract artwork from contemporary artists:
+Following our discussion on Generative Adversarial Networks in ESE 546, I've also been playing with Style Transfer GANs by exploring abstract artwork from contemporary artists. These adversarial paradigms prove to be very promising in generation tasks, and can be a lot less noisy than Variational Autoencoders. An interesting area of research is applying these adversarial paradigms to discrete domains, such as natural language. 
  
 ![image](https://i.imgur.com/gFAOIRM.png) 
 <small> (this is based off of pieces from Marc Chagall) </small>
 
 ![image](https://i.imgur.com/Rv7KRFC.png) <br />
 <small> (this is based off pieces from Jerret Lee) </small>
+
+### Generation Algorithms for Language
+
+Reading the paper [The Curious Case of Neural Text Degeneration](https://arxiv.org/pdf/1904.09751.pdf)
+prompted me to learn more about different sampling algorithms. In particular, these algorithms
+attempt to efficiently determine the most likely sequence of text given a probability distribution $P(w_t ~|~ w_{t - 1}, w_{t - 2}, ...)$. This distribution is often the output of a softmax layer on 
+a neural network. Although the state-of-the-art language models are tremendously large models with hundreds of millions of parameters, I was able to experiment with different sampling algorithms 
+using a small LSTM language model.
+
+The model definition for my LSTM was rather simple:
+
+```python
+class Model(torch.nn.Module):
+    def __init__(self, embedding_dim, hidden_dim, vocab_size):
+        super(Model, self).__init__()
+        self.hidden_dim = hidden_dim
+        self.embedding = torch.nn.Embedding(vocab_size, embedding_dim)
+        self.rnn = torch.nn.LSTM(embedding_dim, hidden_dim, batch_first=True)
+        self.output = torch.nn.Linear(hidden_dim, vocab_size)
+
+    def forward(self, data, hidden):
+        embedded = self.embedding(data)
+        prediction, hidden = self.rnn(embedded, hidden)
+        return self.output(prediction), hidden
+
+    def init_hidden(self, BATCH_SIZE):
+        return torch.zeros(1, BATCH_SIZE, self.hidden_dim), torch.zeros(1, BATCH_SIZE, self.hidden_dim)
+```
+
+The first and most intuitive generation strategy is known as **Greedy Decoding**, where we take the **most probable word** over a vocabulary $V$ for a context $c$ as the next word.
+
+$$
+w_i = \operatorname*{arg\, max}_{w \in V} ~ P(w_i ~ | ~ c_0 ~ ... ~ c_{i - 1})
+$$
+
+However, this produced rather trite and non-sensical generations because language often has
+a pertinent information horizon larger than a single time-step. An improvement is known as **Top-$k$ Sampling**, which truncates the probability distribution
+to the $k$ most likely tokens in the vocabulary.
+
+*"I am proposing with an advantage over commerce budget. — (applause) the middle of commerce, way together more of each other people’s it. In the chance that the international issue, freedom we have never has allowed the other way, or share from footing or denied coverage for the work of Democrats and Republican administrations isn’t (Applause.) Now, none of this can happen unless we’re their own rules that progress on so tied long still blind you should make Wall good example. (Applause.) For unemployment to pull all we should leave just like us — (applause)"*.
+
+Introducing non-deterministic generation seems to be the key to creative and engaging generations.
+
+## Conclusion
+
+In conclusion, this independent study has shown me that even though there is a lot of hype and effort in deep learning, there is still a lot of research left. Although companies and organizations are 
+developing larger and more expensive models, many core concepts are still researchable using smaller and more managable models. Chasing the state-of-the-art results is often a challenging and sometimes unrewarding endeavour, whereas devising new paradigms of machine learning training (like paralellizing training over cloud instances) and interesting inference strategies (e.g. Top-$k$ sampling) can make comparable results while still asking promising research questions about machine intelligence. Overall, 
+I am excited to continue research in machine learning, as well as different topics in linguistics and probabilty.
