@@ -32,3 +32,4 @@ Here are the games I've finished (or played a substantial amount of) since retur
 10. *Wolfenstein II: The New Colossus*
 11. *Uncharted 3: Drake's Deception (re-play)*
 12. *Celeste*
+13. *Batman: Arkham Knight (re-play)*
