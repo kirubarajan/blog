@@ -9,12 +9,13 @@ excerpt: "An Overview of How To *Use* A Trained Language-Model"
 <div class="notification  is-danger">
 Disclaimer: this post is still being written - check back soon for updates!
 </div>
-<div class="notification is-link">
-  There is accompanying code for this blog post, if you would like to re-create the results - check out the <a href="https://github.com/kirubarajan/language_modelling">repository here</a>!
-</div>
 
 # Decoding Strategies for Text Generation
 > Finding the Humanity in Approximating an NP-Hard Problem
+
+<div class="notification is-link">
+  There is accompanying code for this blog post, if you would like to re-create the results - check out the <a href="https://github.com/kirubarajan/language_modelling">repository here</a>!
+</div>
 
 ## Introduction
 Recently, machine learning models have seen incredible progress towards computers being able to generate text that sounds human. This is an area of research that involves both furthering our understanding of machine intelligence as well as language usage. I think it’s an interesting problem because it once against prompts a long-standing question in machine intelligence: what does it mean to be human?
