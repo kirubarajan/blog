@@ -6,21 +6,17 @@ tags: ['machine learning']
 excerpt: "An Overview of How To *Use* A Trained Language-Model"
 ---
 
-<div class="notification  is-danger">
-Disclaimer: this post is still being written - check back soon for updates!
+<div class="notification is-link">
+  There is accompanying code for reproducing the results in this blog post. Check out the <a href="https://github.com/kirubarajan/language_modelling">repository here</a>!
 </div>
 
 # Decoding Strategies for Text Generation
 > Finding the Humanity in Approximating an NP-Hard Problem
 
-<div class="notification is-link">
-  There is accompanying code for this blog post, if you would like to re-create the results - check out the <a href="https://github.com/kirubarajan/language_modelling">repository here</a>!
-</div>
-
 ## Introduction
-Recently, machine learning models have seen incredible progress towards computers being able to generate text that sounds human. This is an area of research that involves both furthering our understanding of machine intelligence as well as language usage. I think it’s an interesting problem because it once against prompts a long-standing question in machine intelligence: what does it mean to be human?
+Recently, machine learning models have seen incredible progress towards computers being able to generate text that sounds human. This is an area of research that involves both furthering our understanding of machine intelligence as well as language use in society. I think it’s an interesting problem because it once against prompts a long-standing question in machine intelligence: what does it mean to be human?
 
-So how do we make computers sound human? In particular, let’s look at the different ways we can do this once we have a special kind of trained machine learning model known as a **language model**. In its simplest sense, a language model assigns a probability to a sequence of words. As you can imagine, language is infinite and so we can’t possibly know the probability of the phrase “cat in the hat”. However, our machine learning model (by definition) is going to **approximate** this likelihood for us. And, as it turns out, this is a powerful technique that works incredibly well for practical purposes.
+So how do we make computers sound human? We'll explore this in two ways. The first is understanding *why* this problem is so computationally challenging and the second is to outline the different approaches we can take using a special kind of machine learning model known as a **language model**. In its simplest sense, a language model assigns a probability to a sequence of words. As you can imagine, language is infinite and so we can’t possibly know the probability of the phrase “cat in the hat”. However, our machine learning model (by definition) is going to **approximate** this likelihood for us. And, as it turns out, this is a powerful technique that works incredibly well for practical purposes of generating human-sounding text.
 
 ### Our Objective
 
@@ -74,32 +70,40 @@ $$
 $$
 
 for an entire sequence is thereby also **NP-Hard** since they are equivalent problems. As a result, solving our little text decoding problem in polynomial time could net you [one million dollars](https://en.wikipedia.org/wiki/Millennium_Prize_Problemshttps://en.wikipedia.org/wiki/Millennium_Prize_Problems)! People have tried to do this for a long time with little luck, so let's look into **approximating** this problem instead.
+
+## Approaches
  
-## Greedy Decoding
+### Greedy Decoding
 Our first and most intuitive approximation is known as **Greedy Decoding**, where we take the **most probable word** over a vocabulary $V$ for a context $c$ as the next word.
 
 $$
 w_i = \operatorname*{arg\, max}_{w \in V} ~ P(w_i ~ | ~ c_0 ~ ... ~ c_{i - 1})
 $$
 
-Repeatedly taking the most performing this operation will allow us to create a sentence, one word at a time.
+Repeatedly taking the most performing this operation will allow us to create a sentence, one word at a time. Unfortunately, this approach doesn't produce very convincing results, and tends to exploit weird patterns, even repeating itself due to cyclic dependencies (i.e. going back and forth between words that predict each other like *"I went to the place that the place that the place that the place ..."*).
 
-## Beam Search
+We can do better!
+
+### Beam Search
 As with most naive approaches, Greedy Decoding doesn't always produce the best outcomes. This is especially true in certain domains such as translating between different languages, where tokens at the beginning of the sentence may dramatically alter the likehood of its following tokens. This creates the problem of a high-probability token "hiding behind" a low-probability token that preceeds it in the order of the sentence. As a result, Greedy Decoding will forgo the low-probabilty token in favour of another one, regardless of that token's subsequently generated tokens.
 
-One approach that mitigates this problem is **Beam Search**, which is another *greedy* algorithm that approximates the search process by maintaining multiple possible candidates for a path (which each represent a sentence).
+One approach that mitigates this problem is **Beam Search**, which is another *greedy* algorithm that approximates the search process by maintaining multiple possible candidates for a path (which each represent a sentence). This "beam" of results is ultimately a search heuristic that allows us to deterministically approximate the most likely sequence of words.
 
-## Random Sampling
+Beam Search works really well in translation settings, since there is often not too much creativity involved with translating sentences between languages. However, for tasks such as dialogue and story generation, Beam Search is rarely used for this reason. As it turns out, there are more direct (and elegant) ways to approach this search tasks non-deterministically.
+
+### Random Sampling
 The last way that we can generate text is to let uncertainy do it's thing and **randomly sample** directly from the distribution of $P(w ~|~ c)$. This might also feels like a naive way to do text generation, but in reality this allows for a good middle-ground between creativity and greediness. In expectation, the strategy tends to produce statistically likely sequences. For machine learning in general, relying on expectation tends to do well for us!
 
-## Distributional Changes
-One issue with Random Sampling (and decoding strategies in general) is the lack of control we have over how the signal is used to select candidate words. Fear not, because we have ways of fine-tuning the way our model uses the token probabilities to generate text. One main way is to impose additional behaviour on decoding strategies by **altering the output distribution** of $P(w ~|~ c)$.
+However, one issue with Random Sampling (and decoding strategies in general) is the lack of control we have over how the signal is used to select candidate words. Fear not, because we have ways of fine-tuning the way our model uses the token probabilities to generate text. One main way is to impose additional behaviour on decoding strategies by **altering the output distribution** of $P(w ~|~ c)$.
 
-### Temperature
+#### Top-K Sampling
+The first way we can alter the probability distribution of the next word is to truncate the vocabulary to a certain length of the $k$ most likely tokens, and redistributing the truncated probability mass to these selected tokens. This has the effect of constraining the generation process to select words that the model itself has deemed to be more sensible in the context. This tends to produce more human-sounding text, potentially at the cost of sounding generic if the hyperparameter $k$ is too small.
 
-### Top-K Sampling
+A nice implementation quirk about Top-K Sampling is that this is equal to pure random sampling when $k = |V|$, so the results of using a specific value of $k$ can be quickly evaluated against a distributional baseline.
 
-### Top-P Sampling
+#### Top-P Sampling
+
+#### Temperature
 
 ## Conclusion
 
