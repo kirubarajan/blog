@@ -21,10 +21,11 @@ const Index = () => {
 	          <h1 className="title"> Hi! I'm Arun. 🙌 </h1>
 	          <p>
 	            I'm an undergraduate at the University of Pennsylvania studying computer science, and minoring in linguistics. 
-              I research machine learning in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://cis192.github.io/">teach</a> one of Penn's computer science courses!
+              I'm a <a href="/research">published</a> machine learning researcher in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://cis192.github.io/">teach</a> one of Penn's computer science courses!
               
               <br /> <br />
-              Outside of school, I'm a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a> and an incoming intern at a hedge fund named <a href="https://bridgewater.com"> Bridgewater Associates</a>.
+              Outside of school, I'm a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a> and an intern at a hedge fund named <a href="https://bridgewater.com"> Bridgewater</a>.
+			   I also consult and do contract work with a variety of organizations, ranging from Y-Combinator backed startups to R&D/defense companies.
 
               <br /> <br />
               I like brewing coffee, skateboarding, and playing video games!
