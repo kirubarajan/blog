@@ -28,7 +28,7 @@ const Index = () => {
 			   I also do consulting and contracting work with a variety of organizations, ranging from Y-Combinator backed startups to R&D/defense companies.
 
               <br /> <br />
-              Other than that, I like brewing coffee, skateboarding, and going on 2 hour long walks.
+              Other than that, I like brewing coffee, skateboarding, and going on 2 hour long walks!
               This website is where I write about the things that I am doing or stuff I find interesting.
 	          </p>
 	        </div>

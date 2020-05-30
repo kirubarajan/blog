@@ -24,7 +24,7 @@ const Research = () => {
                 <a class="panel-block list-group-item is-primary" href="https://www.aclweb.org/anthology/N19-4011/">ChatEval: A Tool for Chatbot Evaluation [NAACL 2019]</a>
                 <a class="panel-block list-group-item is-primary" href="https://spie.org/conferences-and-exhibitions/past-conferences-and-exhibitions/defense--commercial-sensing-2016">Cloud4ISR: Large-scale intelligence, surveillance, and reconnaissance [SPIE 2016]</a>
               </div>
-              <p><strong>Projects</strong></p>
+              <p><strong>Research Projects</strong></p>
               <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
 				<a class="panel-block list-group-item is-primary" href="https://www.roft.io">Real or Fake Text?</a>
 				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/kirubarajan_kashyap_zhang.pdf">Fine-Tuning BERT on Wiki-How for Temporal Event Reasoning</a>
@@ -37,7 +37,7 @@ const Research = () => {
 	            include applying deep learning techniques to natural language processing problems, specifically in the domain of information extraction and dialogue systems. 
 	            I have publications in the ACL anthology and NAACL for the area of dialogue systems. <br /> <br />
 
-	            My current research includes optimization techniques for natural language processing systems, primarily those involving attention mechanisms. 
+	            My current research includes standardized evaluation for a variety of machine learning models.
 	            
 	            <br /> <br />
 	            <p style={{marginBottom: "0.5rem"}}> <strong>Software Architecture</strong> </p>
