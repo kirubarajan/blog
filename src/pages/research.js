@@ -26,8 +26,9 @@ const Research = () => {
               </div>
               <p><strong>Projects</strong></p>
               <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/learning_to_trick_humans.pdf">Learning to Trick Humans: Evaluation Criteria for Human and Computer Written Text</a>
+				<a class="panel-block list-group-item is-primary" href="https://www.roft.io">Real or Fake Text?</a>
 				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/kirubarajan_kashyap_zhang.pdf">Fine-Tuning BERT on Wiki-How for Temporal Event Reasoning</a>
+				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/learning_to_trick_humans.pdf">Learning to Trick Humans: Evaluation Criteria for Human and Computer Written Text</a>
 				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf">Deep DNA (CRISPR) Lineage Tree Reconstruction</a>
 				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/530_Final_Project_1_.pdf">GROVER: Generating Rap by Observing Verses</a>
               </div>
