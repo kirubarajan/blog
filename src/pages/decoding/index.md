@@ -106,6 +106,10 @@ A nice implementation quirk about Top-K Sampling is that this is equal to pure r
 
 #### Temperature
 
+$$
+P(w_i ~ | ~ c_0 ~ ... ~ c_{i - 1}) = \frac{e^{(z_i / T)}}{\sum_j e^{(z_j / T)}}
+$$
+
 ## Conclusion
 
 So it seems like there are a lot of decoding strategies for generating text. For deciding which to use, it's best to think about what aspect of human language you are trying to capture. If it's an accuracy-maximizing translation task, then Beam Search is the way to go (determinism in selection can be helpful). If you want the expressiveness and character of a chatbot, then random sampling with a distributional change would make the most sense.
