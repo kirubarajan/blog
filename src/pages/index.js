@@ -25,7 +25,7 @@ const Index = () => {
               
               <br /> <br />
               Outside of school, I'm a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a> and an intern at a hedge fund named <a href="https://bridgewater.com"> Bridgewater</a>.
-			   I also do consulting and contracting work with a variety of organizations, ranging from Y-Combinator backed startups to R&D/defense companies.
+			   I also do consulting and contracting work with a variety of organizations, ranging from Y&#8209;Combinator backed startups to R&D/defense companies.
 
               <br /> <br />
               Other than that, I like brewing coffee, skateboarding, and going on 2 hour long walks!
