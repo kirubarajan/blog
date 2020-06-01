@@ -3,10 +3,11 @@ path: "/blog/vision"
 date: "2020-05-31"
 title: "On Vision Walks"
 tags: ['personal']
-excerpt: "How I Keep Myself Sane and Active"
+excerpt: "Keeping Myself Sane and Active"
 ---
 
 # On Vision Walks
+> Keeping Myself Sane and Active
 
 Since the start of quarantine, I've been spending a lot more time outdoors (2 meters from others) by going on walks for 2 to 3 hours each day. I jokingly refer to them with my friends as **"Vision Walks"**. I've found it to be a great way to relieve tension, think creatively about work, and engage in my newly found hobby of birdwatching. Overall, it's been a huge improvement to my mental and physical health. I've had a lot of good ideas and even better lifestyle vibes from this new-ish habit!
 
