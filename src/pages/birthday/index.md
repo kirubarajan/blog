@@ -11,7 +11,7 @@ excerpt: "Somehow The Most Memorable One Yet"
 
 I've been very fortunate this week by being able to enjoy my birthday in peace at my home in Canada. 
 But when quarantine first started, I didn't expect it to last through my June birthday. So in early May,
-I began to get a little worried about a pitiful celebration alone in my room or something. Even on the of, my relatives and friends
+I began to get a little worried about a pitiful celebration alone in my room or something. Even on the day of, my relatives and friends
 would jokingly refer to a *"Quarantine Birthday"*, which I'm sure other people who've gone through birthdays in 2020 can relate to. However, this birthday may have been my favourite yet and I'm pretty sure quarantine had something to do with it. In this blog post, I would like to share why my otherwise mundane celebration actually was the most memorable.
 
 The day started at midnight with my sister dropping a laptop in my room with my first ever surprise birthday party over Zoom. I'm really grateful for
