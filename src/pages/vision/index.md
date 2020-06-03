@@ -13,14 +13,20 @@ Since the start of quarantine, I've been spending a lot more time outdoors (2 me
 
 Here are some photos I've taken over the weeks (mostly of foliage and clouds) in beautiful [Mississauga, Ontario](/blog/things):
 
+![](https://i.imgur.com/gbp4I9Z.jpg)
+
+![](https://i.imgur.com/j8KRZnz.jpg)
+
 ![](https://i.imgur.com/oixrY8n.jpg)
 
 ![](https://i.imgur.com/UCkc8xF.jpg)
 
 ![](https://i.imgur.com/zimXeWe.jpg)
 
-![](https://i.imgur.com/feBwJ65.jpg)
+![](https://i.imgur.com/b8iPdTh.jpg)
 
-![](https://i.imgur.com/gbp4I9Z.jpg)
+![](https://i.imgur.com/Z3Lwu0D.jpg)
+
+![](https://i.imgur.com/feBwJ65.jpg)
 
 Although I'm not a photographer, it's hard to look at sunlight seeping into a forest and *not* snap a picture. If you have any cool nature-y (preferably secluded) spots in the Toronto area, please let me know!
