@@ -14,7 +14,13 @@ But when quarantine first started, I didn't expect it to last through my June bi
 I began to get a little worried about a pitiful celebration alone in my room or something. Even on the of, my relatives and friends
 would jokingly refer to a *"Quarantine Birthday"*, which I'm sure other people who've gone through birthdays in 2020 can relate to. However, this birthday may have been my favourite yet and I'm pretty sure quarantine had something to do with it. In this blog post, I would like to share why my otherwise mundane celebration actually was the most memorable.
 
-I started my day with some croissants (my favourite breakfast food) and a cup of freshly roasted Kenyan coffee from West End Roasters. The coffee was so good I ended up having another two cups by the end of the day.
+The day started at midnight with my sister dropping a laptop in my room with my first ever surprise birthday party over Zoom. I'm really grateful for
+everybody hopping on the call, and it was really heartwarming to see (I was also genuinely surprised), even if everybody had embarrasing Zoom backgrounds of me.
+Given that the call included a never seen before combination of my friends from both Canada and the US, it could only have been done over video chat!
+
+![](https://i.imgur.com/IXYVAI9.jpg)
+
+I started the morning after a late night with some croissants (my favourite breakfast food) and a cup of freshly roasted Kenyan coffee from West End Roasters. The coffee was so good I ended up having another two cups by the end of the day!
 
 ![](https://i.imgur.com/EMYY0KL.png)
 
