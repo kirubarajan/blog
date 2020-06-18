@@ -30,6 +30,8 @@ Here are the games I've finished (or played a substantial amount of) since retur
 8. *Legend of Zelda: Wind Waker*
 9. *The Stanley Parable*
 10. *Wolfenstein II: The New Colossus*
-11. *Uncharted 3: Drake's Deception (re-play)*
+11. *Uncharted 3: Drake's Deception* (re-play)
 12. *Celeste*
-13. *Batman: Arkham Knight (re-play)*
+13. *Batman: Arkham Knight* (re-play)
+14. *The Last of Us* (re-play)
+15. *The Last of Us: Part II*
