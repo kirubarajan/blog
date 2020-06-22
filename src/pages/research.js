@@ -18,7 +18,7 @@ const Research = () => {
 	          <figure className="image is-128x128">
 	            <img src={"/img/thinking.svg"}  />
 	          </figure>
-			  <h1 class="title"> my research</h1>
+			  <h1 class="title"> some research</h1>
               <p><strong>Published Papers</strong></p>
               <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
                 <a class="panel-block list-group-item is-primary" href="https://www.aclweb.org/anthology/N19-4011/">ChatEval: A Tool for Chatbot Evaluation [NAACL 2019]</a>
