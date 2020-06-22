@@ -26,8 +26,11 @@ const Consulting = () => {
 
               <br /> <br />
               
-              Professionally, I've built systems for intelligence at Foursquare, Bridgewater, and Dorm Room Fund. I'm always looking for contract work - feel free 
-              to reach out to me at <a>arun@dormroomfund.com</a>!
+              Professionally, I've built systems for intelligence at Foursquare, Bridgewater, and Dorm Room Fund. I'm currently working on a 
+              new project named <a href="https://catacomb.ai/">Catacomb</a>.
+			  
+      				<br /> <br />
+              I'm always looking for contract work - feel free to reach out to me at <a>arun@dormroomfund.com</a>!
 	          </p> 
 	        </div>
 	        <div className="column"></div>
