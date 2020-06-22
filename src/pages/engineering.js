@@ -73,7 +73,7 @@ const Consulting = () => {
 
               <br /> <br />
               
-              Professionally, I've built systems for intelligence at Foursquare, Bridgewater, and Dorm Room Fund. I'm currently working on a 
+              Professionally, I've built systems for intelligence at Foursquare, Dorm Room Fund, and Bridgewater. I'm currently working on a 
               new project named <a href="https://catacomb.ai/">Catacomb</a>.
 			  
       	    </p>
