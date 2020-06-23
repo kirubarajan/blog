@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 const projects = [
   {
 	  "name": "Catacomb",
-	  "description": "Machine learning platform for deploying prototypes, conducting quality assurance, and tracking production model performance. deploying prototyping and conducting quality assurance. Powered by Kubernetes, supports PyTorch, Tensorflow and other ML frameworks.",
+	  "description": "Machine learning platform for deploying prototypes, conducting quality assurance, and tracking production model performance. Powered by Kubernetes, supports PyTorch, Tensorflow and other ML frameworks.",
 	  "github": "https://github.com/catacomb",
   },
   {
