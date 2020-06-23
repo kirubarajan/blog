@@ -33,6 +33,11 @@ const projects = [
 	  "github": "https://github.com/kirubarajan/crrntly",
   },
   {
+	  "name": "Penn Clubs",
+	  "description": "A public directory of student-run organizations at Penn, used by tens of thousands of students. Written in React and Django.",
+	  "github": "https://github.com/pennlabs/pennclubs",
+  },
+  {
     "name": "Price Tracker",
     "description": "An application to track the value of blue chip stocks over history, and compute potential returns on other commodities to maximize long-term gain.",
     "github": "https://github.com/ksjiaxian/price_tracker"
