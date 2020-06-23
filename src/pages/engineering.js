@@ -78,7 +78,7 @@ const Consulting = () => {
 
               <br /> <br />
               
-              Professionally, I've built systems for intelligence at Foursquare, Dorm Room Fund, and Bridgewater. I'm currently working on a 
+              I work on open source projects at <a href="https://pennlabs.org">Penn Labs</a>, where I've been a founding team lead for many projects. Professionally, I've built systems for intelligence at Foursquare, Dorm Room Fund, and Bridgewater. I'm currently working on a 
               new project named <a href="https://catacomb.ai/">Catacomb</a>.
 			  
       	    </p>
