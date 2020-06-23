@@ -2,6 +2,47 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 import Nav from '../components/Nav'
 
+const projects = [
+	{
+		"name": "ChatEval",
+    "description": "A scientific chatbot evaluation framework for automatic and human evaluation of dialogue. Published NAACL 2019.",
+    "demo": "https://chateval.org",
+		"github": "https://github.com/chateval",
+		"paper": "https://www.aclweb.org/anthology/N19-4011/"
+  },
+	{
+		"name": "Real or Fake Text?",
+		"description": "Crowd-sourced gamification of evaluation for large-scale neural language models.",
+		"demo": "https://www.roft.io/"
+	},
+	{
+		"name": "Predicting Orderliness Using Wikihow",
+		"description": "Performing temporal event reasoning by fine-tuning BERT-based neural language models.",
+		'paper': 'https://kirubarajan.nyc3.digitaloceanspaces.com/kirubarajan_kashyap_zhang.pdf' 
+  },
+  {
+		"name": "Deep DNA (CRISPR) Lineage Tree Reconstruction",
+		"description": "A simulation framework for the zygote development process to achieve a dataset size required by deep learning models, and various supervised and unsupervised approaches for cell mutation tree reconstruction.",
+		"github": "https://github.com/mukund-v/learning-the-game-of-life",
+		"paper": "https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf"
+	},
+	{
+		"name": "Cloud4ISR",
+		"description": "Leveraging cloud architectures to perform intelligence, surveillance, and reconnaissance. Published SPIE Defense 2016.",
+		"paper": "https://spie.org/conferences-and-exhibitions/past-conferences-and-exhibitions/defense--commercial-sensing-2016",
+	},
+  {
+		"name": "Evaluation Criteria for Human and Computer Written Text",
+		"description": "Human-annotated taxonomy of both errors made by large-scale neural language models, and characteristics of human-written text.",
+		"paper": "https://kirubarajan.nyc3.digitaloceanspaces.com/learning_to_trick_humans.pdf",
+  },
+	{
+		"name": "GROVER: Generating Rap by Observing Verses",
+		"description": "An LSTM-based with attention model written in PyTorch that uses the CMU pronounciation dictionary to generate rhyming lyrics with inflection and meter.",
+		"paper": "https://kirubarajan.nyc3.digitaloceanspaces.com/530_Final_Project_1_.pdf",
+	}
+]
+
 const Research = () => {
   return (
 	  <section className="section" style={{"paddingTop": "1rem"}}>
@@ -11,45 +52,41 @@ const Research = () => {
         </Helmet>
 
 	    <div className="container">
-        <div className="columns">
+        <div className="columns" style={{marginBottom: 0}}>
           <div className="column is-one-fourth"> </div>
           <div className="column">  
           	<Nav />
 	          <figure className="image is-128x128">
 	            <img src={"/img/thinking.svg"}  />
 	          </figure>
-			  <h1 class="title"> some research</h1>
-              <p><strong>Published Papers</strong></p>
-              <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-                <a class="panel-block list-group-item is-primary" href="https://www.aclweb.org/anthology/N19-4011/">ChatEval: A Tool for Chatbot Evaluation [NAACL 2019]</a>
-                <a class="panel-block list-group-item is-primary" href="https://spie.org/conferences-and-exhibitions/past-conferences-and-exhibitions/defense--commercial-sensing-2016">Cloud4ISR: Large-scale intelligence, surveillance, and reconnaissance [SPIE 2016]</a>
-              </div>
-              <p><strong>Research Projects</strong></p>
-              <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-				<a class="panel-block list-group-item is-primary" href="https://www.roft.io">Real or Fake Text?</a>
-				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/kirubarajan_kashyap_zhang.pdf">Fine-Tuning BERT on Wiki-How for Temporal Event Reasoning</a>
-				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/learning_to_trick_humans.pdf">Learning to Trick Humans: Evaluation Criteria for Human and Computer Written Text</a>
-				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf">Deep DNA (CRISPR) Lineage Tree Reconstruction</a>
-				<a class="panel-block list-group-item is-primary" href="https://kirubarajan.nyc3.digitaloceanspaces.com/530_Final_Project_1_.pdf">GROVER: Generating Rap by Observing Verses</a>
-              </div>
-	            <p style={{marginBottom: "0.5rem"}}> <strong>Natural Language Processing</strong> </p>
+			      <h1 class="title"> some research</h1>
 	            I am an undergraduate researcher working in Professor <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch's</a> lab. My research interests
-	            include applying deep learning techniques to natural language processing problems, specifically in the domain of information extraction and dialogue systems. 
-	            I have publications in the ACL anthology and NAACL for the area of dialogue systems. <br /> <br />
+	            include applying deep learning techniques to natural language processing problems, specifically in the domain of black-box model evaluation, information extraction, and dialogue systems. 
+	            I have publications in NAACL, ACL Anthology, and SPIE Defense. <br /> <br />
 
-	            My current research includes standardized evaluation for a variety of machine learning models.
-	            
-	            <br /> <br />
-	            <p style={{marginBottom: "0.5rem"}}> <strong>Software Architecture</strong> </p>
-	            I published a conference paper in the 2016 SPIE Defense journal and presented a talk on the cloud architecture I helped design (online
-	            processing of autonomous vehicle sensor data). This architecture was later developed at Trackgen and deployed into production.<br /> <br />
+              You can find my Google Scholar profile <a href="https://scholar.google.com/citations?user=9dZbMCsAAAAJ&hl=en&oi=ao">here</a>.  <br /> <br />
 
-	            I've previously volunteered at McMaster University under Professor Jamal Deen and Dr. Thamarasa, assisting
-	            in data analysis using D3.js and Javascript. In addition, I helped write scripts to speed up instantiation of EC2 instances
-	            for analyzing tracker data. <br /> <br />     
+              <p style={{marginBottom: '0.5rem', color: 'grey', fontWeight: 600}}>Projects:</p> 
 	        </div>
 	        <div className="column"></div>
 	      </div>
+		      <div className="columns is-multiline">
+            {projects.map(project => (
+              <div className="column is-one-third">
+                <div className="box">
+                  <p style={{fontWeight: 600, marginBottom: '0.25rem'}}>{project.name}</p>
+                  <p style={{fontSize: "0.85rem", marginBottom: "0.5rem", marginTop: "0.1rem"}}>
+                    {project.description}
+                  </p>
+                  <p>
+                  {project.demo && <a style={{marginRight: "0.75rem"}} href={project.demo}>Demo</a>}
+                  {project.paper && <a style={{marginRight: "0.75rem"}} href={project.paper}>Paper</a>}
+                  {project.github && <a style={{marginRight: "0.75rem"}} href={project.github}>Source</a>}
+                  </p>
+                </div>
+              </div>
+            ))}
+        </div>
 	    </div>
 	  </section>
   );
