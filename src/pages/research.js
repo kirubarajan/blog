@@ -24,7 +24,7 @@ const projects = [
 		"name": "Deep DNA (CRISPR) Lineage Tree Reconstruction",
 		"description": "A simulation framework for the zygote development process to achieve a dataset size required by deep learning models, and various supervised and unsupervised approaches for cell mutation tree reconstruction.",
 		"github": "https://github.com/mukund-v/learning-the-game-of-life",
-		"paper": "https://kirubarajan.nyc3.digitaloceanspaces.com/ESE546_fp_learning_game_of_life.pdf"
+		"paper": "https://kirubarajan.nyc3.digitaloceanspaces.com/learning_game_of_life.pdf"
 	},
 	{
 		"name": "Cloud4ISR",
