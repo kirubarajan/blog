@@ -68,7 +68,7 @@ const Consulting = () => {
           <div className="column">  
           	<Nav />
 	          <figure className="image is-128x128">
-	            <img src={"/img/nips.svg"}  />
+	            <img src={"/img/thinking.svg"}  />
 	          </figure>
 	          <h1 class="title"> some engineering </h1>
 	          <p>           

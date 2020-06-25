@@ -57,7 +57,7 @@ const Research = () => {
           <div className="column">  
           	<Nav />
 	          <figure className="image is-128x128">
-	            <img src={"/img/thinking.svg"}  />
+	            <img src={"/img/nips.svg"}  />
 	          </figure>
 			      <h1 class="title"> some research</h1>
 	            I am an undergraduate researcher working in Professor <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch's</a> lab. My research interests
