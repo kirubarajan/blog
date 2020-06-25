@@ -5,8 +5,8 @@ import Nav from '../components/Nav'
 const projects = [
 	{
 		"name": "ChatEval",
-    "description": "A scientific chatbot evaluation framework for automatic and human evaluation of dialogue. Published NAACL 2019.",
-    "demo": "https://chateval.org",
+    	"description": "A scientific chatbot evaluation framework for automatic and human evaluation of dialogue. Published NAACL 2019.",
+    	"demo": "https://chateval.org",
 		"github": "https://github.com/chateval",
 		"paper": "https://www.aclweb.org/anthology/N19-4011/"
   },
@@ -34,7 +34,7 @@ const projects = [
   {
 		"name": "Evaluation Criteria for Human and Computer Written Text",
 		"description": "Human-annotated taxonomy of both errors made by large-scale neural language models, and characteristics of human-written text.",
-		"paper": "https://kirubarajan.nyc3.digitaloceanspaces.com/learning_to_trick_humans.pdf",
+		"paper": "https://kirubarajan.nyc3.digitaloceanspaces.com/learning_to_trick.pdf",
   },
 	{
 		"name": "GROVER: Generating Rap by Observing Verses",
