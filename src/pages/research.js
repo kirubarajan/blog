@@ -4,17 +4,18 @@ import Nav from '../components/Nav'
 
 const projects = [
 	{
+		"name": "Real or Fake Text?",
+		"description": "A tool for the crowd-sourced evaluation of large-scale neural language models. Published EMNLP 2020.",
+		"demo": "https://www.roft.io/",
+		"github": "https://github.com/kirubarajan/roft",
+	},
+	{
 		"name": "ChatEval",
     	"description": "A scientific chatbot evaluation framework for automatic and human evaluation of dialogue. Published NAACL 2019.",
     	"demo": "https://chateval.org",
 		"github": "https://github.com/chateval",
 		"paper": "https://www.aclweb.org/anthology/N19-4011/"
   },
-	{
-		"name": "Real or Fake Text?",
-		"description": "Crowd-sourced gamification of evaluation for large-scale neural language models.",
-		"demo": "https://www.roft.io/"
-	},
 	{
 		"name": "Predicting Orderliness Using Wikihow",
 		"description": "Performing temporal event reasoning by fine-tuning BERT-based neural language models.",
@@ -62,9 +63,9 @@ const Research = () => {
 			      <h1 class="title"> some research</h1>
 	            I am an undergraduate researcher working in Professor <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch's</a> lab. My research interests
 	            include applying deep learning techniques to natural language processing problems, specifically in the domain of black-box model evaluation, information extraction, and dialogue systems. 
-	            I have publications in NAACL, ACL Anthology, and SPIE Defense. <br /> <br />
+	            I have publications in EMNLP, NAACL, INLG, and SPIE Defense. My research is graciously funded by Google and DARPA. <br /> <br />
 
-              You can find my Google Scholar profile <a href="https://scholar.google.com/citations?user=9dZbMCsAAAAJ&hl=en&oi=ao">here</a>.  <br /> <br />
+              	You can find my Google Scholar profile <a href="https://scholar.google.com/citations?user=9dZbMCsAAAAJ&hl=en&oi=ao">here</a>.  <br /> <br />
 
               <p style={{marginBottom: '0.5rem', color: 'grey', fontWeight: 600}}>Projects:</p> 
 	        </div>
