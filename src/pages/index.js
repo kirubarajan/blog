@@ -20,8 +20,8 @@ const Index = () => {
 	          </figure>
 	          <h1 className="title"> Hi, I'm Arun! 🙌 </h1>
 	          <p>
-	            I'm a Canadian 🇨🇦 undergraduate at the University of Pennsylvania studying computer science and minoring in linguistics. 
-              I'm a <a href="/research">published</a> machine learning researcher in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://cis192.github.io/">teach</a> in Penn's official Python course.
+	            I'm a (Canadian! 🇨🇦) undergraduate at the University of Pennsylvania studying computer science and minoring in linguistics. 
+              I'm a <a href="/research">published</a> machine learning researcher in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://cis192.github.io/">teach</a> Penn's official Python course!
               
               <br /> <br />
               	Outside of school, I'm currently a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a> and a Quantitative Researcher at an AI-powered wealth management company named <a href="https://vise.com">Vise</a>.
