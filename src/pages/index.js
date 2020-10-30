@@ -24,8 +24,8 @@ const Index = () => {
               I'm a <a href="/research">published</a> machine learning researcher in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I also <a href="https://cis192.github.io/">teach</a> Penn's official Python course!
               
               <br /> <br />
-              	Outside of school, I'm currently a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a> and a Quantitative Researcher at an AI-powered wealth management company named <a href="https://vise.com">Vise</a>.
-			  	Previously I was an intern at a hedge fund named <a href="https://bridgewater.com"> Bridgewater</a>.
+              	Outside of school, I'm currently a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a>.
+			  	Previously, I was an intern at an AI-powered wealth management startup named <a href="https://vise.com">Vise</a> and at a hedge fund named <a href="https://bridgewater.com"> Bridgewater</a>.
 			   	I also do consulting and contract work with a variety of organizations, ranging from Y&#8209;Combinator backed startups to R&D/defense companies.
 
               <br /> <br />
