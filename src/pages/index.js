@@ -25,7 +25,7 @@ const Index = () => {
               
               <br /> <br />
               	Outside of school, I'm currently a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a>.
-			  	Previously, I've worked at a couple of interesting companies, such as <a href="https://foursquare.com">Foursquare</a>, <a href="https://vise.com">Vise</a>, and <a href="https://bridgewater.com">Bridgewater</a>.
+			  	Previously, I've worked at a couple of interesting companies, such as <a href="https://vise.com">Vise</a>, <a href="https://foursquare.com">Foursquare</a>, and <a href="https://bridgewater.com">Bridgewater</a>.
 			   	I also consult with a variety of organizations, ranging from Y&#8209;Combinator backed startups to R&D/defense companies.
 
               <br /> <br />
