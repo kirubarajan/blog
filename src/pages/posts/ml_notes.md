@@ -3,11 +3,11 @@ path: "/blog/ml_notes"
 date: "2019-11-21"
 title: "Machine Learning Concepts"
 tags: ['machine learning', 'notes']
-excerpt: "My Notes on Various Topics"
+excerpt: "Notes on some machine learning related topics"
 ---
 
-# Machine Learning Concepts
-> My Notes on Various Machine Learning Topics
+# Machine Learning Notes
+> Notes on some machine learning related topics
 
 Getting started in machine learning sometimes feels like drinking water from a firehose (pardon my cliché). The topic has so many academic roots in a lot of different disciplines (bayesian statistics, optimization, and information theory - oh my!) so I decided to keep a personal glossary of various machine learning concepts (namely relating to neural networks and natural language processing) for my own benefit. These notes might not be complete or accurate - if you would like to see an idea to be written about here feel free to shoot me an email!
 

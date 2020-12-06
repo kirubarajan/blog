@@ -3,7 +3,7 @@ path: "/blog/decoding"
 date: "2020-04-17"
 title: "Decoding Strategies for Text Generation"
 tags: ['machine learning']
-excerpt: "An Overview of How To *Use* A Trained Language-Model"
+excerpt: "An overview of how to *use* a trained language model"
 ---
 
 <div class="notification is-link">

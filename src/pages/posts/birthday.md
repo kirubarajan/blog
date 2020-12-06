@@ -3,11 +3,11 @@ path: "/blog/birthday"
 date: "2020-06-03"
 title: "Quarantine Birthday"
 tags: ['personal']
-excerpt: "Somehow The Most Memorable One Yet"
+excerpt: "Somehow the most memorable yet"
 ---
 
 # Quarantine Birthday
-> Somehow The Most Memorable One Yet
+> Somehow the most memorable yet
 
 I've been very fortunate this week by being able to enjoy my birthday in peace at my home in Canada. 
 But when quarantine first started, I didn't expect it to last through my June birthday. So in early May,
