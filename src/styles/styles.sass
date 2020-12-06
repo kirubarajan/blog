@@ -1,10 +1,5 @@
-@import "../../node_modules/bulma/bulma"
-
-@import url('https://rsms.me/inter/inter.css');
-html
-	font-family: 'Inter', sans-serif !important; 
-
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+	
 small
 	text-align: right !important
 	font-size: 0.6rem
@@ -81,3 +76,12 @@ small
 
 	.katex-html
 		margin-bottom: 1.5rem !important
+
+
+$family-serif: 'Lora', serif;
+$family-sans-serif: 'IBM Plex Sans', sans-serif;
+
+$family-primary: $family-sans-serif;
+$family-secondary: $family-serif;
+
+@import "../../node_modules/bulma/bulma"

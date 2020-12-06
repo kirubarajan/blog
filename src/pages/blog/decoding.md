@@ -114,4 +114,4 @@ $$
 
 So it seems like there are a lot of decoding strategies for generating text. For deciding which to use, it's best to think about what aspect of human language you are trying to capture. If it's an accuracy-maximizing translation task, then Beam Search is the way to go (determinism in selection can be helpful). If you want the expressiveness and character of a chatbot, then random sampling with a distributional change would make the most sense.
 
-Trying to use statical and mathematical tools to decipher what makes text sound human is an interesting avenue of research and lately I've been exploring it in earnest. Check out this project [here](https://github.com/kirubarajan/trick) to see our latest efforts!
+Trying to use statistical and mathematical tools to decipher what makes text sound human is an interesting avenue of research and lately I've been exploring it in earnest. Check out this project [here](https://github.com/kirubarajan/trick) to see our latest efforts!
