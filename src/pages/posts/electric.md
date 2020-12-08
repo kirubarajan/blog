@@ -3,7 +3,7 @@ path: "/blog/electric"
 date: "2020-05-17"
 title: "On *Electric* Longboards"
 tags: ['personal']
-excerpt: "Reflecting on Building an Electric Longboard"
+excerpt: "Reflecting on building an electric longboard"
 ---
 
 # On *Electric* Longboards

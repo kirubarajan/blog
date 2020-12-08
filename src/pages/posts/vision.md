@@ -3,7 +3,7 @@ path: "/blog/vision"
 date: "2020-05-31"
 title: "On Vision Walks"
 tags: ['personal']
-excerpt: "Keeping Myself Sane and Active"
+excerpt: "Keeping myself sane (and active)"
 ---
 
 # On Vision Walks

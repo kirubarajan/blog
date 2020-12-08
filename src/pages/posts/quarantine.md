@@ -2,7 +2,7 @@
 path: "/blog/quarantine"
 date: "2020-04-03"
 title: "Spending Time in Quarantine"
-excerpt: "My Experiences with COVID-19 and Flattening the Curve"
+excerpt: "My experiences with COVID-19 and flattening the curve"
 tags: ['personal']
 ---
 
