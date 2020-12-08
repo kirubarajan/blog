@@ -1,8 +1,25 @@
 import React from 'react'
+import anime from 'animejs/lib/anime.es.js'
 import { Helmet } from "react-helmet"
 import '../styles/styles.sass'
 
 const Index = () => {
+  const animationRef = React.useRef(null);
+  
+  React.useEffect(() => {
+    animationRef.current = anime.timeline({
+      easing: 'linear',
+      direction: 'alternate',
+      loop: true,
+      duration: 1000
+    })
+    .add({ targets: '.neuron1',  background: ['#F4F4F4', '#BFD5F6'], delay: 200}, 0)
+    .add({ targets: '.neuron6',  background: ['#F4F4F4', '#BFD5F6'], delay: 400}, 0)
+    .add({ targets: '.neuron8',  background: ['#F4F4F4', '#BFD5F6'], delay: 600}, 0)
+    .add({ targets: '.neuron10',  background: ['#F4F4F4', '#BFD5F6'], delay: 800 }, 0)
+
+  }, [])
+
   return (
 	  <section className="section" style={{"paddingTop": "1rem"}}>
       <Helmet>
@@ -11,7 +28,7 @@ const Index = () => {
       </Helmet>
 
 	    <div className="container">
-        <div className="columns">
+        <div className="columns is-variable is-8 is-vcentered" style={{height: '90vh'}}>
           <div className="column is-half">  
 	          <h1 style={{marginTop: '2rem', color: '#496B9E'}} className="title is-family-secondary is-size-2 has-text-info-dark">
               Hi, I'm Arun. 🙌
@@ -31,6 +48,99 @@ const Index = () => {
 	          </p>
 	        </div>
 	        <div className="column is-half">
+            <div>
+              <span className="neuron1" style={{
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+
+              <span className="neuron2" style={{
+                marginLeft: "30px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+
+              <span className="neuron3" style={{
+                marginLeft: "30px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+              
+              <span className="neuron4" style={{
+                marginLeft: "30px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+            </div>
+
+            <div style={{marginTop: '1rem'}}>
+              <span className="neuron5" style={{
+                marginLeft: "65px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+              <span className="neuron6" style={{
+                marginLeft: "30px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+
+              <span className="neuron7" style={{
+                marginLeft: "30px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />   
+            </div>
+
+            <div style={{marginTop: '1rem'}}>
+              <span className="neuron8" style={{
+                marginLeft: "130px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+              <span className="neuron9" style={{
+                marginLeft: "30px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+            </div>
+            <div style={{marginTop: '1rem'}}>
+              <span className="neuron10" style={{
+                marginLeft: "200px",
+                height: '100px',
+                width: '100px',
+                backgroundColor: '#F4F4F4',
+                borderRadius: '50%',
+                display: 'inline-block'
+              }} />
+            </div>
           </div>
         </div>
 	    </div>
