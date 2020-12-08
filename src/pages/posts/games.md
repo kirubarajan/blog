@@ -2,12 +2,12 @@
 path: "/blog/games"
 date: "2020-04-04"
 title: "Catching Up on Video Games"
-excerpt: "Lots of Time and Lots of Games"
+excerpt: "Lots of time and lots of games"
 tags: ['personal']
 ---
 
 # Catching Up on Video Games
-> Lots of Time and Lots of Games
+> Lots of time and lots of games
 
 ## Perfect Timing
 
