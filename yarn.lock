@@ -9647,6 +9647,11 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
+konva@7.1.4:
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-7.1.4.tgz#2ec92cac04a40e5aff4f1cb063091958b06b9c44"
+  integrity sha512-YnouWYg14hrrIk987QCYP20HPu9OXfIDYs3jEX2ywhuGDAPP1RPF9xIJgY3odmWTpBXsa22YE+8txiKT+Fiwdw==
+
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
@@ -12592,6 +12597,14 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-konva@16.13.0-0:
+  version "16.13.0-0"
+  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-16.13.0-0.tgz#6a717adb891af476da87585969fb960d0bec5a8c"
+  integrity sha512-JwnmV3AOoaxjh8LFFbJjpF+9qbWzS3iNoRbO5CQAqMIWK9eH0EtJTgW6lOPTLl/Yh9L1+hgvbzWr8lOuEPcOnQ==
+  dependencies:
+    react-reconciler "^0.25.1"
+    scheduler "^0.19.1"
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"

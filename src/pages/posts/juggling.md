@@ -24,7 +24,10 @@ A lot of times college is referred to as a **balancing act**, where all obligati
 
 When I told my friend this, she thought it was unfathomable. And to be fair, it really only works where you aren't constantly putting out fires, so this could be my senior-ness talking.  Sometimes, this is just hard to do, with weird group project meetings and one-off requirements sprinkled throughout the week. But even then, just carving time around them for a single task, and waking up with a single accomplishable goal did wonders for me. 
 
+<br />
+
 ![](https://media.giphy.com/media/S6BFlYf8Puqt3F62Tt/giphy.gif)
+<br /><small>(it's not just fun metaphorically)</small>
 
 Focusing on one thing at a time and assuming everything else will get done *when it was time* helped me with my biggest problem when drowning: feeling bad because I wasn't getting the most out of my work. I would always feel that I was rushing studying or research because of other external factors (i.e. other assignments). That feeling goes away after a day of hard work, where I could honestly say that I devoted that day's working hours to a *single thing*. It even helped me wake up earlier (to squeeze more hours into the day), helped me avoid the negatives of [context switching](https://en.wikipedia.org/wiki/Human_multitasking), and forced me to schedule my work further in advance to ensure a full day of working.
 

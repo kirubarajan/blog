@@ -1,6 +1,7 @@
 import React from 'react'
 import anime from 'animejs/lib/anime.es.js'
 import { Helmet } from "react-helmet"
+import { Stage, Layer, Circle, Line } from 'react-konva';
 import '../styles/styles.sass'
 
 const Index = () => {
@@ -10,7 +11,6 @@ const Index = () => {
     animationRef.current = anime.timeline({
       easing: 'linear',
       direction: 'alternate',
-      loop: true,
       duration: 1000
     })
     .add({ targets: '.neuron1',  background: ['#F4F4F4', '#BFD5F6'], delay: 200}, 0)
@@ -28,7 +28,7 @@ const Index = () => {
       </Helmet>
 
 	    <div className="container">
-        <div className="columns is-variable is-8 is-vcentered" style={{height: '90vh'}}>
+        <div className="columns is-multiline is-variable is-8 is-vcentered" style={{height: '90vh'}}>
           <div className="column is-half">  
 	          <h1 style={{marginTop: '2rem', color: '#496B9E'}} className="title is-family-secondary is-size-2 has-text-info-dark">
               Hi, I'm Arun. 🙌
@@ -47,6 +47,40 @@ const Index = () => {
               This website is where I write about the things that I am doing or stuff I find interesting.
 	          </p>
 	        </div>
+          <div className="column is-half">
+            <Stage width={window.innerWidth} height={window.innerHeight}>
+              <Layer>
+                <Circle x={200} y={200} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={325} y={200} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={450} y={200} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={575} y={200} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={260} y={325} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={385} y={325} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={510} y={325} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={325} y={450} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={450} y={450} fill="#F4F4F4" radius={50} />
+              </Layer>
+              <Layer>
+                <Circle x={385} y={325} fill="#F4F4F4" radius={50} />
+              </Layer>
+            </Stage>
+          </div>
 	        <div className="column is-half">
             <div>
               <span className="neuron1" style={{
