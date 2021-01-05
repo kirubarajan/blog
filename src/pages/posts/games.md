@@ -35,3 +35,6 @@ Here are the games I've finished (or played a substantial amount of) since retur
 13. *Batman: Arkham Knight* (re-play)
 14. *The Last of Us* (re-play)
 15. *The Last of Us: Part II*
+16. *Halo 1*
+17. *Halo 2*
+18. *DOOM VFR*

@@ -48,7 +48,7 @@ const Index = () => {
 	          </p>
 	        </div>
           <div className="column is-half">
-            <Stage width={window.innerWidth} height={window.innerHeight}>
+            <Stage width={'100%'} height={'100%'}>
               <Layer>
                 <Circle x={200} y={200} fill="#F4F4F4" radius={50} />
               </Layer>
