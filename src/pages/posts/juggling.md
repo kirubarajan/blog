@@ -14,9 +14,9 @@ Students are always working on *something*. Whether it's homework, pre-professio
 
 So how should you approach getting work done? Should you work on every single thing every single day? Are you destined to experience the burnout that comes with doing this?
 
-I've recently had some friends ask how I find the time and mental energy to work on a variety of seemingly disparate things, like helping run [Dorm Room Fund](https://dormroomfund.com) and teaching [a course at Penn](https://cis192.github.io) while being a full-time student. Whenever I get this question I laugh (on the inside). I never thought of myself as having good time management skills at all, and there are definitely other people who are *much, much* better at balancing commitments than I am. 
+I've recently had some friends ask how I find the time and mental energy to work on a variety of seemingly disparate things, like helping run [Dorm Room Fund](https://dormroomfund.com) or teaching [a course at Penn](https://cis192.github.io) while being a full-time student. I never thought of myself as having good time management skills at all, and there are definitely other people who are *much, much* better at balancing commitments their than I am. But one thing I like to think that I'm good at is avoiding burnout from working on too many things, especially when progress stagnates or things get out of hand.
 
-But one thing I like to think that I'm good at is avoiding burnout from working on too many things, especially when progress isn't being made on the things I work on. Part of this is because a lot of what I do are actually pretty intertwined (e.g. doing [NLP research](https://kirubarajan.com/research) helping me stay sharp with investing in ML companies and having better topics to lecture). I think the most important part, however, is how I like to structure my work days.
+Part of this is because a lot of what I do are actually pretty intertwined (e.g. doing [NLP research](https://kirubarajan.com/research) helping me stay sharp with investing in ML companies and helping me teach more interesting lectures). I think the most important part, however, is how I like to structure my work days.
 
 
 ## Just throw it all and forget
@@ -31,7 +31,7 @@ When I told my friend this, she thought it was unfathomable. And to be fair, it 
 
 Focusing on one thing at a time and assuming everything else will get done *when it was time* helped me with my biggest problem when drowning: feeling bad because I wasn't getting the most out of my work/material. I would always feel that I was rushing studying or research because of other external factors (i.e. other assignments). That feeling goes away after a day of hard work, where I could honestly say that I devoted that day's working hours to a *single thing*. Not to mention that avoiding [context switching](https://en.wikipedia.org/wiki/Human_multitasking) helped me get in "the zone", where I was comfortably in my flow state and getting to the core at the matter at hand.
 
-In a way, this is just reframing the benefits of procrastinating: staying focused because there is something that *needs* to get done today. Channelling that type of energy into something less stressful and on your own terms is where I think the value in this approach lies.
+In a way, this is just reframing the benefits of procrastinating: staying focused because there is something that *needs* to get done today. Channelling that type of energy into something less stressful and on your own terms is where I think the value lies.
 
 ## Conclusion
 Writing about productivity or work/life balance can get preachy really quickly so I try to avoid it whenever possible. But, framing my day-to-day as juggling instead of balancing act really did help me with handling all my obligations that students are forever burdened with. 

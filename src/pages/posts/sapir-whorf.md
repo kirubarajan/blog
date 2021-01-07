@@ -2,7 +2,7 @@
 path: "/blog/sapir-whorf"
 date: "2020-11-28"
 title: "Linguistic Relativity, Quantitative Finance, and Rebooting Your Brain"
-tags: ['research', 'personal']
+tags: ['research']
 excerpt: "What can change how you think?"
 ---
 
