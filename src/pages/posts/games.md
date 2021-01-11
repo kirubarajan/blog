@@ -19,6 +19,8 @@ But in the time of a tumultuous real world, the appeals of virtual ones couldn't
 
 Here are the games I've finished (or played a substantial amount of) since returning back to Canada for social distancing. I really enjoy well-crafted, single player experiences. Working through this backlog of games is what keeps me looking forward to each day - I try to finish around a video game a week, making use of whatever sales on Steam I can.
 
+Here are the games I've been playing/tracking since March 2020 (to be out of date as of March 2021):
+
 1. *God of War*
 2. *DOOM Eternal*
 3. *Wolfenstein: The New Order*
