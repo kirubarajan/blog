@@ -38,3 +38,5 @@ Here are the games I've finished (or played a substantial amount of) since retur
 16. *Halo 1*
 17. *Halo 2*
 18. *DOOM VFR*
+19. *Bioshock*
+20. *Halo 3*
