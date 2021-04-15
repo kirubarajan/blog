@@ -20,7 +20,7 @@ const Index = () => {
 	          </figure>
 	          <h1 style={{marginTop: '1rem', color: '#496B9E'}} className="title is-family-secondary is-size-2 has-text-info-dark"> Hi, I'm Arun. 🙌 </h1>
 	          <p>
-	            I'm a (Canadian! 🇨🇦) undergraduate at the University of Pennsylvania studying computer science and minoring in linguistics. 
+	            I'm a (Canadian! 🇨🇦) undergraduate at the University of Pennsylvania studying computer science and linguistics. 
               I'm also a <a href="/research">published</a> machine learning researcher in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I teach Penn's official <a href="https://cis192.github.io/"> Python course</a>.
               
               <br /> <br />
@@ -29,7 +29,7 @@ const Index = () => {
               I also consult with a variety of organizations, ranging from Y&#8209;Combinator backed startups to R&D/defense companies.
 
               <br /> <br />
-              Other than that, I like brewing coffee, skateboarding, and birdwatching! 
+              Other than that, I like brewing coffee, skateboarding, birdwatching, and racing!
               This website is where I write about the things that I am doing or stuff I find interesting.
 	          </p>
 	        </div>

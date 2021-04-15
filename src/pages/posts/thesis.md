@@ -3,19 +3,19 @@ path: "/blog/thesis"
 date: "2021-03-16"
 title: "My Undergraduate Thesis (In Progress)"
 tags: ['machine learning', 'research']
-excerpt: "Thesis on Information Extraction, Knowledge Graph Construction & Neural Machine Reasoning"
+excerpt: "Generating Declarative Knowledge From Transformers"
 ---
 
-
 <div class="notification is-link">
-    This post will be under construction until I graduate, and is subject to (probably a lot of) change. For any errata, feel free to reach out to me!
+  This post will be under construction until I graduate, and is subject to (probably a lot of) change. For any errata, feel free to reach out to me!
 </div>
 
 # My Undergraduate Thesis
+> Generating Declarative Knowledge From Transformer Language Models
 
 After (almost) 4 long years at the University of Pennsylvania, I'm finally a senior approaching my final few weeks as a student. Sentiments aside, this means that I'm also wrapping up a lot of the research on machine learning and natural language processing I've done during my time at Penn. For my program, this culminates in a senior thesis (on a topic of my choosing) during my final semester.
 
-A single semester isn't typically enough time to make a significant contribution to the field, so I'm hoping to use this thesis as an opportunity to explore new areas of machine intelligence. I'm really excited to shift some of my focus from my previous research from generative models (i.e. language models) towards knowledge representation. I'm equally excited to work with Professor [Dan Roth](https://en.wikipedia.org/wiki/Dan_Roth), who helped pioneer the field of machine reasoning. 
+A single semester isn't typically enough time to make a significant contribution to the field, so I'm hoping to use this thesis as an opportunity to explore new areas of machine intelligence. I'm really excited to shift some of my focus from my previous research from generative models (i.e. language models) towards knowledge representation.
 
 I'll be using this part of my website as a public workspace for my foray into **information extraction, knowledge graph construction, and machine reasoning**. This will probably include (but isn't limited to) code snippets, equations/derivations, background reading, literature review, and personal hot takes.
 
@@ -27,7 +27,7 @@ In recent years, there has been an explosion of data of various formats (e.g. vi
 
 This problem is not just a question of information theory, but also relies on biological inspiration. When collecting new information, humans are able to make connections between related data, which enables not only efficient recall but also provides a framework for synthesizing new thoughts or beliefs. Providing such a framework for machines to perform such types of reasoning over previously given data is a goal for the field and, in turn, this paper.
 
-The approach that this thesis is primarily interested in is the **knowledge graph** model, which models real life (or abstract) entities and their relationships as a graph $G = (V, E)$. Google aptly describes this approach as "things, not strings" [1], referring to the notion that these graphs are often mined from pure language but contain a far more powerful semantic meaning.
+The approach that this thesis is primarily interested in is the **knowledge graph** model, which models real life (or abstract) entities and their relationships as a graph $G = (V, E)$. Google aptly describes this approach as "things, not strings", referring to the notion that these graphs are often mined from pure language but contain a far more powerful semantic meaning.
 
 In this paper, we explore various knowledge graph construction methods, both from their theoretical merits, as well as their empirical performance provided real natural language data as source material. We also aim to provide an unopinionated framework for expressing declarative knowledge over mined knowledge graphs to aid in logical reasoning. In addition, an engineering goal for this thesis is to make such knowledge graphs accessible to the general public, by offering an open source front-end application that is self-hostable for researchers.
 
@@ -72,21 +72,67 @@ where $\alpha$ is the **learning rate**, often an integer in the range [0.01, 0.
 
 ### Transformers
 
-The current state-of-the-art in various natural language processing tasks (particularly related to information extraction and text generation) are **transformer** models, which have been popularized by Vatswani et. al in 2017. These models are largely extensions of feed-forward neural networks, and mark a departure from the previous state-of-the-art models that were variations of **recurrent neural networks**. Due to their feed-forward nature, transformer networks are highly parallelizable, and thereby make it feasible to train of vast quantities of language data.
+The current state-of-the-art in various natural language processing tasks (particularly related to information extraction and text generation) are **transformer** models, which have been popularized by Vatswani et. al in 2017. These models are largely extensions of feed-forward neural networks, and mark a departure from the previous state-of-the-art models that were variations of **recurrent neural networks**. Due to their feed-forward nature, transformer networks are highly parallelizable, and thereby making it feasible to train of vast quantities of language data.
 
 ![](http://jalammar.github.io/images/t/transformer_resideual_layer_norm_3.png)
 
-#### Model Fine-Tuning
-
-A recent development in the natural language processing field is the use of **model fine-tuning**, where a base machine learning model is used to springboard additional training on another dataset, in order to leverage both the generalizability of the original base model as well as the domain-specific performance of the fine-tuning training set. For this paper, we rely on BERT for our base transformer model, and utilize the power of **fine-tuning** to acheive additional performance on specific downstream tasks, namely dependency parsing, named entity recognition, and text generation.
-
 #### Connection to Graph Neural Networks
+
+Since the attention mechanism can be interpreted as a connected graph, with edged annotated with their various weights (or attention strenghths), transformer models are closely related to neural networks that operate over graphs, known as **graph neural networks**. In particular, a challenge in graph neural networks is the requirement that nodes are encoded in a representation that captures information about the local structure, namely to derive semantic value from a given node's neighbourhood. In transformer models, this same requirement is prevalent as well, since the feed-forward nature of the neural network requires that .
+
+### Language Models
+
+We can use the chain rule in probability to break down a sequence (or sentence) of words into step-by-step calculations. For example, if we are considering the probability of the phrase "cat in the hat":
+
+$$
+P(\text{cat in the hat})
+$$
+
+We can break this value down into the product of the following terms (where $\text{<s>}$ denotes the starting token):
+
+$$
+P(\text{<s>})
+\newline
+P(\text{cat} ~|~ \text{<s>})
+\newline 
+P(\text{in} ~|~ \text{<s> cat}) 
+\newline 
+P(\text{the} ~|~ \text{<s> cat in}) 
+\newline 
+P(\text{hat} ~|~ \text{<s> cat in the}) 
+$$
+
+These probabilities are provided by a **language model**. In essence, a language model’s purpose is to provide $P(w ~|~ c)$, where $w$ is a particular target word (i.e. the next word) and $c$ is the context that precedes the target word. Using a trained model, we can use $P(w ~|~ c)$ to create a distribution of the likelihood for the next word. A common method to estimate this probbaility is using a neural network:
+
+$$
+P(w ~|~ c) = \operatorname*{softmax}(Wh_t + b)
+$$
+
+where $W$ represents a parameter matrix of the neural network weights, $h_t$ consists of a representation of the preceeding language (either the encoding of natural language string or the previous output of a neural network in the case of a recurrent architecture), and $b$ represents the bias of the prediction. The $\operatorname*{softmax}$ operation produces an distribution over possible outputs $i$ through the equation:
+
+$$
+\sigma(z)_i = \frac{e^{z_i}}{\sum_j{e^{z_j}}}
+$$
+
+Note that the output distribution is a valid probability distribution by the normalization of the denominator term, which allows the use of stochastic sampling for various applications (including text generation).
+
+#### Text Generation
+
+Now, we turn our focus to using these probabilities to **create** text. We first determine what the first word of our generation would be. Similar to the previous example, where we have a $\text{<s>}$ token to signify the beginning of a sequence, we can ask the model what the value of $P(w ~|~ \text{<s>})$ for a variety of different values of $w$.
+
+More broadly, our goal is to select the words that maximize:
+
+$$
+\prod _{i = 0} ^{n} P(w_i ~ | ~ c_0 ~ ... ~ c_{i - 1})
+$$
+
+Note that we can model this problem as a graph with layers for each timestep *t* in the sentence comprised of nodes representing words that are fully connected to the nodes in the following layer. Thus, we can prove that this problem is equivalent to the **longest path problem**, which has been shown to be NP-complete. As such, generating text through deterministic combinatorial optimization is far too slow, both for real-world applications and for model training.
 
 ### Machine Reasoning
 
-#### Knowledge Representation
-
 #### Reasoning Tasks
+
+TODO
 
 #### Knowledge Graphs
 
@@ -102,31 +148,57 @@ Collaborative human approaches to knowledge graph constructions have existed as 
 
 #### Named Entity Recognition
 
+TODO
+
 #### Dependency Parsing
+
+TODO
 
 ## Related Work
 
-### Knowledge Graph Construction
+### Knowledge Extraction
 
-#### [CoType](https://arxiv.org/pdf/1610.08763.pdf)
-#### [COMET](https://arxiv.org/pdf/1906.05317.pdf)
+#### [OpenIE](https://nlp.stanford.edu/pubs/2015angeli-openie.pdf)
+##### Summary
+TODO
+##### Analysis
+TODO
+
+#### [Language Models as Knowledge Bases?](https://www.aclweb.org/anthology/D19-1250.pdf)
+##### Summary
+*Language Models as Knowledge Bases* is a paper written in 2019 by various researchers at Facebook AI Research (FAIR) and University College London. The paper is inspired by the notion that in the process of learning linguistic knowledge (i.e. language model training), models are possibly able to learn relational data as well, and that such relational data can be probed via cloze statements (or other fill-in-the-blank tasks). The goal of the paper is to explain that language models themselves contain relational data similar to how knowledge bases do, without the need for extensive manual annotating of a structured knowledge graph. The authors show this by evaluating the ability of BERT (without fine-tuning) to complete cloze tasks for factual data, as well as BERT's ability to perform question answering (QA) tasks. In the process, the authors develop a probe named *LAMA* (LAnguage Model Analysis), which is a set of subject-relation-object triples or question-answer pairs from various disparate sources.
+
+##### Analysis
+The intuition for the claims about language models made by the paper stem from the modern training process of large language models. In particular, the ability of modern language models to contain such linguistic and relational knowledge is two-fold. The first improvement that such models have to obtain excess factual knowledge than expected is due to the amount of training data used in the model training process. Since transformer language models do not have the bottle-necks in parallelization that recursive models do (e.g. recurrent neural networks), it is possible to train them on troves more data, which often include internet data containing a plethora of declarative/factual information such as Wikipedia. The second recent improvement in language modelling is sheer representational power, as transformer models have a representational capacity order of magnitudes larger than their predecessors, as it is common to see state-of-the-art models with billions of model parameters. The generation process itself may be a contributor to this, as language models tend to exihibit some sort of memorization when generating text, as well as information obfuscation or retrieval itself.
+
+In addition, the method of information extraction put forth by the paper is particularly interesting to this research. Instead of producing declarative knowledge in a structured manner, the generative approach indirectly probes the model for answers via clever question/prompt formulation, relying on implicit knowledge representation peformed by the model that is hidden to observers. This is in contrast to a more direct approach of extracting knowledge, like the previous gold-standard information extraction approach of OpenIE.
+
+The authors also note that certain types of factual knowledge are more easily acquired by language models than others. As a result, they argue that they are not measuring the average empirical performance of language models on this task, but are instead measuring a **lower bound** on the ability for language models to acquire knowledge.
 
 ### Knowledge Graph Tasks
 
-#### [Knowledge Graph Inference](https://www.cs.cmu.edu/~mg1/thesis.pdf)
+#### [COMET](https://arxiv.org/pdf/1906.05317.pdf)
+##### Summary
+TODO
+##### Analysis
+TODO
+
 #### [GraphWriter](https://arxiv.org/pdf/1904.02342.pdf)
+##### Summary
+TODO
+##### Analysis
+TODO
 
-## Experimental Setup
+## Dependency-Based Construction Task
 
-The primary experiment for this paper is relying on knowledge graph representations to generate unstructured text (inspired by Koncel-Kedziorski et. al). The experiment procedure given source data $D$ is as follows:
+### Experimental Design
+Dataset: [CMU Book Summaries](http://www.cs.cmu.edu/~dbamman/booksummaries.html)
 
-1. Mine knowledge graph $G$ from an excerpt of $D$.
-2. Generate text $D'$ from representation $G$.
-3. Compute information loss using various distance metrics (e.g. perplexity from language model, average embedding difference, BLEU etc.)
+1. Extract knowledge graph using OpenIE.
+2. Extract knowledge graph using NER + dependency parsing.
+3. Compare extraction similarities.
 
-This task, although ambitious, serves to lay the foundation for future research in relying on knowledge graphs to generate coherent and logically consistent text.
-
-## Dependency-Based Prototype
+### Pipeline Architecture
 
 #### SpaCy
 
@@ -164,27 +236,49 @@ for token in doc:
 
 This generates a graph $G = (V, E)$ which we are able to export into a useable format for downstream tasks. We also develop auxillary functions for querying and interacting with the knowledge graph.
 
-#### Usage
-
-After exporting the knowledge graph, we are able to load it into our open source knowledge graph browser, which is self-hostable for researchers. Below is a screenshot of extracted entities from raw text of various news articles:
-
-![](https://i.imgur.com/oOnLa1G.png)
-
 #### Representation
 
 In order to provide the knowledge graph as an input to standard language models, we must first generate a string representation for the graph. The simplest way to do this is to perform a string concatenation between the various nodes and edge annotations, ensuring that nodes and edges appear close-by in the representation.
 
-## Results
+This notes a more ambitious, but less robust departure from GraphWriter, which relies on a graph neural network to process the given knowledge graph. 
 
-TBD
+#### Usage
+
+After exporting the knowledge graph, we are able to load it into our open source knowledge graph browser, which is built in JavaScript and is self-hostable for researchers.
+
+## Transformer-based Knowledge Graph Construction/Bootstrapping
+
+### Experimental Design
+
+#### Generative Construction Probe
+Dataset: [CMU Book Summaries](http://www.cs.cmu.edu/~dbamman/booksummaries.html)
+
+1. Extract knowledge graph using OpenIE + generative approach (OpenIE for subject and relation, generate object).
+2. Compare accuracy/embedding similarity.
+
+#### Knowledge Graph Reasoning Task
+Dataset: [ATOMIC Dataset](https://homes.cs.washington.edu/~msap/atomic/)
+
+1. Generate knowledge graph with NER + dependency parsing approach.
+2. Feed knowledge graph representation to language model and evaluate on ATOMIC dataset.
+
+TODO
+
+### Results
+
+TODO
+
+### Comparison
+
+TODO
 
 ## Future Work
 
-TBD
+TODO
 
 ## Conclusion
 
-TBD
+TODO
 
 ## Bibliography
 1. https://blog.google/products/search/introducing-knowledge-graph-things-not/
@@ -192,3 +286,4 @@ TBD
 3. https://arxiv.org/pdf/1610.08763.pdf
 4. https://arxiv.org/pdf/1904.02342.pdf
 5. https://www.cs.cmu.edu/~mg1/thesis.pdf
+6. https://www.aclweb.org/anthology/D19-1250.pdf
