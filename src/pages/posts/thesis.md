@@ -72,13 +72,17 @@ where $\alpha$ is the **learning rate**, often an integer in the range [0.01, 0.
 
 ### Transformers
 
-The current state-of-the-art in various natural language processing tasks (particularly related to information extraction and text generation) are **transformer** models, which have been popularized by Vatswani et. al in 2017. These models are largely extensions of feed-forward neural networks, and mark a departure from the previous state-of-the-art models that were variations of **recurrent neural networks**. Due to their feed-forward nature, transformer networks are highly parallelizable, and thereby making it feasible to train of vast quantities of language data.
+The current state-of-the-art in various natural language processing tasks (particularly related to information extraction and text generation) are **transformer** models, which have been popularized by Vatswani et. al in 2017. These models are largely extensions of feed-forward neural networks, and mark a departure from the previous generation of language models that were variations of **recurrent neural networks**. Due to their feed-forward nature, transformer networks are highly parallelizable, and thereby making it feasible to train of vast quantities of language data. As a result, these models have achieved widespread state-of-the-art results on many tasks in natural language processing, often achieving human-level performance.
 
 ![](http://jalammar.github.io/images/t/transformer_resideual_layer_norm_3.png)
 
+#### Architecture
+
+TODO
+
 #### Connection to Graph Neural Networks
 
-Since the attention mechanism can be interpreted as a connected graph, with edged annotated with their various weights (or attention strenghths), transformer models are closely related to neural networks that operate over graphs, known as **graph neural networks**. In particular, a challenge in graph neural networks is the requirement that nodes are encoded in a representation that captures information about the local structure, namely to derive semantic value from a given node's neighbourhood. In transformer models, this same requirement is prevalent as well, since the feed-forward nature of the neural network requires that .
+Since the attention mechanism can be interpreted as a connected graph, with edged annotated with their various weights (or attention strenghths), transformer models are closely related to neural networks that operate over graphs, known as **graph neural networks**. In particular, a challenge in graph neural networks is the requirement that nodes are encoded in a representation that captures information about the local structure, namely to derive semantic value from a given node's neighbourhood. In transformer models, this same requirement is challenge as well, since the feed-forward nature of the neural network prohibits the model from learning the temporal ordering aspect of the input words. In transformer networks, this is solved by introducing a positional encoding (often a sinusoidal function) for each token, whose embeddings are an additional input to the multiple attention heads of the transformer model. Their connection to graph neural networks would suggest that transformers would be a natural choice for incorporating graphical data into a language setting.
 
 ### Language Models
 
@@ -130,10 +134,6 @@ Note that we can model this problem as a graph with layers for each timestep *t*
 
 ### Machine Reasoning
 
-#### Reasoning Tasks
-
-TODO
-
 #### Knowledge Graphs
 
 For this paper, the knowledge representation scheme that we are concerned with are **knowledge graphs**. As the name implies, these are graphical data models that collect a set of *entities*, as well as various relationships between them. For example, Google Search incorporates a knowledge graph of various entities from the results of web searches (e.g. President Barack Obama), which allows it to provide information about the entity without performing additional web crawls.
@@ -143,6 +143,10 @@ For this paper, the knowledge representation scheme that we are concerned with a
 <small> Source: Oracle </small>
 
 Collaborative human approaches to knowledge graph constructions have existed as volunteer efforts, namely through [Wikidata]() and [Freebase](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.538.7139&rep=rep1&type=pdf). However, the limitations to human approaches are (by nature) their inability to automatically adapt to new raw text, as well as their reliance on humans, which are either costly or time intensive (or both).
+
+#### Reasoning Tasks
+
+TODO
 
 ### Information Extraction
 
@@ -177,13 +181,14 @@ The authors also note that certain types of factual knowledge are more easily ac
 
 ### Knowledge Graph Tasks
 
-#### [COMET](https://arxiv.org/pdf/1906.05317.pdf)
+#### [GraphWriter](https://arxiv.org/pdf/1904.02342.pdf)
 ##### Summary
-TODO
+*Text Generation from Knowledge Graphs with Graph Transformers* is a paper written in 2019 by researchers at the University of Washington, the University of Edinburgh, and the Allen Institute for Artificial Intelligence (AI2). The paper aims to improve the generational abilities of modern transformer language models by augmenting their knowledge abilities through declarative knowledge, in particular knowledge graphs. The paper introduces a novel graph encoding neural network architecture that is capable of understanding the relational structures that comprise knowledge graphs. This encoding architecture is then incorporated into an end-to-end trainable system that is capable of generating downstream text given a knowledge graph as input. The authors show that this architecture is superior than competing architectures through automatic evaluations (e.g. BLEU, METEOR), as well as human annotators agreeing that the produced text is more informative and captures more of the source information. In addition, the authors introduce the AGENDA (Abstract GENeration DAtaset) dataset as their encoder-decoder architecture is trained to generate scientific paper abstracts from their knowledge graph representations.
+
 ##### Analysis
 TODO
 
-#### [GraphWriter](https://arxiv.org/pdf/1904.02342.pdf)
+#### [COMET](https://arxiv.org/pdf/1906.05317.pdf)
 ##### Summary
 TODO
 ##### Analysis
