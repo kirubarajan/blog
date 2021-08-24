@@ -72,15 +72,13 @@ const Consulting = () => {
 	          </figure>
 	          <h1 class="title"> some engineering </h1>
 	          <p>           
-	            I've been programming since I was 9 years old, when I developed clones of 
+	            I've been programming since I was a kid, when I built clones of 
               Super Smash Bros and other video games. Since then, I've gotten involved in full stack development (React, Rails, Django, SQL),
               machine learning (PyTorch, Tensorflow), distributed systems (Docker, MapReduce, Kubernetes) and anything else I can get my hands on!
 
               <br /> <br />
               
-              I work on open source projects at <a href="https://pennlabs.org">Penn Labs</a>, where I've been a founding team lead for many projects, used by virtually every Penn student. Professionally, I've built systems for intelligence at Foursquare, Dorm Room Fund, and Bridgewater. I'm currently working on a 
-              new project named <a href="https://catacomb.ai/">Catacomb</a>.
-			  
+              I also work on open source projects at <a href="https://pennlabs.org">Penn Labs</a>, where I've been a founding team lead for different projects used by virtually every Penn student. 
       	    </p>
             <br />
             <p style={{color: 'grey', fontWeight: 600}}>Non-exhaustive list of projects:</p> 
