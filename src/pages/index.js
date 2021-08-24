@@ -20,17 +20,15 @@ const Index = () => {
 	          </figure>
 	          <h1 style={{marginTop: '1rem', color: '#496B9E'}} className="title is-family-secondary is-size-2 has-text-info-dark"> Hi, I'm Arun. 🙌 </h1>
 	          <p>
-	            I'm a (Canadian! 🇨🇦) undergraduate at the University of Pennsylvania studying computer science and linguistics. 
-              I'm also a <a href="/research">published</a> machine learning researcher in Penn's <a href="https://penn-nlp.github.io/">NLP Group</a> and I teach Penn's official <a href="https://cis192.github.io/"> Python course</a>.
-              
-              <br /> <br />
-              Outside of school, I'm currently a Managing Partner at a venture capital firm named <a href="https://dormroomfund.com">Dorm Room Fund</a>.
-              Previously, I've worked at a couple of interesting companies, such as <a href="https://vise.com">Vise</a>, <a href="https://foursquare.com">Foursquare</a>, and <a href="https://bridgewater.com">Bridgewater</a>.
-              I also consult with a variety of organizations, ranging from Y&#8209;Combinator backed startups to R&D/defense companies.
+              I research machine learning for natural language processing and teach computer science at the University of Pennsylvania. My research interests are 
+              in generative language models and evaluation methodology.
 
               <br /> <br />
-              Other than that, I like brewing coffee, skateboarding, birdwatching, and racing!
-              This website is where I write about the things that I am doing or stuff I find interesting.
+              Previously, I worked on algorithmic trading at <a href="https://mlp.com">Millennium</a>, customizable portfolio optimization at <a href="https://vise.com">Vise</a>, and big data streaming at <a href='https://foursquare.com'>Foursquare</a>.
+              I was also a managing partner at a venture capital fund named <a href='https://dormroomfund.com'>Dorm Room Fund</a>.
+
+              <br /> <br />
+              Other than that, I like brewing coffee, skateboarding, birdwatching, and playing video games! This website is where I write about things I find interesting.
 	          </p>
 	        </div>
 	        <div className="column"></div>
