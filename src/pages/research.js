@@ -61,11 +61,7 @@ const Research = () => {
 	            <img src={"/img/nips.svg"}  />
 	          </figure>
 			      <h1 class="title"> some research</h1>
-	            I am an NLP researcher working in Professor <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch's</a> lab. My research interests
-	            include applying deep learning techniques to natural language processing problems, specifically in the domain of black-box model evaluation, information extraction, and dialogue systems. 
-	            I have publications in EMNLP, NAACL, INLG, and SPIE Defense. My research is graciously funded by academic grants from Google and DARPA. <br /> <br />
-
-              	You can find my Google Scholar profile <a href="https://scholar.google.com/citations?user=9dZbMCsAAAAJ&hl=en&oi=ao">here</a>.  <br /> <br />
+	            I am an NLP researcher working in Professor <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch's</a> lab. You can find my Google Scholar profile <a href="https://scholar.google.com/citations?user=9dZbMCsAAAAJ&hl=en&oi=ao">here</a>.  <br /> <br />
 
               <p style={{marginBottom: '0.5rem', color: 'grey', fontWeight: 600}}>Projects:</p> 
 	        </div>

@@ -70,17 +70,7 @@ const Consulting = () => {
 	          <figure className="image is-128x128">
 	            <img src={"/img/thinking.svg"}  />
 	          </figure>
-	          <h1 class="title"> some engineering </h1>
-	          <p>           
-	            I've been programming since I was a kid, when I built clones of 
-              Super Smash Bros and other video games. Since then, I've gotten involved in full stack development (React, Rails, Django, SQL),
-              machine learning (PyTorch, Tensorflow), distributed systems (Docker, MapReduce, Kubernetes) and anything else I can get my hands on!
-
-              <br /> <br />
-              
-              I also work on open source projects at <a href="https://pennlabs.org">Penn Labs</a>, where I've been a founding team lead for different projects used by virtually every Penn student. 
-      	    </p>
-            <br />
+	          <h1 class="title"> engineering </h1>
             <p style={{color: 'grey', fontWeight: 600}}>Non-exhaustive list of projects:</p> 
 	        </div>
 	        <div className="column"></div>

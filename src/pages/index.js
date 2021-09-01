@@ -24,7 +24,7 @@ const Index = () => {
               in generative language models and evaluation methodology.
 
               <br /> <br />
-              Previously, I worked on algorithmic trading at <a href="https://mlp.com">Millennium</a>, customizable portfolio optimization at <a href="https://vise.com">Vise</a>, and big data streaming at <a href='https://foursquare.com'>Foursquare</a>.
+              Previously, I worked on algorithmic trading signals at <a href="https://mlp.com">Millennium</a>, customizable portfolio optimization at <a href="https://vise.com">Vise</a>, and big data streaming at <a href='https://foursquare.com'>Foursquare</a>.
               I was also a managing partner at a venture capital fund named <a href='https://dormroomfund.com'>Dorm Room Fund</a>.
 
               <br /> <br />
