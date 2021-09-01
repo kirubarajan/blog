@@ -3,7 +3,7 @@ path: "/blog/embeddings"
 date: "2018-11-18"
 title: "A Gentle Introduction to Word Embeddings"
 tags: ['machine learning']
-excerpt: "Fun with Natural Language Processing's Secret Sauce"
+excerpt: "Fun with natural language processing's secret sauce"
 favourite: true 
 ---
 
