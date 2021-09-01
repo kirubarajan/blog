@@ -15,9 +15,9 @@ In June 2019, I was fortunate to attend the *Annual Conference of the North Amer
 ![my booth at the conference](https://i.imgur.com/iYbqd4w.jpg)
 <small> our booth (and demo!) at the conference </small>
 
-More importantly, it was my first time at a research event for natural language processing. Although I published a paper in high school, the energy of a military/defense conference does not come close to that of one focused on *machine learning*. From all the live demos of friendly conversational agents, to the industry booths boasting the machine learning efforts of Google and Two Sigma, it felt like there was electricity in the air; I was enthralled to finally get involved in the community.
+More importantly, it was my first time at a research event for natural language processing. From all the live demos of friendly conversational agents, to the industry booths boasting the machine learning efforts of Google and Two Sigma, it felt like there was electricity in the air; I was enthralled to finally get involved in the community.
 
-Not a lot of undergraduates think too hard about research, so I'm writing this post to show how *exciting* research can be, and how rewarding events like this can be.
+Not a lot of undergraduates think too hard about research, so I'm writing this post to show how interesting research can be, and how fun events like this can be.
 
 ## About the Conference
 In 2019, NAACL was held in Minneapolis, Minnesota at the Hyatt Regency (which was a really nice venue). Since it was the middle of summer, I was worried about the weather being a bit too hot and humid for my liking. This turned out to be fine, since the conference itself (which was indoors, surprise surprise) was a lot more exciting!
