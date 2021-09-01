@@ -28,7 +28,7 @@ const Index = () => {
               I was also a managing partner at a venture capital fund named <a href='https://dormroomfund.com'>Dorm Room Fund</a>.
 
               <br /> <br />
-              Other than that, I like brewing coffee, skateboarding, birdwatching, and playing video games! This website is where I write about things I find interesting.
+              Other than that, I like brewing coffee and skateboarding! This website is where I write about things I find interesting.
 	          </p>
 	        </div>
 	        <div className="column"></div>
