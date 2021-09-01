@@ -1,9 +1,10 @@
 ---
 path: "/blog/embeddings"
-date: "2019-11-18"
+date: "2018-11-18"
 title: "A Gentle Introduction to Word Embeddings"
 tags: ['machine learning']
 excerpt: "Fun with Natural Language Processing's Secret Sauce"
+favourite: true 
 ---
 
 # A Gentle Introduction to Word Embeddings

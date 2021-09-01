@@ -4,6 +4,7 @@ date: "2020-03-07"
 title: "My First NLP Research Conference"
 tags: ['research']
 excerpt: "An undergraduate academic adventure in Minneapolis"
+favourite: true 
 ---
 
 # My First NLP Research Conference

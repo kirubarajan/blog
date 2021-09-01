@@ -4,6 +4,7 @@ date: "2020-12-07"
 title: "Decoding Strategies for Text Generation"
 tags: ['machine learning']
 excerpt: "Finding the humanity in approximating a NP-Hard problem"
+favourite: true
 ---
 
 <div class="notification is-link">
