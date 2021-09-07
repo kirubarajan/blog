@@ -3,12 +3,12 @@ path: "/blog/electric"
 date: "2020-05-17"
 title: "On *Electric* Longboards"
 tags: ['personal']
-excerpt: "Reflecting on building an electric longboard"
+excerpt: "Putting together an electric longboard"
 favourite: true 
 ---
 
-# On *Electric* Longboards
-> Reflecting on Building an Electric Longboard
+# On Electric Longboards
+> Putting together an electric longboard
 
 I recently built an electric longboard after many years of dreaming, and I couldn't be happier with the results. Here's a picture of the board, 
 in all of the Canadian springtime glory:
@@ -23,8 +23,7 @@ in all of the Canadian springtime glory:
 4. Loaded Truncated Tesseract (Deck)
 
 ## Riding
-For my riding preferences, this board feels better to me than any Boosted Board to I've ever ridden (which is not suprising considering
-that I've accumulated my favourite parts through the ~6 years of owning the deck.
+For my riding preferences, this board feels better to me than any Boosted Board to I've ever ridden (which is not suprising considering that I've accumulated my favourite parts through the ~7 years of owning the deck).
 
 I think that although the board is a lot of fun to ride around aimlessly, I'll start to see it's value
 more when I move out of quarantine and back into a city like Philadelphia or San Francisco (I made
