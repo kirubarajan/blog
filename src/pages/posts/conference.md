@@ -1,13 +1,13 @@
 ---
 path: "/blog/conference"
 date: "2020-03-07"
-title: "Experiencing An NLP Research Conference"
+title: "My NAACL 2019 Experience"
 tags: ['research']
 excerpt: "An undergraduate academic adventure in Minneapolis"
 favourite: true 
 ---
 
-# Experiencing An NLP Research Conference
+# My NAACL 2019 Experience
 > An Undergraduate Academic Adventure in Minneapolis
 
 In June 2019, I was fortunate to attend the *Annual Conference of the North American Chapter of the Association for Computational Linguistics* - otherwise known as **NAACL** [(one of the top venues for research in natural language processing)](https://naacl2019.org/). My collaborators and I published a paper on the evaluation of open-domain dialogue systems (e.g. chatbots) and we were eager to share our work with the research community!
