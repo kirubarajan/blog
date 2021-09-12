@@ -6,12 +6,20 @@ const projects = [
   {
 	  "name": "Catacomb",
 	  "description": "Machine learning platform for deploying prototypes, conducting quality assurance, and tracking production model performance. Powered by Kubernetes, supports PyTorch, Tensorflow and other ML frameworks.",
-	  "github": "https://github.com/catacomb",
+	  "github": "https://github.com/catacomb-ai",
+    'selected': true
   },
   {
 	  "name": "crypt",
-	  "description": "A powerful account manager that generates unique anonymous emails and passwords when signing up for new online accounts. PennApps XV Best Security and Encryption Awards. Functionality later implemented by Apple.",
-	  "github": "https://github.com/eloreprojects/crypt"
+	  "description": "A powerful account manager that generates unique anonymous emails and passwords when signing up for new online accounts (PennApps XV Best Security and Encryption Awards). Functionality later standard in iOS.",
+	  "github": "https://github.com/eloreprojects/crypt",
+    'selected': true
+  },
+  {
+	  "name": "Penn Clubs",
+	  "description": "A public directory of student-run organizations at Penn, used by tens of thousands of students (later became official University service). Written in React and Django.",
+	  "github": "https://github.com/pennlabs/pennclubs",
+    'selected': true
   },
   {
     "name": "PennFace Book",
@@ -31,11 +39,6 @@ const projects = [
 	  "name": "crrntly",
 	  "description": "A free minimalist kanban board for teams to use. Offers team updates on a member-by-member basis in real-time. Built using Node and MongoDB.",
 	  "github": "https://github.com/kirubarajan/crrntly",
-  },
-  {
-	  "name": "Penn Clubs",
-	  "description": "A public directory of student-run organizations at Penn, used by tens of thousands of students. Written in React and Django.",
-	  "github": "https://github.com/pennlabs/pennclubs",
   },
   {
     "name": "Price Tracker",
@@ -79,8 +82,16 @@ const Consulting = () => {
             {projects.map(project => (
               <div className="column is-one-third">
                 <div className="box">
-                  <p style={{fontWeight: 600, marginBottom: '0.25rem'}}>{project.name}</p>
+                  <p style={{fontWeight: 600, marginBottom: '0.25rem'}}>
+                    {project.name}
+                  </p>
                   <p style={{fontSize: "0.85rem", marginBottom: "0.5rem", marginTop: "0.1rem"}}>
+                    {project.selected && (
+                      <>
+                        <span style={{marginTop: '0.5rem'}} class="tag is-info is-light">Featured</span>
+                        <br style={{marginBottom: '1rem'}} />
+                      </>
+                    )}
                     {project.description}
                   </p>
                   <p>

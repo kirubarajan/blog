@@ -5,7 +5,8 @@ import '../styles/styles.sass'
 function getColour(name) {
   if (name == "machine learning") return "is-light is-info";
   if (name == "personal") return "is-light is-danger";
-  if (name == "natural language processing") return "is-light is-success";
+  if (name == "trading") return "is-light is-success";
+  if (name == "crypto") return "is-light is-link";
   if (name == "notes") return "is-light is-warning";
   if (name == "programming") return "is-light is-primary";
   if (name == "research") return "is-light is-primary";
