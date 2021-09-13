@@ -4,7 +4,6 @@ date: "2020-05-17"
 title: "On *Electric* Longboards"
 tags: ['personal']
 excerpt: "Putting together an electric longboard"
-favourite: true 
 ---
 
 # On Electric Longboards
