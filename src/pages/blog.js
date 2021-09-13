@@ -22,12 +22,9 @@ const Blog = ({data}) => {
             <figure className="image is-128x128">
               <img src={"/img/papers.svg"} />
             </figure>
-            <h1 className="title"> my blog </h1>
-            <p>I like writing about food, my work and (sometimes)
-              my personal life. My views are entirely my own.</p>
+            <h1 className="title"> blog </h1>
             <p>
-              <br />
-              <p style={{marginBottom: "0.5rem"}}><strong className="has-text-grey">Selected Posts</strong></p>
+              <p style={{fontSize: "0.85rem"}} className="has-text-grey mb-3">Featured</p>
               {edges.map(edge => {
                 const {frontmatter} = edge.node;
                 if (frontmatter.favourite) {
@@ -44,7 +41,7 @@ const Blog = ({data}) => {
                 }
               })}
 
-              <p style={{marginBottom: "0.5rem"}}><strong className="has-text-grey">All Posts</strong></p>
+              <p style={{fontSize: "0.85rem"}} className="has-text-grey mb-3 mt-5">All Posts</p>
               {edges.map(edge => {
                 const {frontmatter} = edge.node;
                 

@@ -15,12 +15,12 @@ excerpt: "An overview of the miner extractable value (MEV) paper"
 
 ## Introduction
 
-## The Paper
+## [Flash Boys 2.0 Paper](https://arxiv.org/pdf/1904.05234.pdf)
 
 ## Examples
 
-### Paradigm: "Ethereum Is A Dark Forest"
+### [Paradigm: "Ethereum Is A Dark Forest"](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 
-### Flashbots: Synthetix Strategy
+### [Flashbots: Synthetix Strategy](https://bertcmiller.com/2021/09/05/mev-synthetix.html)
 
 ## Conclusion
