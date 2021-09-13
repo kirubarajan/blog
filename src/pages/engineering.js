@@ -88,7 +88,7 @@ const Consulting = () => {
                   <p style={{fontSize: "0.85rem", marginBottom: "0.5rem", marginTop: "0.1rem"}}>
                     {project.selected && (
                       <>
-                        <span style={{marginTop: '0.5rem'}} class="tag is-info is-light">Featured</span>
+                        <span style={{marginTop: '0.25rem'}} class="tag is-info is-light">Featured</span>
                         <br style={{marginBottom: '1rem'}} />
                       </>
                     )}
