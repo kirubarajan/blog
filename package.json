@@ -34,7 +34,7 @@
     "gatsby-transformer-sharp": "^2.3.14",
     "katex": "^0.11.1",
     "konva": "7.1.4",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "prismjs": "^1.17.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
