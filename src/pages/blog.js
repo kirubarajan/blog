@@ -27,7 +27,7 @@ const Blog = ({data}) => {
               <p style={{fontSize: "0.85rem"}} className="has-text-grey mb-3">Featured</p>
               {edges.map(edge => {
                 const {frontmatter} = edge.node;
-                if (frontmatter.favourite) {
+                if (frontmatter.favourite && !frontmatter.hidden) {
                   return (
                     <div className="box" key={frontmatter.path} style={{color: "grey", marginBottom: "1rem"}}>
                       <span style={{fontSize: "0.75rem"}}>{frontmatter.date} </span> <br />
@@ -45,7 +45,7 @@ const Blog = ({data}) => {
               {edges.map(edge => {
                 const {frontmatter} = edge.node;
                 
-                if (!frontmatter.favourite) {
+                if (!frontmatter.favourite && !frontmatter.hidden) {
                   return (
                     <div className="box" key={frontmatter.path} style={{color: "grey", marginBottom: "1rem"}}>
                       <span style={{fontSize: "0.75rem"}}>{frontmatter.date} </span> <br />
@@ -81,6 +81,7 @@ export const query = graphql`
             date
             tags
             favourite
+            hidden
           }
         }
       }

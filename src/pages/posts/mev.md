@@ -4,6 +4,7 @@ date: "2021-09-07"
 title: "Flash Boys 2.0"
 tags: ['crypto', 'trading']
 excerpt: "An overview of the miner extractable value (MEV) paper"
+hidden: true
 ---
 
 <div class="notification is-link is-light">
