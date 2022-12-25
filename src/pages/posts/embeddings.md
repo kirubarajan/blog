@@ -4,7 +4,6 @@ date: "2018-11-18"
 title: "An Introduction to Word Embeddings"
 tags: ['machine learning']
 excerpt: "Fun with natural language processing's secret sauce"
-favourite: true 
 ---
 
 # An Introduction to Word Embeddings

@@ -4,6 +4,12 @@ import Nav from '../components/Nav'
 
 const projects = [
 	{
+		"name": "BIG-Bench",
+		"description": "Benchmark for measuring and extrapolating the capabilities of language models. Collaborative dataset published in 2022 by Google, Penn, and dozens of other institutions.",
+		"github": "https://github.com/google/BIG-bench",
+		"paper": "https://arxiv.org/abs/2206.04615"
+	},	
+	{
 		"name": "Real or Fake Text?",
 		"description": "A tool for the crowd-sourced evaluation of large-scale neural language models. Published EMNLP 2020.",
 		"demo": "https://www.roft.io/",
