@@ -15,7 +15,7 @@ excerpt: "Things to hopefully avoid this year"
 
 Most blog posts I've seen on goal-setting for 2021 are a list of normative statements for what to do within the following year. From running $X$ kilometers to learning a new programming language, there's nothing wrong in highlighting your aspirations.
 
-However, whenever I write a list like that on my blog, I find myself either being too ambitious or inadvertently value signalling. So this year, I'm going to try something different: writing a list of things to *not do*. 
+However, over the years whenever I wrote a list like that on my blog, I find myself either being too ambitious or inadvertently value signalling. So this year, I'm going to try something different: writing a list of things to *not do*. 
 
 Let's call these **anti-goals**.
 
@@ -29,11 +29,7 @@ Bonus points if you buy more books before finishing the ones you're currently re
 
 It's your last semester so why not finish strong with a good GPA? It's a pandemic anyway, so this very well could be your only productive use of time (beyond launching a SubStack or starting a new company).
 
-#### 3. Earn to give instead of giving.
-
-Instead of getting your hands dirty, use the time you save to earn more money! Donate a fraction of that instead (say $Y$% of it) and pat yourself on the back for being responsible during a pandemic.
-
-#### 4. Doom-scroll into Twitter oblivion every day. 
+#### 3. Doom-scroll into Twitter oblivion every day. 
 
 How else will you simultaneously know *every single thing* that occurs in the world? As a citizen of the 21st century, it is your responsibility to do so, and have a tweetable opinion on everything as well.
 
