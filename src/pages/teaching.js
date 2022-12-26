@@ -20,10 +20,17 @@ const Teaching = () => {
 	          </figure>
 						<h1 class="title"> some teaching </h1>
 	          <p>
-	            I am the instructor for <a href="https://www.cis.upenn.edu/~cis192/">CIS 192</a> at Penn, which is 
+	            I was the instructor for <a href="https://www.cis.upenn.edu/~cis192/">CIS 192</a> at Penn, which is 
 	            a great class about some very interesting topics (in Python). Previously, I was a teaching assistant for <a href="http://computational-linguistics-class.org/">CIS 530</a> - Penn's graduate computational linguistics course. <br />
 	          </p>
-	          <br />
+
+			  <p className='my-4'>
+				Some talks I've given:
+			  </p>
+			  <p><strong>Crypto</strong></p>
+			  <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
+	            <a class="panel-block list-group-item is-primary">Solana HH Singapore 2022 - Building On-Chain </a>
+	          </div>
 	          <p><strong>Machine Learning</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
 	            <a class="panel-block list-group-item is-primary">P-Classic 2019 - Natural Language Processing (Python) </a>
